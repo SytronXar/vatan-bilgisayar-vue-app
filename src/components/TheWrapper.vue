@@ -92,6 +92,8 @@
                       class="btn btn-primary btn-basket dropdown-toggle"
                       aria-haspopup="true"
                       aria-expanded="false"
+                      @mouseenter="OpenDropdown"                      
+                      @mouseleave="CloseDropdown"
                     >
                       <span class="icon-shopping-card"
                         ></span>
