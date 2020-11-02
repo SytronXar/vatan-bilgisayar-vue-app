@@ -1,52 +1,152 @@
 <template>
+  <div>
+    <TheTopBar />
+    <div class="wrapper-topbar-menu menu-toptools">
+      <div class="global-container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bars"></span>
+              </button>
+            </div>
 
-    <div >
-        <TheTopBar/>
-        <div id="navbar-header__content">
-            <div class="navbar-header__area">
-                <router-link class="navbar_brand" to="/">
-                    <img src="https://www.vatanbilgisayar.com/assets/dist/images/vatanlogo.svg"/>
-                </router-link>
+            <div class="navbar-header__content no-padding">
+              <div class="navbar-header__area">
+                <a class="navbar-brand" href="/">
+                  <img
+                    src="https://www.vatanbilgisayar.com/assets/dist/images/vatanlogo.svg"
+                    alt="Vatan Bilgisayar"
+                  />
+                </a>
+              </div>
+              <div class="navbar-header__area">
+                <div class="search search-light hide">
+                  <div class="search__form">
+                    <input
+                      autocomplete="off"
+                      data-searchUrl="/Partial/Search"
+                      id="navbar-search-input"
+                      class="search__input"
+                      type="text"
+                      name="search"
+                      placeholder="Aramak istediğiniz ürünü yazın"
+                    />
+                    <a href="javascript:void(0);" class="remove__button">
+                      <span class="icon-times"></span>
+                    </a>
+                    <button class="search__button">
+                      <span class="icon-search"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-header__area">
+                <div class="wrap-button">
+                  <div class="btn-group my-account">
+                    <button
+                      type="button"
+                      id="btnMyAccount"
+                      class="btn btn-primary btn-login dropdown-toggle"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      @blur="CloseDropdown"
+                      @focus="OpenDropdown"
+                    >
+                      <span class="icon-user"></span>
+                      <span id="type">GİRİŞ YAP</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-home hide account" v-class="{hide: !isLoginTime}">
+                      <li><a href="/uyeBilgi/uyeBilgi">Üyeliğim</a></li>
+                      <li><a href="/uyeBilgi/siparistakip">Siparişlerim</a></li>
+                      <li>
+                        <a href="/uyeBilgi/favorilistem">Favori Ürünlerim</a>
+                      </li>
+                      <li><a href="/uyeBilgi/uyeAdres">Adres Bilgilerim</a></li>
+                      <li><a href="/uyeBilgi/mesaj">Mesajlarım</a></li>
+                      <li>
+                        <a
+                          href="/MemberTransaction/Logout?returnUrl=%2F&amp;logtab=signup"
+                          >ÇIKIŞ <span class="icon-door-open"></span
+                        ></a>
+                      </li>
+                    </ul>
+                    <ul class="dropdown-menu dropdown-menu-home hide login">
+                      <li>
+                        <a href="/login?returnUrl=%2F&amp;logtab=signin"
+                          >Giriş Yap</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/login?returnUrl=%2F&amp;logtab=signup"
+                          >Üye Ol</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="btn-group referrer-search-area">
+                    <i class="icon-search"></i>
+                  </div>
+
+                  <div class="btn-group basketGroup">
+                    <button
+                      type="button"
+                      id="btnMyBasket"
+                      class="btn btn-primary btn-basket dropdown-toggle"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      @mouseover="OpenDropdown"        
+                      @mouseleave="CloseDropdown"
+                    >
+                      <span class="icon-shopping-card"></span>
+                      <span class="btn-basket--text">SEPETİM</span>
+                      <span class="btn-basket--count">0</span>
+                    </button>
+                    <ul
+                      class="dropdown-menu dropdown-menu-basket openBasket"
+                    ></ul>
+                  </div>
+                </div>
+              </div>
+              <div id="navbar-search-results"></div>
             </div>
-            <div id="search-form">
-                <input autocomplete="off" data-searchurl="/Partial/Search" id="navbar-search-input" class="search__input" type="text" name="search" placeholder="Aramak istediğiniz ürünü yazın">
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 <style scoped>
-    #navbar-header__area{
-        display: table-cell;
-        vertical-align: middle;
-        width: 33.333333%;
-    }
-    #navbar_brand{
-        background-color: #fff;
-        margin: 12px 0;
-        margin-top: 12px;
-        margin-right: 0px;
-        margin-bottom: 12px;
-        margin-left: 0px;
-        padding: 0;
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-    }
-    #navbar_brand img{
-        height: 50px;
-    }
-    #navbar-header__content {
-    display: inline;
-    position: relative;
-}
-    
+
 </style>
 <script>
-import TheTopBar from "@/components/TheTopBar"
+import TheTopBar from "@/components/TheTopBar";
 export default {
-  components:{
+  components: {
     TheTopBar
+  },
+  methods:{
+    CloseDropdown(event){
+      var Target=event.target;
+      Target.setAttribute('aria-expanded',false);    
+      Target.parentElement.classList.remove("open");
+    },
+    OpenDropdown(event){
+      var Target=event.target;
+      Target.setAttribute('aria-expanded',true);
+      Target.parentElement.classList.add("open");
+    },
+  },
+  computed:{ 
+    isLoginTime: function(event){      
+      var Target=event.target;
+      var DoIt= Target.parentElement.classList.contains("open");
+      console.debug("DoIt");
+      return DoIt;
+    }
   }
-}
+};
 </script>
