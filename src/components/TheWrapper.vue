@@ -131,6 +131,9 @@ export default {
   computed:{
 
   },
+  props:{
+
+  },
   methods: {
     OpenDropdown(event) { 
         var Target=event.target;

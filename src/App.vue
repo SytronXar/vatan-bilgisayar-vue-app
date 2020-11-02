@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <TheWrapper/>
+    <TheWrapperTopbarMenu/>
     <router-view />
   </div>
 </template>
 <script>
 import TheWrapper from "@/components/TheWrapper"
+import TheWrapperTopbarMenu from "@/components/TheWrapperTopbarMenu"
 export default {
   components:{
-    TheWrapper
+    TheWrapper,
+    TheWrapperTopbarMenu
   }
 }
 </script>
