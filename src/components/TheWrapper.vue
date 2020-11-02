@@ -5,13 +5,6 @@
       <div class="global-container">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bars"></span>
-              </button>
-            </div>
-
             <div class="navbar-header__content no-padding">
               <div class="navbar-header__area">
                 <a class="navbar-brand" href="/">
@@ -37,7 +30,9 @@
                       <span class="icon-times"></span>
                     </a>
                     <button class="search__button">
-                      <span class="icon-search"></span>
+                      <span class="icon-search">
+                        <i class="fa fa-search"></i>
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -51,14 +46,13 @@
                       class="btn btn-primary btn-login dropdown-toggle"
                       data-toggle="dropdown"
                       aria-haspopup="true"
-                      aria-expanded="false"
-                      @blur="CloseDropdown"
                       @focus="OpenDropdown"
+                      @blur="CloseDropdown"
                     >
                       <span class="icon-user"></span>
-                      <span id="type">GİRİŞ YAP</span>
+                      <span id="type">GİRİŞ</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-home hide account" v-class="{hide: !isLoginTime}">
+                    <ul class="dropdown-menu dropdown-menu-home account" v-show="loginTime"> 
                       <li><a href="/uyeBilgi/uyeBilgi">Üyeliğim</a></li>
                       <li><a href="/uyeBilgi/siparistakip">Siparişlerim</a></li>
                       <li>
@@ -98,10 +92,9 @@
                       class="btn btn-primary btn-basket dropdown-toggle"
                       aria-haspopup="true"
                       aria-expanded="false"
-                      @mouseover="OpenDropdown"        
-                      @mouseleave="CloseDropdown"
                     >
-                      <span class="icon-shopping-card"></span>
+                      <span class="icon-shopping-card"
+                        ></span>
                       <span class="btn-basket--text">SEPETİM</span>
                       <span class="btn-basket--count">0</span>
                     </button>
@@ -120,7 +113,12 @@
   </div>
 </template>
 <style scoped>
-
+#navbar_brand img {
+  height: 50px;
+}
+.button drop_down_arrow {
+  float: right;
+}
 </style>
 <script>
 import TheTopBar from "@/components/TheTopBar";
@@ -128,24 +126,23 @@ export default {
   components: {
     TheTopBar
   },
-  methods:{
-    CloseDropdown(event){
-      var Target=event.target;
-      Target.setAttribute('aria-expanded',false);    
-      Target.parentElement.classList.remove("open");
-    },
-    OpenDropdown(event){
-      var Target=event.target;
-      Target.setAttribute('aria-expanded',true);
-      Target.parentElement.classList.add("open");
-    },
+  computed:{
+
   },
-  computed:{ 
-    isLoginTime: function(event){      
-      var Target=event.target;
-      var DoIt= Target.parentElement.classList.contains("open");
-      console.debug("DoIt");
-      return DoIt;
+  methods: {
+    OpenDropdown(event) { 
+        var Target=event.target;
+        Target.setAttribute("aria-expanded", true);
+        Target.parentElement.classList.add("open");  
+    },
+    CloseDropdown(event) { 
+        var Target=event.target;
+        Target.setAttribute("aria-expanded", false);      
+        Target.parentElement.classList.remove("open");  
+    },
+    loginTime(event){  
+        var Target=event.target;
+        return Target.parentElement.classList.contains('open');
     }
   }
 };
