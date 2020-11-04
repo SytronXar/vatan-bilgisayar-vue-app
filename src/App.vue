@@ -1,17 +1,20 @@
 <template>
   <div id="app">
+    <FastShippingAd/>
     <TheWrapper/>
-    <TheWrapperTopbarMenu/>
+    <CategoryDropbar/>
     <router-view />
   </div>
 </template>
 <script>
 import TheWrapper from "@/components/TheWrapper"
-import TheWrapperTopbarMenu from "@/components/TheWrapperTopbarMenu"
+import CategoryDropbar from "@/components/CategoryDropbar"
+import FastShippingAd from "@/components/FastShippingAd"
 export default {
   components:{
     TheWrapper,
-    TheWrapperTopbarMenu
+    CategoryDropbar,
+    FastShippingAd
   }
 }
 </script>
