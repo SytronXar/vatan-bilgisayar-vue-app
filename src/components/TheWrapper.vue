@@ -46,13 +46,14 @@
                       class="btn btn-primary btn-login dropdown-toggle"
                       data-toggle="dropdown"
                       aria-haspopup="true"
+                      aria-expanded="true"
                       @focus="OpenDropdown"
                       @blur="CloseDropdown"
                     >
-                      <span class="icon-user"><i class="fas fa-user"></i></span>
+                      <span class="icon-user"></span>
                       <span id="type">GİRİŞ</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-home hide account">
+                    <ul class="dropdown-menu dropdown-menu-home account" v-show="loginTime"> 
                       <li><a href="/uyeBilgi/uyeBilgi">Üyeliğim</a></li>
                       <li><a href="/uyeBilgi/siparistakip">Siparişlerim</a></li>
                       <li>
@@ -91,11 +92,12 @@
                       id="btnMyBasket"
                       class="btn btn-primary btn-basket dropdown-toggle"
                       aria-haspopup="true"
-                      aria-expanded="false"
+                      aria-expanded="true"
+                      @mouseenter="OpenDropdown"                      
+                      @mouseleave="CloseDropdown"
                     >
                       <span class="icon-shopping-card"
-                        ><i class="fas fa-shopping-cart"></i
-                      ></span>
+                        ></span>
                       <span class="btn-basket--text">SEPETİM</span>
                       <span class="btn-basket--count">0</span>
                     </button>
@@ -127,17 +129,26 @@ export default {
   components: {
     TheTopBar
   },
+  computed:{
 
+  },
+  props:{
+
+  },
   methods: {
     OpenDropdown(event) { 
         var Target=event.target;
-        Target.setAttribute("aria-expanded", true);
+        Target.setAttribute("aria-expanded", false);
         Target.parentElement.classList.add("open");  
     },
     CloseDropdown(event) { 
         var Target=event.target;
-        Target.setAttribute("aria-expanded", false);      
+        Target.setAttribute("aria-expanded", true);      
         Target.parentElement.classList.remove("open");  
+    },
+    loginTime(event){  
+        var Target=event.target;
+        return Target.parentElement.classList.contains('open');
     }
   }
 };

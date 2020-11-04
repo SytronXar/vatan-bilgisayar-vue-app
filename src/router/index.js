@@ -49,6 +49,11 @@ const routes = [
     path: "/yeni-urunler",
     name: "YeniUrunler",
     component: () => import(/*webpackChunkName:"YeniUrunler"*/ "../views/YeniUrunler.vue")
+  },
+  {
+    path: "/hizli-teslimat",
+    name: "HizliTeslimat",
+    component: () => import(/*webpackChunkName:"HizliTeslimat"*/ "../views/HizliTeslimat.vue")
   }
 ];
 

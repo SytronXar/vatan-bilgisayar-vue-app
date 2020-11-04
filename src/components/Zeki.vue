@@ -9,7 +9,7 @@
     </a>
     <div id="smallBannerHide" class="small-banner__button">
       <span class="small-banner__text">Gizle</span>
-      <span class="icon-times"><i class="fas fa-times 2x"></i></span>
+      <span class="icon-times"></span>
     </div>
   </div>
 </template>
