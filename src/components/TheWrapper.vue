@@ -9,7 +9,7 @@
               <div class="navbar-header__area">
                 <a class="navbar-brand" href="/">
                   <img
-                    src="https://www.vatanbilgisayar.com/assets/dist/images/vatanlogo.svg"
+                    src="../assets/logo.png"
                     alt="Vatan Bilgisayar"
                   />
                 </a>

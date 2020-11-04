@@ -1,5 +1,6 @@
 <template>
-  <div class="pc-toplama">
+  <div class="pc-toplama">   
+    <h2>PC Toplama</h2>
   </div>
 </template>
 

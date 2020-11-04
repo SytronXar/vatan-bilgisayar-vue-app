@@ -1,6 +1,6 @@
 <template>
     <nav id="nav">       
-      <router-link  to="/">
+      <router-link  to="/webe-ozel-urunler">
         <span>Web'e Özel</span>
       </router-link>
       <router-link  to="/firsat-urunler">

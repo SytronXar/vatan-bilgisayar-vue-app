@@ -1,5 +1,6 @@
 <template>
   <div class="iletisim">
+    <h2>İletişim</h2>
   </div>
 </template>
 
