@@ -3,6 +3,7 @@
     <FastShippingAd/>
     <TheWrapper/>
     <CategoryDropbar/>
+    <GununFirsatlari/>
     <router-view />
   </div>
 </template>
@@ -10,11 +11,13 @@
 import TheWrapper from "@/components/TheWrapper"
 import CategoryDropbar from "@/components/CategoryDropbar"
 import FastShippingAd from "@/components/FastShippingAd"
+import GununFirsatlari from "@/components/GununFirsatlari"
 export default {
   components:{
     TheWrapper,
     CategoryDropbar,
-    FastShippingAd
+    FastShippingAd,
+    GununFirsatlari
   }
 }
 </script>
