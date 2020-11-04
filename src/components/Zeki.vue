@@ -13,3 +13,41 @@
     </div>
   </div>
 </template>
+<style scoped>
+.icon-times
+{
+    font-family: Vatan-Bilgisayar!important;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.small-banner {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-color: #02377d;
+  margin: 0 0 40px;
+}
+.small-banner__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin-right: 5px;
+}
+.small-banner__image {
+  margin: 0 auto;
+}
+.small-banner__button {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  right: 15px;
+  cursor: pointer;
+}
+.hide {
+  display: none;
+}
+</style>
