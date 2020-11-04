@@ -46,6 +46,7 @@
                       class="btn btn-primary btn-login dropdown-toggle"
                       data-toggle="dropdown"
                       aria-haspopup="true"
+                      aria-expanded="true"
                       @focus="OpenDropdown"
                       @blur="CloseDropdown"
                     >
@@ -91,7 +92,7 @@
                       id="btnMyBasket"
                       class="btn btn-primary btn-basket dropdown-toggle"
                       aria-haspopup="true"
-                      aria-expanded="false"
+                      aria-expanded="true"
                       @mouseenter="OpenDropdown"                      
                       @mouseleave="CloseDropdown"
                     >
@@ -137,12 +138,12 @@ export default {
   methods: {
     OpenDropdown(event) { 
         var Target=event.target;
-        Target.setAttribute("aria-expanded", true);
+        Target.setAttribute("aria-expanded", false);
         Target.parentElement.classList.add("open");  
     },
     CloseDropdown(event) { 
         var Target=event.target;
-        Target.setAttribute("aria-expanded", false);      
+        Target.setAttribute("aria-expanded", true);      
         Target.parentElement.classList.remove("open");  
     },
     loginTime(event){  

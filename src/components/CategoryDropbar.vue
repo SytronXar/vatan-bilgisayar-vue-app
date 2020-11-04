@@ -357,8 +357,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/telefon.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/telefon.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/telefon.jpg"
                           />
                         </div>
                       </div>
@@ -1382,8 +1382,8 @@
                           <a href="/oem-hazir-sistemler/"
                             ><img
                               class="lazyimg"
-                              data-src="/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
-                              src="/assets/dist/images/_blank_1x1.png"
+                              data-src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
+                              src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
                             />
                           </a>
                         </div>
@@ -1391,8 +1391,8 @@
                           <a href="/pc-toplama/"
                             ><img
                               class="lazyimg lazy-init"
-                              data-src="/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
-                              src="/assets/dist/images/_blank_1x1.png"
+                              data-src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
+                              src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
                             />
                           </a>
                         </div>
@@ -2810,8 +2810,8 @@
                           <a href="/oem-hazir-sistemler/"
                             ><img
                               class="lazyimg"
-                              data-src="/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
-                              src="/assets/dist/images/_blank_1x1.png"
+                              data-src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
+                              src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/kampanya-banner/oembanner2020-min.jpg"
                             />
                           </a>
                         </div>
@@ -2819,8 +2819,8 @@
                           <a href="/pc-toplama/"
                             ><img
                               class="lazyimg lazy-init"
-                              data-src="/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
-                              src="/assets/dist/images/_blank_1x1.png"
+                              data-src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
+                              src="https://www.vatanbilgisayar.com/upload/banner/yeni-tasarim/anasayfa/pc-toplama.jpg"
                             />
                           </a>
                         </div>
@@ -2935,8 +2935,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/camera.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/camera.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/camera.jpg"
                           />
                         </div>
                       </div>
@@ -3131,8 +3131,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/televizyon.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/televizyon.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/televizyon.jpg"
                           />
                         </div>
                       </div>
@@ -3289,8 +3289,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/yazici.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/yazici.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/yazici.jpg"
                           />
                         </div>
                       </div>
@@ -3498,8 +3498,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/aksesuar.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/aksesuar.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/aksesuar.jpg"
                           />
                         </div>
                       </div>
@@ -3642,8 +3642,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/gaming.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/gaming.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/gaming.jpg"
                           />
                         </div>
                       </div>
@@ -3876,8 +3876,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/kea.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/kea.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/kea.jpg"
                           />
                         </div>
                       </div>
@@ -4008,8 +4008,8 @@
                         <div class="banner-list__item">
                           <img
                             class="lazyimg"
-                            data-src="/Upload/GENERAL/menu-banner/spor.jpg"
-                            src="/assets/dist/images/_blank_1x1.png"
+                            data-src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/spor.jpg"
+                            src="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/spor.jpg"
                           />
                         </div>
                       </div>

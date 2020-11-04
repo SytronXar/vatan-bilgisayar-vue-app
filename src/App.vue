@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <TheWrapper/>
-    <TheWrapperTopbarMenu/>
+    <CategoryDropbar/>
     <router-view />
   </div>
 </template>
 <script>
 import TheWrapper from "@/components/TheWrapper"
-import TheWrapperTopbarMenu from "@/components/TheWrapperTopbarMenu"
+import CategoryDropbar from "@/components/CategoryDropbar"
 export default {
   components:{
     TheWrapper,
-    TheWrapperTopbarMenu
+    CategoryDropbar
   }
 }
 </script>
