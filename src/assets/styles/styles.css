@@ -7181,7 +7181,7 @@ button.close {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: #000\9;
+    background-color: #0009;
     background-color: transparent;
     border: 1px solid #fff;
     border-radius: 10px;
@@ -11299,19 +11299,15 @@ button.swiper-pagination-bullet {
     url(../fonts/sourcesans/SourceSansPro-Semibold.woff) format("woff");
   font-weight: 600;
   font-style: normal;
-}
+}*/
+
 [class*=" icon-"],
 [class^="icon-"] {
-  font-family: Vatan-Bilgisayar !important;
-  speak: none;
-  font-style: normal;
-  font-weight: 400;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "Font Awesome 5 Free" !important;
 }
+
+
+/*
 .icon-help:before {
   content: "\e97e";
 }
@@ -11590,12 +11586,10 @@ button.swiper-pagination-bullet {
 }*/
 
 .icon-search:before {
-    font-family: "Font Awesome 5 Free";
     content: "\f002";
 }
 
 .icon-shopping-card:before {
-    font-family: "Font Awesome 5 Free";
     content: "\f07a";
 }
 
@@ -11627,10 +11621,14 @@ button.swiper-pagination-bullet {
 }
 .icon-times-circle:before {
   content: "\e94a";
-}
+}*/
+
 .icon-times:before {
-  content: "\e94b";
+    content: "\f00d";
 }
+
+
+/*
 .icon-trash-alt:before {
   content: "\e94c";
 }
