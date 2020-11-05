@@ -2,8 +2,8 @@
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
     <div class="product-list">
       <div class="product-list__image-safe">
-        <a
-          :href="ProductHref"
+        <router-link
+          :to="{name: 'ProductPage' ,params:{id:productData.id, producthref:ProductHref}}"
           title=""
           class="product-list__image-safe-link sld product-pic-slider owl-carousel owl-loaded owl-drag"
         >
@@ -36,21 +36,21 @@
             </button>
           </div>
           <div class="owl-dots disabled"></div
-        ></a>
+        ></router-link>
         <ul class="img-slide-thumbs">
           <li v-class="{active: isActive(n)}" :style="`width:` + percentSlideThumbs +`%`" v-for="n in productData.images.length" :key="n"></li>
         </ul>
       </div>
 
       <div class="product-list__content">
-        <a :href="ProductHref" class="product-list__link">
+        <router-link :to="{name: 'ProductPage' ,params:{id:productData.id, producthref:ProductHref}}" class="product-list__link">
           <div class="product-list__product-code">
             {{ productData.id }}
           </div>
           <div class="product-list__product-name">
             {{ productData.name }}
           </div>
-        </a>
+        </router-link>
         <div class="product-list__cost">
           <span class="product-list__price">{{formatPrice(productData.cost)}}</span>
           <span class="product-list__currency"> TL</span>
@@ -92,7 +92,7 @@ export default {
           return 100/this.productData.images.length;
       },     
       ProductHref(){
-          return "/"+ this.productData.name.toLowerCase().replace(/\s/g, '-')+".html"
+          return this.productData.name.toLowerCase().replace(/\s/g, '-')+".html"
       }
   },
   props: {},

@@ -54,6 +54,11 @@ const routes = [
     path: "/hizli-teslimat",
     name: "HizliTeslimat",
     component: () => import(/*webpackChunkName:"HizliTeslimat"*/ "../views/HizliTeslimat.vue")
+  },
+  {
+    path: '/:producthref',
+    name: 'ProductPage',
+    component: () => import(/*webpackChunkName:"UrunSayfasi"*/ "../views/UrunSayfasi.vue")
   }
 ];
 
