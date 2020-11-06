@@ -70,6 +70,12 @@ const routes = [
     name: "ProductPage",
     component: () =>
       import(/*webpackChunkName:"UrunSayfasi"*/ "../views/UrunSayfasi.vue")
+  },
+  {
+    path: "/:loginhref",
+    name: "LoginPage",
+    component: () =>
+      import(/*webpackChunkName:"LoginPage"*/ "../views/LoginPage.vue")
   }
 ];
 

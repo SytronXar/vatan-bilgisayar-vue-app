@@ -52,7 +52,7 @@
                     </button>
                     <ul
                       class="dropdown-menu dropdown-menu-home account"
-                      v-show="loginTime"
+                      v-show="parent_open && loginStatus === true"
                     >
                       <li><a href="/uyeBilgi/uyeBilgi">Üyeliğim</a></li>
                       <li><a href="/uyeBilgi/siparistakip">Siparişlerim</a></li>
@@ -68,15 +68,32 @@
                         ></a>
                       </li>
                     </ul>
-                    <ul class="dropdown-menu dropdown-menu-home hide login">
+                    <ul
+                      class="dropdown-menu dropdown-menu-home login"
+                      v-show="parent_open && loginStatus === false"
+                    >
                       <li>
-                        <a href="/login?returnUrl=%2F&amp;logtab=signin"
-                          >Giriş Yap</a
+                        <router-link
+                          :to="{
+                            name: 'LoginPage',
+                            params: {
+                              openLogin: true,
+                              loginhref: 'signin'
+                            }
+                          }"
+                          >Giriş Yap</router-link
                         >
                       </li>
                       <li>
-                        <a href="/login?returnUrl=%2F&amp;logtab=signup"
-                          >Üye Ol</a
+                        <router-link
+                          :to="{
+                            name: 'LoginPage',
+                            params: {
+                              openLogin: false,
+                              loginhref: 'signup'
+                            }
+                          }"
+                          >Üye Ol</router-link
                         >
                       </li>
                     </ul>
@@ -124,12 +141,18 @@
 </style>
 <script>
 import TheTopBar from "@/components/TheTopBar";
+import LoginData from "@/LoginData";
 export default {
   components: {
     TheTopBar
   },
   computed: {},
   props: {},
+  data() {
+    return {
+      loginStatus: LoginData.loginStatus
+    };
+  },
   methods: {
     OpenDropdown(event) {
       var Target = event.target;
@@ -139,11 +162,13 @@ export default {
     CloseDropdown(event) {
       var Target = event.target;
       Target.setAttribute("aria-expanded", true);
-      Target.parentElement.classList.remove("open");
+      setTimeout(() => Target.parentElement.classList.remove("open"),100);
     },
-    loginTime(event) {
+    parent_open(event) {
       var Target = event.target;
-      return Target.parentElement.classList.contains("open");
+      return (
+        Target.parentElement.classList.contains("open")
+      );
     }
   }
 };
