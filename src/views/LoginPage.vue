@@ -1,3 +1,22 @@
+<script>
+// @ is an alias to /src
+
+import Products from "@/Products";
+export default {
+  name: "UrunSayfasi",
+  computed: {
+    productData() {
+      return Products.data.find(data => data.id === this.productId);
+    }
+  },
+  data() {
+    return {
+      productId: this.$route.params.id,
+      openLogin: this.$route.params.openLogin,
+    };
+  }
+};
+</script>
 <template>
   <main>
 
@@ -5,21 +24,21 @@
       <div class="clearfix">
         <div id="signup-form-container" class=" signup-form">
           <ul class="nav" id="loginTab">
-            <li class="active">
+            <li :class="{ active: openLogin === true }">
               <a
                 href="#signin-section"
                 id="signin"
                 data-toggle="tab"
-                aria-expanded="true"
+                aria-expanded="openLogin === true"
                 >Giriş Yap</a
               >
             </li>
-            <li class="">
+            <li :class="{ active: openLogin === false }">
               <a
                 href="#signup-section"
                 id="signup"
                 data-toggle="tab"
-                aria-expanded="false"
+                aria-expanded="openLogin === false"
                 >Üye Ol</a
               >
             </li>
