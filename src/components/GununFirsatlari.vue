@@ -1,13 +1,4 @@
-<script>
-import Zeki from "@/components/Zeki";
-import ProductButton from "@/components/TheProductButton";
-export default {
-  components: {
-    Zeki,
-    ProductButton
-  }
-};
-</script>
+
 <template>
   <div class="opportunity opportunity--home">
     <div
@@ -33,7 +24,11 @@ export default {
       <div class="opportunity-content clearfix">
         <div class="row">
           <!--V-for ile sıfırdan yapılacak-->
-          <ProductButton  v-for="n in 12" :key="n" />
+          <ProductButton
+            :productId="getProductID(index)"
+            v-for="(n, index) in getMaxAvailableListCount(12)"
+            :key="n"
+          />
         </div>
       </div>
       <div class="text-center">
@@ -45,3 +40,33 @@ export default {
     </div>
   </div>
 </template>
+<script>
+import Zeki from "@/components/Zeki";
+import ProductButton from "@/components/TheProductButton";
+import Products from "@/Products";
+export default {
+  components: {
+    Zeki,
+    ProductButton
+  },
+
+  data() {
+    return {
+      productsData: Products.data
+    };
+  },
+
+  computed: {},
+  methods: {
+    getProductID(index) {
+      return this.productsData[index].id;
+    },
+    getMaxAvailableListCount(number) {
+      if (this.productsData.length < number) return this.productsData.length;
+      return number;
+    }
+  }
+};
+</script>
+
+ 

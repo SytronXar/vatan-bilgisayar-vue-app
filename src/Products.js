@@ -1,5 +1,5 @@
 export default {
-    Products: [
+    data: [
         {
             id: 111981,
             code: "UX363EA-EM045T",
@@ -13,7 +13,7 @@ export default {
             maxInstallmentCount: 6, /* taksit sayısı */
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                88816,
+                88816,84459,104988
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/111981_large.jpg",
@@ -81,7 +81,7 @@ export default {
 
             ],
             images: [
-                "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg", ,
+                "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg", 
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-1_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-2_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-3_large.jpg",
