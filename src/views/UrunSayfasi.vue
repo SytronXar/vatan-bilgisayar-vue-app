@@ -11,8 +11,15 @@ export default {
   },
   data() {
     return {
-      productId: this.$route.params.id
+      productId: this.$route.params.id,
+      currentimg:0
     };
+  },
+  methods:{
+    updateimg(index)
+    {
+      this.currentimg=index
+    }
   }
 };
 </script>
@@ -50,7 +57,7 @@ export default {
                   <a
                     href="https://www.vatanbilgisayar.com/dell/oyun-bilgisayari"
                     class="bradcrumb-item"
-                    >DELL</a
+                    >{{currentimg}}</a
                   >
                 </li>
                 <li>
@@ -205,7 +212,7 @@ export default {
                                             href="javascript:void(0);"
                                           >
                                             <img
-                                              data-src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-13_large.jpg"
+                                              src=""
                                               class="owl-lazy img-responsive wrapper-main-slider__image"
                                               alt='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
                                               title='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
@@ -240,7 +247,7 @@ export default {
                                             href="javascript:void(0);"
                                           >
                                             <img
-                                              data-src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-1_large.jpg"
+                                              src=""
                                               class="owl-lazy img-responsive wrapper-main-slider__image"
                                               alt='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
                                               title='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
@@ -309,11 +316,12 @@ export default {
                                             class="lightbox-item"
                                             href="javascript:void(0);"
                                           >
+                                          <!--Resim-->
                                             <img
                                               class="owl-lazy img-responsive wrapper-main-slider__image lazy-init"
                                               alt='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
                                               title='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
-                                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
+                                              :src="productData.images[currentimg]"
                                               style="opacity: 1;"
                                             />
                                           </a>
@@ -644,32 +652,11 @@ export default {
                             <span></span>
                           </button>
                         </div>
+                       <!--Vfor ile çoğaltılacak-->
                         <div class="owl-t-container">
-                          <button class="owl-t-container-item active">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            /></button
-                          ><button class="owl-t-container-item">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            /></button
-                          ><button class="owl-t-container-item">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            /></button
-                          ><button class="owl-t-container-item">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            /></button
-                          ><button class="owl-t-container-item">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            /></button
-                          ><button class="owl-t-container-item">
-                            <img
-                              src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg"
-                            />
-                          </button>
+                          <button  v-for="(image,index) in productData.images" v-bind:key="image" @mouseover="updateimg(index)" class="owl-t-container-item active">
+                            <img :src="image"
+                            /></button>
                         </div>
                       </div>
                     </div>
@@ -679,9 +666,9 @@ export default {
                       href="https://www.vatanbilgisayar.com/dell/oyun-bilgisayari"
                     >
                       <img
-                        src="https://cdn.vatanbilgisayar.com/Upload//MARKA/dell/dell.jpg"
-                        alt="DELL"
-                        title="DELL"
+                        v-bind:src="productData.markalogosu"
+                        :alt="productData.code"
+                        :title="productData.code"
                       />
                       <span></span>
                     </a>
