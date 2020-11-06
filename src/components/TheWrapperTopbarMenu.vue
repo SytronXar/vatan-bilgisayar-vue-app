@@ -16,7 +16,11 @@
               </a>
             </div>
             <ul class="nav navbar-nav">
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/telefonlar/">Telefon</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -366,7 +370,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/bilgisayar/">Bilgisayar</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -1401,7 +1409,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/bilgisayar-bilesenleri/"
                   >Bilgisayar Par&ccedil;aları</a
                 >
@@ -2829,7 +2841,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/fotograf-makinesi-video-kamera"
                   >Kamera</a
                 >
@@ -2944,7 +2960,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/tv-ev-elektronigi/"
                   >Tv &amp; Ev Elektroniği</a
                 >
@@ -3140,7 +3160,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/ofis-malzemeleri/">Ofis</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -3298,7 +3322,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/aksesuarlar/">Aksesuar</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -3507,7 +3535,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/oyun-hobi">Oyun &amp; Hobi</a>
                 <div class="dropdown-menu">
                   <div class="row">
@@ -3651,7 +3683,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/elektrikli-ev-aletleri/"
                   >Ev Aletleri</a
                 >
@@ -3885,7 +3921,11 @@
                   </div>
                 </div>
               </li>
-              <li class="dropdown" @mouseenter="OpenDropdown" @mouseleave="CloseDropdown">
+              <li
+                class="dropdown"
+                @mouseenter="OpenDropdown"
+                @mouseleave="CloseDropdown"
+              >
                 <a class="nav-first-link" href="/spor-aletleri/"
                   >Spor &amp; Outdoor</a
                 >
@@ -4067,27 +4107,21 @@
 
 <script>
 export default {
-  components: {
-    
-  },
-  computed:{
-
-  },
-  props:{
-
-  },
+  components: {},
+  computed: {},
+  props: {},
   methods: {
-    OpenDropdown(event) { 
-        var Target=event.target;
-        Target.classList.add("open");  
+    OpenDropdown(event) {
+      var Target = event.target;
+      Target.classList.add("open");
     },
-    CloseDropdown(event) { 
-        var Target=event.target;     
-        Target.classList.remove("open");  
+    CloseDropdown(event) {
+      var Target = event.target;
+      Target.classList.remove("open");
     },
-    loginTime(event){  
-        var Target=event.target;
-        return Target.parentElement.classList.contains('open');
+    loginTime(event) {
+      var Target = event.target;
+      return Target.parentElement.classList.contains("open");
     }
   }
 };

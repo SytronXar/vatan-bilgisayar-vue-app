@@ -1,4 +1,3 @@
-
 <template>
   <div class="opportunity opportunity--home">
     <div
@@ -26,7 +25,7 @@
           <!--V-for ile sıfırdan yapılacak-->
           <ProductButton
             :productId="getProductID(index)"
-            v-for="(n, index) in getMaxAvailableListCount(12)"
+            v-for="(n, index) in getMaxAvailableListCount(17)"
             :key="n"
           />
         </div>
@@ -68,5 +67,3 @@ export default {
   }
 };
 </script>
-
- 

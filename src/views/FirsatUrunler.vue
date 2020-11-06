@@ -1,5 +1,5 @@
 <template>
-  <div class="firsat-urunler"> 
+  <div class="firsat-urunler">
     <h2>Fırsat Ürünler</h2>
   </div>
 </template>
@@ -9,8 +9,6 @@
 
 export default {
   name: "FirsatUrunler",
-  components: {
-    
-  }
+  components: {}
 };
 </script>

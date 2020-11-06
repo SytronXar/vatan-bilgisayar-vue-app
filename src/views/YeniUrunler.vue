@@ -9,8 +9,6 @@
 
 export default {
   name: "YeniUrunler",
-  components: {
-    
-  }
+  components: {}
 };
 </script>

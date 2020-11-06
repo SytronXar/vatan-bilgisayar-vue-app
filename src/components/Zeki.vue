@@ -1,7 +1,11 @@
 <template>
   <transition name="list">
-    <div id="smallBanner" class="small-banner hidden-sm hidden-xs" v-show="bannerActive">
-      <div class="global-container" >
+    <div
+      id="smallBanner"
+      class="small-banner hidden-sm hidden-xs"
+      v-show="bannerActive"
+    >
+      <div class="global-container">
         <a href="https://zeki.vatanbilgisayar.com/">
           <img
             src="https://cdn.vatanbilgisayar.com/Upload/BANNER//zeki/zeki2.jpg"

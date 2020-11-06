@@ -53,7 +53,13 @@
           ></li>
         </ul>
       </div>
-
+      <!-- Yeni ürün labeli -->
+      <div class="product-list__badge-bar" v-show="isNewProduct()">
+        <div class="in-wrapper-condition">
+          <span class="icong-yeniurun"></span
+          ><span class="wrapper-condition__text">YENİ ÜRÜN</span>
+        </div>
+      </div>
       <div class="product-list__content">
         <router-link
           :to="{
@@ -106,6 +112,7 @@
 </template>
 <script>
 import Products from "@/Products";
+import moment from "moment";
 export default {
   data() {
     return {
@@ -138,6 +145,15 @@ export default {
     formatPrice(value) {
       let val = (value / 1).toFixed(0).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    },
+    isNewProduct() {
+      var diff = moment().diff(
+        this.productData.productLaunchTime,
+        "years",
+        true
+      );
+      console.log("fark: " + diff);
+      return diff < 0.2;
     }
   }
 };

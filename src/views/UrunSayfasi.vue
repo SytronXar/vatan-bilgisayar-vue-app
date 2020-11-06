@@ -1,23 +1,20 @@
-
 <script>
 // @ is an alias to /src
 
-import Products from "@/Products"
+import Products from "@/Products";
 export default {
   name: "UrunSayfasi",
   computed: {
-    productData(){
-      return Products.data.find(
-        data =>data.id===this.productId
-      )
-    },
+    productData() {
+      return Products.data.find(data => data.id === this.productId);
+    }
   },
   data() {
     return {
       productId: this.$route.params.id
     };
   }
-}
+};
 </script>
 <template>
   <body class="has-top-banner" tabindex="0">
@@ -83,13 +80,11 @@ export default {
             <a
               href="https://www.vatanbilgisayar.com/dell-g315-core-i5-10300h-2-5ghz-8gb-ram-512gb-ssd-gtx1650ti-4gb-15-6-w10.html#"
             >
-              <span
-                >{{productData.name}}</span
-              >
+              <span>{{ productData.name }}</span>
             </a>
           </div>
           <div class="d-cell col-sm-3 col-xs-3 short-price">
-            <span class="product-list__price">{{productData.cost}}</span>
+            <span class="product-list__price">{{ productData.cost }}</span>
             <span class="product-list__currency">TL</span>
           </div>
           <div class="d-cell col-xs-12 short-basket-button">
@@ -797,7 +792,7 @@ export default {
                             class="product-list__product-code pull-left"
                             data-productcode="G315-4B30W85C"
                           >
-                            {{productData.code}} / {{productData.id}}
+                            {{ productData.code }} / {{ productData.id }}
                           </div>
                         </div>
 
@@ -805,7 +800,7 @@ export default {
                           class="product-list__content product-detail-big-price"
                         >
                           <h1 class="product-list__product-name">
-                            {{productData.name}}
+                            {{ productData.name }}
                           </h1>
 
                           <div
@@ -814,7 +809,9 @@ export default {
                             <h3
                               class="product-list_explanation product-list__description-text"
                             ></h3>
-                            <span class="product-list__price">{{productData.cost}}</span>
+                            <span class="product-list__price">{{
+                              productData.cost
+                            }}</span>
                             <span class="product-list__currency">TL</span>
                           </div>
                           <a
@@ -4774,4 +4771,3 @@ export default {
     </main>
   </body>
 </template>
-

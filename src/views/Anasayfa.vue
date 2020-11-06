@@ -1,13 +1,13 @@
 <template>
   <div class="anasayfa">
-    <GununFirsatlari/>
+    <GununFirsatlari />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 
-import GununFirsatlari from "@/components/GununFirsatlari"
+import GununFirsatlari from "@/components/GununFirsatlari";
 export default {
   name: "Anasayfa",
   components: {

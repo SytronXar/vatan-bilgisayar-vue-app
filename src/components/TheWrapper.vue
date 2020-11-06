@@ -8,10 +8,7 @@
             <div class="navbar-header__content no-padding">
               <div class="navbar-header__area">
                 <a class="navbar-brand" href="/">
-                  <img
-                    src="../assets/logo.png"
-                    alt="Vatan Bilgisayar"
-                  />
+                  <img src="../assets/logo.png" alt="Vatan Bilgisayar" />
                 </a>
               </div>
               <div class="navbar-header__area">
@@ -53,7 +50,10 @@
                       <span class="icon-user"></span>
                       <span id="type">GİRİŞ</span>
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-home account" v-show="loginTime"> 
+                    <ul
+                      class="dropdown-menu dropdown-menu-home account"
+                      v-show="loginTime"
+                    >
                       <li><a href="/uyeBilgi/uyeBilgi">Üyeliğim</a></li>
                       <li><a href="/uyeBilgi/siparistakip">Siparişlerim</a></li>
                       <li>
@@ -93,11 +93,10 @@
                       class="btn btn-primary btn-basket dropdown-toggle"
                       aria-haspopup="true"
                       aria-expanded="true"
-                      @mouseenter="OpenDropdown"                      
+                      @mouseenter="OpenDropdown"
                       @mouseleave="CloseDropdown"
                     >
-                      <span class="icon-shopping-card"
-                        ></span>
+                      <span class="icon-shopping-card"></span>
                       <span class="btn-basket--text">SEPETİM</span>
                       <span class="btn-basket--count">0</span>
                     </button>
@@ -129,26 +128,22 @@ export default {
   components: {
     TheTopBar
   },
-  computed:{
-
-  },
-  props:{
-
-  },
+  computed: {},
+  props: {},
   methods: {
-    OpenDropdown(event) { 
-        var Target=event.target;
-        Target.setAttribute("aria-expanded", false);
-        Target.parentElement.classList.add("open");  
+    OpenDropdown(event) {
+      var Target = event.target;
+      Target.setAttribute("aria-expanded", false);
+      Target.parentElement.classList.add("open");
     },
-    CloseDropdown(event) { 
-        var Target=event.target;
-        Target.setAttribute("aria-expanded", true);      
-        Target.parentElement.classList.remove("open");  
+    CloseDropdown(event) {
+      var Target = event.target;
+      Target.setAttribute("aria-expanded", true);
+      Target.parentElement.classList.remove("open");
     },
-    loginTime(event){  
-        var Target=event.target;
-        return Target.parentElement.classList.contains('open');
+    loginTime(event) {
+      var Target = event.target;
+      return Target.parentElement.classList.contains("open");
     }
   }
 };

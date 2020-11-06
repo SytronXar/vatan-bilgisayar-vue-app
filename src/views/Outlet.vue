@@ -1,5 +1,5 @@
 <template>
-  <div class="outlet">  
+  <div class="outlet">
     <h2>Outlet</h2>
   </div>
 </template>
@@ -9,8 +9,6 @@
 
 export default {
   name: "Outlet",
-  components: {
-    
-  }
+  components: {}
 };
 </script>

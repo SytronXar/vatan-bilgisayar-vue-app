@@ -9,8 +9,6 @@
 
 export default {
   name: "HizliTeslimat",
-  components: {
-    
-  }
+  components: {}
 };
 </script>

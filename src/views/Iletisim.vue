@@ -9,8 +9,6 @@
 
 export default {
   name: "Iletisim",
-  components: {
-    
-  }
+  components: {}
 };
 </script>
