@@ -3,9 +3,10 @@
     <div class="product-list">
       <div class="product-list__image-safe">
         <router-link
+          :id="productData.id"
           :to="{
             name: 'ProductPage',
-            params: { id: productData.id, producthref: ProductHref }
+            params: { productId: productData.id, producthref: ProductHref }
           }"
           title=""
           class="product-list__image-safe-link sld product-pic-slider owl-carousel owl-loaded owl-drag"
@@ -54,14 +55,22 @@
         </ul>
       </div>
       <!-- Son * ürün labeli -->
-      <div class="product-list__campaign-bar only-web flash-animated" v-show="isLowInStock()">
+      <div
+        class="product-list__campaign-bar only-web flash-animated"
+        v-show="isLowInStock()"
+      >
         <span> Web'e Özel</span
         ><span
-          ><span> Bu Fiyata<span> Son {{productData.inStock}} Ürün</span></span></span
+          ><span>
+            Bu Fiyata<span> Son {{ productData.inStock }} Ürün</span></span
+          ></span
         >
       </div>
       <!-- Yeni ürün labeli -->
-      <div class="product-list__badge-bar" v-show="isNewProduct()&&!isLowInStock()">
+      <div
+        class="product-list__badge-bar"
+        v-show="isNewProduct() && !isLowInStock()"
+      >
         <div class="in-wrapper-condition">
           <span class="icong-yeniurun"></span
           ><span class="wrapper-condition__text">YENİ ÜRÜN</span>
@@ -71,7 +80,7 @@
         <router-link
           :to="{
             name: 'ProductPage',
-            params: { id: productData.id, producthref: ProductHref }
+            params: { productId: productData.id, producthref: ProductHref }
           }"
           class="product-list__link"
         >
@@ -161,7 +170,7 @@ export default {
       );
       return diff < 0.2;
     },
-    isLowInStock(){
+    isLowInStock() {
       return this.productData.inStock <= 30;
     }
   }

@@ -9,42 +9,56 @@ export default {
       return Products.data.find(data => data.id === this.productId);
     }
   },
+  props: {
+    openLogin: {
+      type: String,
+      required: true
+    }
+  },
   data() {
-    return {
-      productId: this.$route.params.id,
-      openLogin: this.$route.params.openLogin,
-    };
+    return {};
   }
 };
 </script>
 <template>
   <main>
-
     <main class="signup basket-signup clear-singin">
       <div class="clearfix">
         <div id="signup-form-container" class=" signup-form">
           <ul class="nav" id="loginTab">
             <li :class="{ active: openLogin === true }">
-              <a
-                href="#signin-section"
+              <router-link
+                :to="{
+                  name: 'LoginPage',
+                  params: {
+                    openLogin: true,
+                    loginhref: 'signin'
+                  }
+                }"
                 id="signin"
                 data-toggle="tab"
-                aria-expanded="openLogin === true"
-                >Giriş Yap</a
+                :aria-expanded="openLogin === true"
+                >Giriş Yap</router-link
               >
             </li>
             <li :class="{ active: openLogin === false }">
-              <a
-                href="#signup-section"
+              <router-link
+                :to="{
+                  name: 'LoginPage',
+                  params: {
+                    openLogin: false,
+                    loginhref: 'signup'
+                  }
+                }"
                 id="signup"
                 data-toggle="tab"
-                aria-expanded="openLogin === false"
-                >Üye Ol</a
+                :aria-expanded="openLogin === false"
+                >Üye Ol</router-link
               >
             </li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane collapse fade active in" id="signin-section">
+            <div class="tab-pane collapse fade " :class="{ 'active in': openLogin === true }" id="signin-section">
               <form
                 action="/login?returnUrl=%2F"
                 class="form-horizontal"
@@ -136,12 +150,12 @@ export default {
                     href="javascript:void(0)"
                     onclick="loginWithFacebook()"
                     class="signup-form__facebook-login"
-                    ><i class="icon-facebook"></i>FACEBOOK İLE BAĞLAN</a
+                    ><i class="fab fa-facebook-f"></i>FACEBOOK İLE BAĞLAN</a
                   >
                 </div>
               </form>
             </div>
-            <div class="tab-pane" id="signup-section">
+            <div class="tab-pane" id="signup-section" :class="{ 'active in': openLogin === false }">
               <form
                 action="/Account/Register?returnUrl=%2F"
                 class="form-horizontal"
@@ -321,7 +335,10 @@ export default {
             <div class="tab-pane collapse fade"></div>
           </div>
           <div class="signup-form__footer">
-            <img src="/assets/dist/images/signup_logos.png" alt="Logos" />
+            <img
+              src="https://www.vatanbilgisayar.com/assets/dist/images/signup_logos.png"
+              alt="Logos"
+            />
           </div>
         </div>
       </div>

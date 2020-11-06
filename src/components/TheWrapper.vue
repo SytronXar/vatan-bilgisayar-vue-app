@@ -78,7 +78,7 @@
                             name: 'LoginPage',
                             params: {
                               openLogin: true,
-                              loginhref: 'signin'
+                              loginhref: 'signin' 
                             }
                           }"
                           >Giriş Yap</router-link

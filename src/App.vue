@@ -3,7 +3,7 @@
     <FastShippingAd />
     <TheWrapper />
     <CategoryDropbar />
-    <router-view />
+    <router-view :key="$route.path"/>
     <BottomOfPage/>
   </div>
 </template>

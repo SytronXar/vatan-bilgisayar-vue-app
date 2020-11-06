@@ -9,9 +9,14 @@ export default {
       return Products.data.find(data => data.id === this.productId);
     }
   },
+  props:{
+    productId:{
+      type:String,
+      required:true
+    }
+  },
   data() {
     return {
-      productId: this.$route.params.id,
       currentimg:0
     };
   },
