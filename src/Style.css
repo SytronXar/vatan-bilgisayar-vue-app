@@ -26742,6 +26742,21 @@ input.apple-switch:checked:after {
   .icon-phone-alt{
     content:"\f879"
   }
+  .headset{
+    content:"\f098"
+  }
+  .icon-calendar{
+    content:"\f073"
+  }
+  .daily-delivery{
+    content:"\f4de"
+  }
+  .icon-truck-line{
+    content:"\f48b"
+  }
+  .icon-motorcycle{
+    content:"\f21c"
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;
