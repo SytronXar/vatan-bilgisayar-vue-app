@@ -120,10 +120,6 @@ export default {
     formatPrice(value) {
       let val = (value / 1).toFixed(0).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    },
-    getSlideThumbsClass(n) {
-      var active = n === this.currentShowImageIndex;
-      return{'active' : active}
     }
   }
 };

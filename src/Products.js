@@ -508,8 +508,8 @@ export default {
                 {
                     info1:"Uyumlu Olduğu",info1_detail:"Universal",
                     info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Uyumlu Olduğu",info4_detail:"Universal 15.6",
-                    info4:"Menşei:",info5_detail:"Çin",
+                    info3:"Uyumlu Olduğu",info3_detail:"Universal 15.6",
+                    info4:"Menşei:",info4_detail:"Çin",
                     info5:"Renk",info5_detail:"Koyu Gri",
                     info6:"Marka",info6_detail:"Caselogic"
                 }
