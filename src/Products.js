@@ -20,6 +20,7 @@ export default {
       fastShipping: true /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:8,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         72441,
@@ -84,6 +85,7 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
+      inStock:100,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/v2-88816_large.jpg",
@@ -144,6 +146,7 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
+      inStock:100,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/TeoriV2-84459_large.jpg"
@@ -164,6 +167,7 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
+      inStock:30,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg",
@@ -227,6 +231,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:18,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         111981,
@@ -319,6 +324,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -354,6 +360,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         111981,
@@ -440,6 +447,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:22,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -471,6 +479,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:221,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -503,6 +512,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:300,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -535,6 +545,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:11,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -568,6 +579,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:5,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -601,6 +613,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -633,6 +646,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         72441,
@@ -719,6 +733,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         72441,
@@ -779,6 +794,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:15,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         72441,
@@ -841,6 +857,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:50,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         9105,
@@ -919,6 +936,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
+      inStock:100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         72441,

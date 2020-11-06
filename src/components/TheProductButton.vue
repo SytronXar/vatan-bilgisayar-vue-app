@@ -53,8 +53,15 @@
           ></li>
         </ul>
       </div>
+      <!-- Son * ürün labeli -->
+      <div class="product-list__campaign-bar only-web flash-animated" v-show="isLowInStock()">
+        <span> Web'e Özel</span
+        ><span
+          ><span> Bu Fiyata<span> Son {{productData.inStock}} Ürün</span></span></span
+        >
+      </div>
       <!-- Yeni ürün labeli -->
-      <div class="product-list__badge-bar" v-show="isNewProduct()">
+      <div class="product-list__badge-bar" v-show="isNewProduct()&&!isLowInStock()">
         <div class="in-wrapper-condition">
           <span class="icong-yeniurun"></span
           ><span class="wrapper-condition__text">YENİ ÜRÜN</span>
@@ -152,8 +159,10 @@ export default {
         "years",
         true
       );
-      console.log("fark: " + diff);
       return diff < 0.2;
+    },
+    isLowInStock(){
+      return this.productData.inStock <= 30;
     }
   }
 };
