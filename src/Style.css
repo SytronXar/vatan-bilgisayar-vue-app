@@ -26724,6 +26724,24 @@ input.apple-switch:checked:after {
   .responsive-tables tbody tr:nth-child(odd) {
     background-color: #fff;
   }
+  .icon-instagram{
+    content:"\f16d"
+  }
+  .icon-youtube{
+    content:"\f167"
+  }
+  .icon-facebook{
+    content:"\f39e"
+  }
+  .icon-twitter{
+    content:"\f099"
+  }
+  .icon-map-marker-alt{
+    content:"\f3c5"
+  }
+  .icon-phone-alt{
+    content:"\f879"
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;

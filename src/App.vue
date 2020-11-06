@@ -4,17 +4,20 @@
     <TheWrapper />
     <CategoryDropbar />
     <router-view />
+    <BottomOfPage/>
   </div>
 </template>
 <script>
 import TheWrapper from "@/components/TheWrapper";
 import CategoryDropbar from "@/components/CategoryDropbar";
 import FastShippingAd from "@/components/FastShippingAd";
+import BottomOfPage from "@/components/BottomOfPage";
 export default {
   components: {
     TheWrapper,
     CategoryDropbar,
-    FastShippingAd
+    FastShippingAd,
+    BottomOfPage
   }
 };
 </script>
