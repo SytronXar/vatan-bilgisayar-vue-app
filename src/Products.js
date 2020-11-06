@@ -12,15 +12,15 @@ export default {
             cost: 19635,
             productLaunchTime: '2020-11-05', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
-            fastShipping: false, /* hızlı kargo */
+            fastShipping: true, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                72441,103828,111981,110768,79651,300873,69791,9105,109276,89614,
+                72441, 103828, 111981, 110768, 79651, 300873, 69791, 9105, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/111981_large.jpg",
@@ -32,22 +32,23 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/111981-6_large.jpg"
             ],
             /*Urun detay*/
-            moreInformation:[
+            moreInformation: [
                 {
-                    info1:"Pil Hücre Sayısı:",info1_detail:"4 Hücreli",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"12 MB",
-                    info3:"İşlemci Teknolojisi:",info3_detail:"Core i7",
-                    info4:"İşlemci Numarası:",info4_detail:"1165G7",
-                    info5:"Pil Kimyası:",info5_detail:"Lityum Polimer",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"İşlemci Hızı:",info7_detail:"2.8 GHz Turbo",
-                    info8:"İşlemci Çekirdek",info8_detail:"4 Çekirdek"
-                }
+                    info: "Pil Hücre Sayısı:", info_detail: "4 Hücreli"
+                },
+                { info: "İşlemci Ön Bellek:", info_detail: "12 MB" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" },
+                { info: "İşlemci Numarası:", info_detail: "1165G7" },
+                { info: "Pil Kimyası:", info_detail: "Lityum Polimer" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Hızı:", info_detail: "2.8 GHz Turbo" },
+                { info: "İşlemci Çekirdek", info_detail: "4 Çekirdek" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
 
@@ -59,12 +60,12 @@ export default {
             cost: 413,
             productLaunchTime: '2020-08-10',
             rate: 5,
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
             ratedPersonCount: 17,
             freeShipping: true,
             fastShipping: false,
             maxInstallmentCount: 6,
-            productType:"Ekstra Ürünler",
+            productType: "Ekstra Ürünler",
             advicedProducts: [
 
             ],
@@ -74,22 +75,22 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/v2-88816-2_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/v2-88816-3_large.jpg"
             ],
-            moreInformation:[
-                {
-                    info1:"Ön Bellek:",info1_detail:"1 MB",
-                    info2:"DVD Okuma Hızı:",info2_detail:"8X",
-                    info3:"CD Okuma&Yazma",info3_detail:"24X16X24",
-                    info4:"Bağlantı Özellikleri:",info4_detail:"USB 2.0",
-                    info5:"Dahili / Harici:",info5_detail:"Harici",
-                    info6:"DVD Yazma Hızı:",info6_detail:"8X",
-                    info7:"Bağlantı Özellikleri:",info7_detail:"USB 3.1 Type-C",
-                    info8:"Üretici Part",info8_detail:"90DD02A0-"
-                }
+            moreInformation: [
+
+                { info: "Ön Bellek:", info_detail: "1 MB" },
+                { info: "DVD Okuma Hızı:", info_detail: "8X" },
+                { info: "CD Okuma&Yazma", info_detail: "24X16X24" },
+                { info: "Bağlantı Özellikleri:", info_detail: "USB 2.0" },
+                { info: "Dahili / Harici:", info_detail: "Harici" },
+                { info: "DVD Yazma Hızı:", info_detail: "8X" },
+                { info: "Bağlantı Özellikleri:", info_detail: "USB 3.1 Type-C" },
+                { info: "Üretici Part", info_detail: "90DD02A0-" }
+
             ],
-            Comments:[
-                { date:"2020-07-29",time:"23:21:00",rate:"5",name:"Emre Yılmaz",highlight_comment:"Severek kullanmaktayım",comment:"Çok kaliteli ve çok sesiz" },
-                { date:"2020-07-17",time:"12:12:00",rate:"5",name:"Emre Can Duyar",highlight_comment:"İnce ve şık",comment:"İnce ve şık tasarıma sahip. Notebook için aldım ve çok kullanışlı bir ürün." },
-                { date:"2020-06-24",time:"16:26:00",rate:"5",name:"aslı güngör",highlight_comment:"F/P",comment:"tasarımı iyi sorunsuz çalışıyor. Type C kablosu avantaj" }                
+            Comments: [
+                { date: "2020-07-29", time: "23:21:00", rate: "5", name: "Emre Yılmaz", highlight_comment: "Severek kullanmaktayım", comment: "Çok kaliteli ve çok sesiz" },
+                { date: "2020-07-17", time: "12:12:00", rate: "5", name: "Emre Can Duyar", highlight_comment: "İnce ve şık", comment: "İnce ve şık tasarıma sahip. Notebook için aldım ve çok kullanışlı bir ürün." },
+                { date: "2020-06-24", time: "16:26:00", rate: "5", name: "aslı güngör", highlight_comment: "F/P", comment: "tasarımı iyi sorunsuz çalışıyor. Type C kablosu avantaj" }
             ]
         },
         {
@@ -99,12 +100,12 @@ export default {
             cost: 550,
             productLaunchTime: '2020-08-10',
             rate: 5,
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/microsoft/microsoft.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/microsoft/microsoft.jpg",
             ratedPersonCount: 17,
             freeShipping: true,
             fastShipping: false,
             maxInstallmentCount: 6,
-            productType:"Ekstra Ürünler",
+            productType: "Ekstra Ürünler",
             advicedProducts: [
 
             ],
@@ -119,38 +120,38 @@ export default {
             cost: 4355,
             productLaunchTime: '2020-08-10',
             rate: 0,
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
             ratedPersonCount: 0,
             freeShipping: true,
             fastShipping: false,
             maxInstallmentCount: 6,
-            productType:"Ekstra Ürünler",
+            productType: "Ekstra Ürünler",
             advicedProducts: [
 
             ],
             images: [
-                "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg", 
+                "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-1_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-2_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-3_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988-4_large.jpg"
             ],
-            moreInformation:[
-                {
-                    info1:"Tepki Süresi (ms):",info1_detail:"5",
-                    info2:"Yenileme Hızı:",info2_detail:"60Hz",
-                    info3:"Çözünürlük",info3_detail:"1920 x 1080",
-                    info4:"Ekran Renk Sayısı:",info4_detail:"262 Bin",
-                    info5:"Parlaklık:",info5_detail:"250 cd/m2",
-                    info6:"Ekran Boyutu:",info6_detail:"15.6 inch",
-                    info7:"Görüntü Formatı:",info7_detail:"16:9",
-                    info8:"Piksel Aralığı:",info8_detail:"0.179mm"
-                }
+            moreInformation: [
+
+                { info: "Tepki Süresi (ms):", info_detail: "5" },
+                { info: "Yenileme Hızı:", info_detail: "60Hz" },
+                { info: "Çözünürlük", info_detail: "1920 x 1080" },
+                { info: "Ekran Renk Sayısı:", info_detail: "262 Bin" },
+                { info: "Parlaklık:", info_detail: "250 cd/m2" },
+                { info: "Ekran Boyutu:", info_detail: "15.6 inch" },
+                { info: "Görüntü Formatı:", info_detail: "16:9" },
+                { info: "Piksel Aralığı:", info_detail: "0.179mm" }
+
             ],
-            Comments:[
-                { date:"2020-06-09",time:"15:54:00",rate:"5",name:"Toprak Aygün",highlight_comment:"Mükemmel Monitör",comment:"Ürünü yeni aldım şiddetle tavsiye ederim" },
-                { date:"2020-08-27",time:"00:33:00",rate:"5",name:"engin yöner",highlight_comment:"ÇOK KULLANIŞLI",comment:"Şık, kullanışlı, Seyehat ederken kullanılabilirlik açısından 10/10 puan alır. Hafif olması da cabası. Kendisinden istenen performansı verebiliyor." },
-                { date:"2020-06-02",time:"17:03:00",rate:"5",name:"FERİDUN C******",highlight_comment:"İstediğin yere taşı",comment:"İstediğin yere taşıyabilmek çok güzel birşey. İş amaçlı kullanıyorum ve oldukça başarılı bir monitör." }                
+            Comments: [
+                { date: "2020-06-09", time: "15:54:00", rate: "5", name: "Toprak Aygün", highlight_comment: "Mükemmel Monitör", comment: "Ürünü yeni aldım şiddetle tavsiye ederim" },
+                { date: "2020-08-27", time: "00:33:00", rate: "5", name: "engin yöner", highlight_comment: "ÇOK KULLANIŞLI", comment: "Şık, kullanışlı, Seyehat ederken kullanılabilirlik açısından 10/10 puan alır. Hafif olması da cabası. Kendisinden istenen performansı verebiliyor." },
+                { date: "2020-06-02", time: "17:03:00", rate: "5", name: "FERİDUN C******", highlight_comment: "İstediğin yere taşı", comment: "İstediğin yere taşıyabilmek çok güzel birşey. İş amaçlı kullanıyorum ve oldukça başarılı bir monitör." }
             ]
         },
         /* Diğer notebooklar */
@@ -161,15 +162,15 @@ export default {
             cost: 10018,
             productLaunchTime: '2020-06-05', /* ürünün satışa sunulma tarihi */
             rate: 4, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/dell/dell.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/dell/dell.jpg",
             ratedPersonCount: 11, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                111981,110768,103828,300873,69791,79651,9105,109276,89614,72441,
+                111981, 110768, 103828, 300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg",
@@ -180,25 +181,27 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-2_large.jpg"
             ],
             /*Urun detay*/
-            moreInformation:[
+            moreInformation: [
                 {
-                    info1:"Pil Hücre Sayısı:",info1_detail:"3 Hücreli",
-                    info2:"Güvenlik:",info2_detail:"Kensington kilidi",
-                    info3:"İşlemci Markası:",info3_detail:"Intel",
-                    info4:"İşlemci Numarası:",info4_detail:"10300H",
-                    info5:"Pil Kimyası:",info5_detail:"Lityum İyon",
-                    info6:"İşlemci Ön Bellek:",info6_detail:"8 MB",
-                    info7:"İşlemci Hızı:",info7_detail:"2.5 GHz Turbo",
-                    info8:"İşlemci Teknolojisi:",info8_detail:"Core i5"
+                    info: "Pil Hücre Sayısı:", info_detail: "3 Hücreli"
+                },
+                { info: "Güvenlik:", info_detail: "Kensington kilidi" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Numarası:", info_detail: "10300H" },
+                { info: "Pil Kimyası:", info_detail: "Lityum İyon" },
+                { info: "İşlemci Ön Bellek:", info_detail: "8 MB" },
+                { info: "İşlemci Hızı:", info_detail: "2.5 GHz Turbo" },
+                {
+                    info: "İşlemci Teknolojisi:", info_detail: "Core i5"
                 }
             ],
-            Comments:[
-                { date:"2020-11-04",time:"17:21:00",rate:"4",name:"RECEP S***** - İZMİR",highlight_comment:"Recep izmir",comment:"Kamerasının ful hd olmaması üzücü, CPU çok fazla enerji harcıyor doğal olarakta ısı üretiyor, Oyun oynamadığım için tam performansını bilmiyorum RAM düşük" },
-                { date:"2020-11-04",time:"11:35:00",rate:"5",name:"EREN S**** - ADANA",highlight_comment:"Laptop",comment:"Gayet iyi bir tercih oldu ve sorunsuz kullanmaktayım." },
-                { date:"2020-06-02",time:"17:03:00",rate:"4",name:"MEHMET A** A*** - ANKARA",highlight_comment:"9/10 Mukemmel",comment:"Tasarım ve kullanım açısından bekleneni mükemmel karsilamakla birlikte, i7 de sunulan ekran kartı 6 GB ve Ram 16 Gb alternatifi i5 modeldede sunulmasini isterdim. Teşekkürler Dell, Teşekkür Vatan..." }                
+            Comments: [
+                { date: "2020-11-04", time: "17:21:00", rate: "4", name: "RECEP S***** - İZMİR", highlight_comment: "Recep izmir", comment: "Kamerasının ful hd olmaması üzücü, CPU çok fazla enerji harcıyor doğal olarakta ısı üretiyor, Oyun oynamadığım için tam performansını bilmiyorum RAM düşük" },
+                { date: "2020-11-04", time: "11:35:00", rate: "5", name: "EREN S**** - ADANA", highlight_comment: "Laptop", comment: "Gayet iyi bir tercih oldu ve sorunsuz kullanmaktayım." },
+                { date: "2020-06-02", time: "17:03:00", rate: "4", name: "MEHMET A** A*** - ANKARA", highlight_comment: "9/10 Mukemmel", comment: "Tasarım ve kullanım açısından bekleneni mükemmel karsilamakla birlikte, i7 de sunulan ekran kartı 6 GB ve Ram 16 Gb alternatifi i5 modeldede sunulmasini isterdim. Teşekkürler Dell, Teşekkür Vatan..." }
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
 
@@ -209,15 +212,15 @@ export default {
             cost: 142,
             productLaunchTime: '2020-01-07', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/addison/addison.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/addison/addison.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: false, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/addison/thumb/v2-88174_large.jpg",
@@ -225,20 +228,20 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/addison/thumb/v2-88174-2_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Marka",info3_detail:"Addison",
-                    info4:"Uyumlu Olduğu",info4_detail:"Universal 13.3",
-                    info5:"Renk:",info5_detail:"Siyah",
-                    info6:"Menşei:",info6_detail:"Çin"
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Marka", info_detail: "Addison" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 13.3" },
+                { info: "Renk:", info_detail: "Siyah" },
+                { info: "Menşei:", info_detail: "Çin" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
 
@@ -249,15 +252,15 @@ export default {
             cost: 10018,
             productLaunchTime: '2020-08-22', /* ürünün satışa sunulma tarihi */
             rate: 5, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/lenovo/lenovo.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/lenovo/lenovo.jpg",
             ratedPersonCount: 9, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                111981,110768,103828,300873,69791,79651,9105,109276,89614,72441,
+                111981, 110768, 103828, 300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-6_large.jpg",
@@ -269,25 +272,25 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-11_large.jpg"
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Güvenlik:",info1_detail:"Fingerprint",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"8 MB",
-                    info3:"İşlemci Markası:",info3_detail:"Intel",
-                    info4:"İşlemci Numarası:",info4_detail:"10510U",
-                    info5:"Pil Hücre Sayısı:",info5_detail:"4 Hücreli",
-                    info6:"İşlemci Ön Bellek:",info6_detail:"8 MB",
-                    info7:"İşlemci Hızı:",info7_detail:"1.8 GHz Turbo",
-                    info8:"İşlemci Teknolojisi:",info8_detail:"Core i7"
-                }
+            moreInformation: [
+
+                { info: "Güvenlik:", info_detail: "Fingerprint" },
+                { info: "İşlemci Ön Bellek:", info_detail: "8 MB" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Numarası:", info_detail: "10510U" },
+                { info: "Pil Hücre Sayısı:", info_detail: "4 Hücreli" },
+                { info: "İşlemci Ön Bellek:", info_detail: "8 MB" },
+                { info: "İşlemci Hızı:", info_detail: "1.8 GHz Turbo" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" }
+
             ],
-            Comments:[
-                { date:"2020-10-16",time:"11:24:00",rate:"5",name:"TUĞBA B**** E*** - İSTANBUL",highlight_comment:"Gayet iyi",comment:"Teşekkür ederiz" },
-                { date:"2020-10-12",time:"12:12:00",rate:"5",name:"YEŞİM Ü*** - ANKARA",highlight_comment:"Çok şık bir ürün",comment:"Çok memnunum. Performansı güçlü ve çok zarif bir ürün." },
-                { date:"2020-10-09",time:"16:31:00",rate:"5",name:"MİNE T**** - İSTANBUL",highlight_comment:"Teşekkürler!",comment:"Alışveriş yaparken bana sunduğunuz seçenekler, iyi niyetli ve ilgili yaklaşımını ve uzman personeliniz için çok teşekkürler!" }                
+            Comments: [
+                { date: "2020-10-16", time: "11:24:00", rate: "5", name: "TUĞBA B**** E*** - İSTANBUL", highlight_comment: "Gayet iyi", comment: "Teşekkür ederiz" },
+                { date: "2020-10-12", time: "12:12:00", rate: "5", name: "YEŞİM Ü*** - ANKARA", highlight_comment: "Çok şık bir ürün", comment: "Çok memnunum. Performansı güçlü ve çok zarif bir ürün." },
+                { date: "2020-10-09", time: "16:31:00", rate: "5", name: "MİNE T**** - İSTANBUL", highlight_comment: "Teşekkürler!", comment: "Alışveriş yaparken bana sunduğunuz seçenekler, iyi niyetli ve ilgili yaklaşımını ve uzman personeliniz için çok teşekkürler!" }
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
 
@@ -298,34 +301,34 @@ export default {
             cost: 179,
             productLaunchTime: '2020-01-07', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/case-logic/case-logic.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/case-logic/case-logic.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: false, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/case-logic/thumb/v2-69791-1_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Marka",info3_detail:"Caselogic",
-                    info4:"Uyumlu Olduğu",info4_detail:"Universal 15.6",
-                    info5:"Renk:",info5_detail:"Siyah",
-                    info6:"Garanti:",info6_detail:"24"
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Marka", info_detail: "Caselogic" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 15.6" },
+                { info: "Renk:", info_detail: "Siyah" },
+                { info: "Garanti:", info_detail: "24" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
 
@@ -336,72 +339,72 @@ export default {
             cost: 221,
             productLaunchTime: '2020-01-07', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/hp/hp.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/hp/hp.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: false, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/hp/thumb/v2-79651_large.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/hp/thumb/v2-79651-1_large.jpg"
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Marka",info3_detail:"HP",
-                    info4:"Uyumlu Olduğu",info4_detail:"Universal",
-                    info5:"Menşei:",info5_detail:"Çin",
-                    info6:"Garanti:",info6_detail:"24"
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Marka", info_detail: "HP" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Menşei:", info_detail: "Çin" },
+                { info: "Garanti:", info_detail: "24" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
-                {
+        {
             id: 9105,
             code: "TAR300Z",
             name: "TARGUS TAR300Z 15.6'' NOTEBOOK ÇANTASI- (SİYAH)",
             cost: 170,
             productLaunchTime: '2020-01-07', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/targus/targus.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/targus/targus.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: false, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/targus/thumb/v2-9105_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Marka",info3_detail:"Targus",
-                    info4:"Uyumlu Olduğu",info4_detail:"Universal 15.6",
-                    info5:"Menşei:",info5_detail:"Çin",
-                    info6:"Renk:",info6_detail:"Siyah"
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Marka", info_detail: "Targus" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 15.6" },
+                { info: "Menşei:", info_detail: "Çin" },
+                { info: "Renk:", info_detail: "Siyah" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
 
@@ -412,15 +415,15 @@ export default {
             cost: 549,
             productLaunchTime: '2020-01-07', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/thule/thule.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/thule/thule.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/thule/thumb/109276_large.jpg",
@@ -430,21 +433,21 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/thule/thumb/109276-5_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Uyumlu Olduğu",info4_detail:"Universal 15",
-                    info4:"Menşei:",info5_detail:"Çin",
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 15" },
+                { info: "Menşei:", info_detail: "Çin" },
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
-        
+
         {
             id: 89614,
             code: "L8J89AA",
@@ -452,15 +455,15 @@ export default {
             cost: 406,
             productLaunchTime: '2020-05-05', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/hp/hp.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/hp/hp.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/hp/thumb/v2-89614_large.jpg",
@@ -468,18 +471,18 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/hp/thumb/v2-89614-2_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Uyumlu Olduğu",info4_detail:"Universal 15",
-                    info4:"Menşei:",info5_detail:"Çin",
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 15" },
+                { info: "Menşei:", info_detail: "Çin" },
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
 
@@ -490,34 +493,34 @@ export default {
             cost: 299,
             productLaunchTime: '2020-05-05', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/case-logic/case-logic.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/case-logic/case-logic.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Sırt Çantası", /*Urun Turu*/
+            productType: "Sırt Çantası", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                
+
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/case-logic/thumb/v2-72441_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Uyumlu Olduğu",info1_detail:"Universal",
-                    info2:"Aksesuar Tipi:",info2_detail:"Notebook",
-                    info3:"Uyumlu Olduğu",info3_detail:"Universal 15.6",
-                    info4:"Menşei:",info4_detail:"Çin",
-                    info5:"Renk",info5_detail:"Koyu Gri",
-                    info6:"Marka",info6_detail:"Caselogic"
-                }
+            moreInformation: [
+
+                { info: "Uyumlu Olduğu", info_detail: "Universal" },
+                { info: "Aksesuar Tipi:", info_detail: "Notebook" },
+                { info: "Uyumlu Olduğu", info_detail: "Universal 15.6" },
+                { info: "Menşei:", info_detail: "Çin" },
+                { info: "Renk", info_detail: "Koyu Gri" },
+                { info: "Marka", info_detail: "Caselogic" }
+
             ],
-            Comments:[          
+            Comments: [
             ],
-            AlsoChecked:[
-                300873,69791,79651,9105,109276,89614,72441,
+            AlsoChecked: [
+                300873, 69791, 79651, 9105, 109276, 89614, 72441,
             ]
         },
         {
@@ -527,15 +530,15 @@ export default {
             cost: 14530,
             productLaunchTime: '2020-11-05', /* ürünün satışa sunulma tarihi */
             rate: 5, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/microsoft/microsoft.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/microsoft/microsoft.jpg",
             ratedPersonCount: 3, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                72441,103828,111981,110768,79651,300873,69791,9105,109276,89614,
+                72441, 103828, 111981, 110768, 79651, 300873, 69791, 9105, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/109917-2_large.jpg",
@@ -544,25 +547,25 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/103267-ek1_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Dokunmatik:",info1_detail:"Var",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"6 MB",
-                    info3:"İşlemci Teknolojisi:",info3_detail:"Core i5",
-                    info4:"İşlemci Numarası:",info4_detail:"8250U",
-                    info5:"Ram:",info5_detail:"8 GB",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"İşlemci Hızı:",info7_detail:"1.6 GHz Turbo",
-                    info8:"İşlemci Çekirdek",info8_detail:"6 Çekirdek"
-                }
+            moreInformation: [
+
+                { info: "Dokunmatik:", info_detail: "Var" },
+                { info: "İşlemci Ön Bellek:", info_detail: "6 MB" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i5" },
+                { info: "İşlemci Numarası:", info_detail: "8250U" },
+                { info: "Ram:", info_detail: "8 GB" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Hızı:", info_detail: "1.6 GHz Turbo" },
+                { info: "İşlemci Çekirdek", info_detail: "6 Çekirdek" }
+
             ],
-            Comments:[    
-                { date:"2020-07-29",time:"17:21:00",rate:"5",name:"OSMAN Y****",highlight_comment:"Diğer Ürünler",comment:"Microsftun diğer ürünleri de gelecekmi? surface laptop gibi?" },
-                { date:"2020-09-17",time:"16:12:00",rate:"5",name:"HİLAL B**",highlight_comment:"Başarılı bir ürün",comment:"Yaklaşık 1 hafta önce ürünü aldım ve deneyimlerimi paylaşmak istedim. Bu ürün benim ilk 2si 1 arada ürünüm, 2si 1 arada bilgisayardan üstün bir performans beklemezken üstün performansla beni şaşırttı. Dizüstü bilgisayar modu standart bir dizüstü bilgisayar gibi fakat ben genelde tablet modunda kullanmayı sevdiğim için tablet modunu daha çok beğendim." },
-                { date:"2020-03-25",time:"09:51:00",rate:"5",name:"GÜNDOĞAN Y*****",highlight_comment:"i7 sini aldım",comment:"bu ürünün i7 işlemcili olanını aldım bunda da sıkıntı çıkacağını sanmıyorum." }      
+            Comments: [
+                { date: "2020-07-29", time: "17:21:00", rate: "5", name: "OSMAN Y****", highlight_comment: "Diğer Ürünler", comment: "Microsftun diğer ürünleri de gelecekmi? surface laptop gibi?" },
+                { date: "2020-09-17", time: "16:12:00", rate: "5", name: "HİLAL B**", highlight_comment: "Başarılı bir ürün", comment: "Yaklaşık 1 hafta önce ürünü aldım ve deneyimlerimi paylaşmak istedim. Bu ürün benim ilk 2si 1 arada ürünüm, 2si 1 arada bilgisayardan üstün bir performans beklemezken üstün performansla beni şaşırttı. Dizüstü bilgisayar modu standart bir dizüstü bilgisayar gibi fakat ben genelde tablet modunda kullanmayı sevdiğim için tablet modunu daha çok beğendim." },
+                { date: "2020-03-25", time: "09:51:00", rate: "5", name: "GÜNDOĞAN Y*****", highlight_comment: "i7 sini aldım", comment: "bu ürünün i7 işlemcili olanını aldım bunda da sıkıntı çıkacağını sanmıyorum." }
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
 
@@ -573,15 +576,15 @@ export default {
             cost: 14999,
             productLaunchTime: '2019-04-08', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/huawei/huawei.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/huawei/huawei.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                72441,103828,111981,110768,79651,300873,69791,9105,109276,89614,
+                72441, 103828, 111981, 110768, 79651, 300873, 69791, 9105, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/huawei/thumb/TeoriV2-108642_large.jpg",
@@ -592,25 +595,25 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/huawei/thumb/TeoriV2-108642-6_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Dokunmatik:",info1_detail:"Var",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"8 MB",
-                    info3:"İşlemci Teknolojisi:",info3_detail:"Core i7",
-                    info4:"İşlemci Numarası:",info4_detail:"10510U",
-                    info5:"Ram:",info5_detail:"16 GB",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"İşlemci Hızı:",info7_detail:"1.8 GHz Turbo",
-                    info8:"İşlemci Çekirdek",info8_detail:"4 Çekirdek"
-                }
+            moreInformation: [
+
+                { info: "Dokunmatik:", info_detail: "Var" },
+                { info: "İşlemci Ön Bellek:", info_detail: "8 MB" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" },
+                { info: "İşlemci Numarası:", info_detail: "10510U" },
+                { info: "Ram:", info_detail: "16 GB" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Hızı:", info_detail: "1.8 GHz Turbo" },
+                { info: "İşlemci Çekirdek", info_detail: "4 Çekirdek" }
+
             ],
-            Comments:[     
+            Comments: [
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
-        
+
         {
             id: 108837,
             code: "UX581LV-H2013T",
@@ -618,15 +621,15 @@ export default {
             cost: 32074,
             productLaunchTime: '2020-04-08', /* ürünün satışa sunulma tarihi */
             rate: 0, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
             ratedPersonCount: 0, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                72441,103828,111981,110768,79651,300873,69791,9105,109276,89614,
+                72441, 103828, 111981, 110768, 79651, 300873, 69791, 9105, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/asus-zenbook-pro-duo-x581-gorseli-108837_large.jpg",
@@ -639,22 +642,22 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-108837-7_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"Pil Kimyası:",info1_detail:"Lithium-ion",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"12 MB",
-                    info3:"İşlemci Teknolojisi:",info3_detail:"Core i7",
-                    info4:"İşlemci Numarası:",info4_detail:"10750H",
-                    info5:"Ram:",info5_detail:"16 GB",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"İşlemci Hızı:",info7_detail:"2.6 GHz Turbo",
-                    info8:"İşlemci Çekirdek",info8_detail:"6 Çekirdek"
-                }
+            moreInformation: [
+
+                { info: "Pil Kimyası:", info_detail: "Lithium-ion" },
+                { info: "İşlemci Ön Bellek:", info_detail: "12 MB" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" },
+                { info: "İşlemci Numarası:", info_detail: "10750H" },
+                { info: "Ram:", info_detail: "16 GB" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Hızı:", info_detail: "2.6 GHz Turbo" },
+                { info: "İşlemci Çekirdek", info_detail: "6 Çekirdek" }
+
             ],
-            Comments:[     
+            Comments: [
             ],
-            AlsoChecked:[
-                111981,110768,103828,103267,108837,108642,106786,105261
+            AlsoChecked: [
+                111981, 110768, 103828, 103267, 108837, 108642, 106786, 105261
             ]
         },
 
@@ -665,15 +668,15 @@ export default {
             cost: 17494,
             productLaunchTime: '2018-02-22', /* ürünün satışa sunulma tarihi */
             rate: 4, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/dell/dell.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/dell/dell.jpg",
             ratedPersonCount: 2, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                9105,111981,72441,103828,110768,79651,300873,69791,109276,89614,
+                9105, 111981, 72441, 103828, 110768, 79651, 300873, 69791, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/TeoriV2-106786_large.jpg",
@@ -684,24 +687,24 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/TeoriV2-106786-5_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"İşlemci Çekirdek",info1_detail:"6 Çekirdek",
-                    info2:"İşlemci Ön Bellek:",info2_detail:"12 MB",
-                    info3:"İşlemci Teknolojisi:",info3_detail:"Core i7",
-                    info4:"İşlemci Numarası:",info4_detail:"10710U",
-                    info5:"Ram:",info5_detail:"16 GB",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"İşlemci Hızı:",info7_detail:"2.6 GHz Turbo",
-                    info8:"Katlanabilir:",info8_detail:"Evet"
-                }
+            moreInformation: [
+
+                { info: "İşlemci Çekirdek", info_detail: "6 Çekirdek" },
+                { info: "İşlemci Ön Bellek:", info_detail: "12 MB" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" },
+                { info: "İşlemci Numarası:", info_detail: "10710U" },
+                { info: "Ram:", info_detail: "16 GB" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "İşlemci Hızı:", info_detail: "2.6 GHz Turbo" },
+                { info: "Katlanabilir:", info_detail: "Evet" }
+
             ],
-            Comments:[    
-                { date:"2020-10-05",time:"16:09:00",rate:"5",name:"Pelin Ş****",highlight_comment:"İyi bir ürün",comment:"Fiyatı performansını pek haketmiyor,fakat ürün çok kullanışlı.Her şekle giriyor." },
-                { date:"2020-10-17",time:"13:35:00",rate:"4",name:"Tayfun A***",highlight_comment:"Şık ve profesyonel",comment:"Genelde tablet modunda kullanmayı sevdiğim için tablet modunu daha çok beğendim." },
+            Comments: [
+                { date: "2020-10-05", time: "16:09:00", rate: "5", name: "Pelin Ş****", highlight_comment: "İyi bir ürün", comment: "Fiyatı performansını pek haketmiyor,fakat ürün çok kullanışlı.Her şekle giriyor." },
+                { date: "2020-10-17", time: "13:35:00", rate: "4", name: "Tayfun A***", highlight_comment: "Şık ve profesyonel", comment: "Genelde tablet modunda kullanmayı sevdiğim için tablet modunu daha çok beğendim." },
             ],
-            AlsoChecked:[
-                106786,105261,111981,110768,103828,103267,108837,108642,
+            AlsoChecked: [
+                106786, 105261, 111981, 110768, 103828, 103267, 108837, 108642,
             ]
         },
         {
@@ -711,15 +714,15 @@ export default {
             cost: 15999,
             productLaunchTime: '2020-03-10', /* ürünün satışa sunulma tarihi */
             rate: 4, /* yıldız */
-            markalogosu:"https://cdn.vatanbilgisayar.com/Upload//MARKA/lenovo/lenovo.jpg",
+            markalogosu: "https://cdn.vatanbilgisayar.com/Upload//MARKA/lenovo/lenovo.jpg",
             ratedPersonCount: 2, /* puanlayan kişi sayısı */
             freeShipping: true, /* ücretsiz kargo */
             fastShipping: false, /* hızlı kargo */
             maxInstallmentCount: 6, /* taksit sayısı */
-            productType:"Notebook", /*Urun Turu*/
+            productType: "Notebook", /*Urun Turu*/
             /* bu ürünle tavsiye edilenler:*/
             advicedProducts: [
-                72441,103828,111981,110768,79651,300873,69791,9105,109276,89614,
+                72441, 103828, 111981, 110768, 79651, 300873, 69791, 9105, 109276, 89614,
             ],
             images: [
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-105261-7_large.jpg",
@@ -730,24 +733,24 @@ export default {
                 "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-105261-12_large.jpg",
             ],
             /*Urun detay*/
-            moreInformation:[
-                {
-                    info1:"İşlemci Çekirdek",info1_detail:"4 Çekirdek",
-                    info2:"İşlemci Teknolojisi:",info2_detail:"Core i7",
-                    info3:"İşlemci Numarası:",info3_detail:"1065G7",
-                    info4:"İşlemci Ön Bellek:",info4_detail:"8 MB",
-                    info5:"İşlemci Hızı:",info5_detail:"1.3 GHz Turbo",
-                    info6:"İşlemci Markası:",info6_detail:"Intel",
-                    info7:"Ram:",info7_detail:"16 GB",
-                    info8:"Güvenlik:",info8_detail:"Fingerprint"
-                }
+            moreInformation: [
+
+                { info: "İşlemci Çekirdek", info_detail: "4 Çekirdek" },
+                { info: "İşlemci Teknolojisi:", info_detail: "Core i7" },
+                { info: "İşlemci Numarası:", info_detail: "1065G7" },
+                { info: "İşlemci Ön Bellek:", info_detail: "8 MB" },
+                { info: "İşlemci Hızı:", info_detail: "1.3 GHz Turbo" },
+                { info: "İşlemci Markası:", info_detail: "Intel" },
+                { info: "Ram:", info_detail: "16 GB" },
+                { info: "Güvenlik:", info_detail: "Fingerprint" }
+
             ],
-            Comments:[    
-                { date:"2020-09-27",time:"16:19:00",rate:"5",name:"HAKKI M**** Ö**** - ANKARA",highlight_comment:"Alınabilecek en iyi 2 in 1",comment:"Kullanımı kolay, ekran kalitesi çok iyi, pil kullanım ömrü son derece başarılı" },
-                { date:"2019-12-25",time:"20:01:00",rate:"5",name:"AYBARS O***",highlight_comment:"Güncel bir laptop",comment:"Merhaba, gönül rahatlığı ile alabilirsiniz. Çok kaliteli, güncel bir laptop. Harici ekran kartı yok. Eğer oyun için almayı düşünüyorsanız tavsiye etmem. 27'' 4K monitore bağladığımda mouse hareketi akıcı değildi. Eski bir kablo ve dönüştürücü üzerinden bağlamıştım. Kabloyu doğrudan type-c üzerinden güncel bir kablo ile bağladım. Sorun çözüldü. Yani harici monitöre bağlıyor ve akış anlamında tatmin olmuyorsanız probleminiz kullandığınız kablonun güncel olmamasından kaynaklanabilir." },
+            Comments: [
+                { date: "2020-09-27", time: "16:19:00", rate: "5", name: "HAKKI M**** Ö**** - ANKARA", highlight_comment: "Alınabilecek en iyi 2 in 1", comment: "Kullanımı kolay, ekran kalitesi çok iyi, pil kullanım ömrü son derece başarılı" },
+                { date: "2019-12-25", time: "20:01:00", rate: "5", name: "AYBARS O***", highlight_comment: "Güncel bir laptop", comment: "Merhaba, gönül rahatlığı ile alabilirsiniz. Çok kaliteli, güncel bir laptop. Harici ekran kartı yok. Eğer oyun için almayı düşünüyorsanız tavsiye etmem. 27'' 4K monitore bağladığımda mouse hareketi akıcı değildi. Eski bir kablo ve dönüştürücü üzerinden bağlamıştım. Kabloyu doğrudan type-c üzerinden güncel bir kablo ile bağladım. Sorun çözüldü. Yani harici monitöre bağlıyor ve akış anlamında tatmin olmuyorsanız probleminiz kullandığınız kablonun güncel olmamasından kaynaklanabilir." },
             ],
-            AlsoChecked:[
-                108642,108837,111981,110768,103828,103267,106786,105261
+            AlsoChecked: [
+                108642, 108837, 111981, 110768, 103828, 103267, 106786, 105261
             ]
         },
     ]

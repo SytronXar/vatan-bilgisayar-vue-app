@@ -49,7 +49,7 @@
             :style="`width:` + percentSlideThumbs + `%`"
             v-for="n in productData.images.length"
             :key="n"
-            v-bind:class="{'active':n===currentShowImageIndex}"
+            v-bind:class="{ active: n === currentShowImageIndex }"
           ></li>
         </ul>
       </div>
@@ -77,9 +77,27 @@
           <span class="product-list__current-price"> </span>
         </div>
         <div class="wrapper-condition wrapper-condition--product-list">
-          <div class="in-wrapper-condition">
-            <span class="icon-truck-alt wrapper-condition__icon"></span
-            ><span class="wrapper-condition__text">BUGÜN KARGODA</span>
+          <div
+            class="in-wrapper-condition"
+            v-show="
+              productData.freeShipping === true ||
+                productData.fastShipping === true
+            "
+          >
+            <span class="icon-truck-alt wrapper-condition__icon"> </span>
+            <span
+              class="wrapper-condition__text"
+              v-if="productData.fastShipping === true"
+              >BUGÜN KARGODA</span
+            >
+            <span
+              class="wrapper-condition__text"
+              v-else-if="
+                productData.fastShipping === false &&
+                  productData.freeShipping === true
+              "
+              >KARGO BEDAVA</span
+            >
           </div>
         </div>
       </div>
