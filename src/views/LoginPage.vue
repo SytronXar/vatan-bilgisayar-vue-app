@@ -2,8 +2,12 @@
 // @ is an alias to /src
 
 import Products from "@/Products";
+import PasswordInput from "@/components/ThePasswordInput";
 export default {
   name: "UrunSayfasi",
+  components:{
+    PasswordInput,
+  },
   computed: {
     productData() {
       return Products.data.find(data => data.id === this.productId);
@@ -16,7 +20,15 @@ export default {
     }
   },
   data() {
-    return {};
+    return {
+      e_mail_input:"",
+      password_input:""
+    };
+  },
+  methods:{
+    login(){
+      console.log(this.e_mail_input+"  "+this.password_input)
+    }
   }
 };
 </script>
@@ -58,12 +70,12 @@ export default {
             </li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane collapse fade " :class="{ 'active in': openLogin === true }" id="signin-section">
+            <div class="tab-pane collapse fade " :class="{'active in': openLogin === true }" id="signin-section">
               <form
-                action="/login?returnUrl=%2F"
+                
                 class="form-horizontal"
                 id="loginform"
-                method="post"
+               
                 role="form"
                 novalidate="novalidate"
               >
@@ -87,6 +99,7 @@ export default {
                     placeholder="ad.soyad@example.com"
                     type="email"
                     value=""
+                    v-mode.lazy="e_mail_input"
                   />
                   <span
                     class="field-validation-valid text-danger"
@@ -97,28 +110,7 @@ export default {
                 </div>
                 <div class="form-group">
                   <label for="">Şifre</label>
-                  <div class="input-group">
-                    <input
-                      class="form-control"
-                      data-val="true"
-                      data-val-required="Şifre alanı boş geçilemez"
-                      id="pass"
-                      name="Password"
-                      placeholder="****"
-                      type="password"
-                    />
-                    <span
-                      class="field-validation-valid text-danger"
-                      data-valmsg-for="Password"
-                      data-valmsg-replace="true"
-                      style="font-size=12px !important;"
-                    ></span>
-                    <div class="input-group-addon">
-                      <a href="#" class="toggle-password-visible"
-                        ><i class="icon-eye-alt"></i
-                      ></a>
-                    </div>
-                  </div>
+                  <PasswordInput v-model="password_value"/>
                 </div>
                 <input
                   type="hidden"
@@ -131,6 +123,7 @@ export default {
                     id="login-button"
                     type="submit"
                     class="btn btn-primary signup-form__button"
+                    @click="login"
                   >
                     GİRİŞ YAP
                   </button>

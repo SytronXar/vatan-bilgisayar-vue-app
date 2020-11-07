@@ -11806,9 +11806,12 @@ button.swiper-pagination-bullet {
 .icon-expand:before {
   content: "\e924";
 }
+*/
 .icon-eye-alt:before {
-  content: "\e925";
+  content: "\f06e";
+  font-size: 20px;
 }
+/*
 .icon-facebook:before {
   content: "\e926";
 }
