@@ -90,6 +90,13 @@ const routes = [
       import(/*webpackChunkName:"LoginPage"*/ "../views/LoginPage.vue")
   },
   {
+    path: "/sepet/sepetim",
+    name: "CartPage",
+    props:true,
+    component: () =>
+      import(/*webpackChunkName:"CartPage"*/ "../views/CartPage.vue")
+  },
+  {
     path:"*",
     name:"notFound",
     component: () =>

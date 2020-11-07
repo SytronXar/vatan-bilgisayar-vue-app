@@ -2,7 +2,6 @@
 import Products from "@/Products";
 import CartButtonItem from "@/components/CartButton/TheCartButtonItem";
 export default {
-  props: {},
   components: {
     CartButtonItem
   },
@@ -32,6 +31,9 @@ export default {
           Products.data.find(data => data.id === cartItem.pid).cost*cartItem.count;
       });
       return total;
+    },
+    goToCart(){
+      this.$router.push({ name: 'CartPage' })
     }
   }
 };
@@ -49,10 +51,11 @@ export default {
       class="btn btn-primary btn-basket dropdown-toggle"
       aria-haspopup="true"
       :aria-expanded="!dropdownOpen"
+      @click="goToCart()"
     >
       <span class="icon-shopping-card"></span>
       <span class="btn-basket--text">SEPETİM</span>
-      <span class="btn-basket--count">0</span>
+      <span class="btn-basket--count">{{Cart.length}}</span>
     </button>
     <ul class="dropdown-menu dropdown-menu-basket openBasket">
       <div class="basket-lists">
