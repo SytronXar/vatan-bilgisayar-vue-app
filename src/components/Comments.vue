@@ -81,22 +81,10 @@ export default {
                 <div class="wrapper-score clearfix">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hidden-xs">
                     <picture>
-                      <!--[if IE 9]><video style="display: none;"><![endif]-->
-                      <source
-                        srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
-                        media="(min-width: 1000px)"
-                      />
-                      <source
-                        srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
-                        media="(min-width: 600px)"
-                      />
-                      <source
-                        srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
-                        media="(min-width: 300px)"
-                      />
+
                       <!--[if IE 9]></video><![endif]-->
                       <img
-                        alt="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
+                        :src="productData.images[0]"
                         class="img-responsive product-list__image product-list--third__image"
                       />
                     </picture>
@@ -110,9 +98,9 @@ export default {
                           style="width: 81.5385%;"
                         ></span>
                       </div>
-                      <span>(13)</span>
+                      <span style="">Bu ürün <b>{{productData.comments.length}}</b> yorumdan ortalama</span>
                       <span
-                        >Bu Ürün <strong id="averageRankNum">4.0</strong> Puan
+                        > <strong id="averageRankNum"> {{13.5 / productData.comments.length}}</strong> Puan
                         Almıştır</span
                       >
                     </div>
