@@ -1,16 +1,17 @@
 
 <script>
 import Products from "@/Products";
+import BasketCartTableRow from "@/components/BasketCartTableRow";
 export default {
   name: "CartPage",
   props: {},
-  components: {},
+  components: { BasketCartTableRow },
   computed: {},
   data() {
     return {
       productsData: Products.data,
       Cart: Products.inCart,
-      dropdownOpen: false,
+      dropdownOpen: false
     };
   },
   methods: {
@@ -39,7 +40,7 @@ export default {
 </script>
 <template>
   <main class="basket-main-area" style="margin-top:8.5px">
-    <div class="basket basket-addresses" v-if="Cart.length<1">
+    <div class="basket basket-addresses" v-if="Cart.length < 1">
       <div class="global-container">
         <div class="row">
           <div class="col-xs-12">
@@ -137,148 +138,8 @@ export default {
                     Sil
                   </div>
                 </div>
-                <div class="basket-cart__table-row">
-                  <div class="basket-cart__table-column info">
-                    <div class="basket-cart__product-info">
-                      <a href="/iphone-11-akilli-telefon-siyah.html">
-                        <div class="basket-cart__product-image">
-                          <img
-                            src="https://cdn.vatanbilgisayar.com/Upload//Product/apple/thumb/TeoriV2-103888-27_small.jpg"
-                            class=""
-                            alt=""
-                          />
-                        </div>
-                        <div class="basket-cart__product-name">
-                          iPhone 11 64 GB AKILLI TELEFON SİYAH
-                        </div>
-                      </a>
-                      <ul
-                        class="basket-cart__product-badges hidden-xs hidden-sm"
-                      >
-                        <li class="discount"></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="basket-cart__table-column count">
-                    <div class="number-input">
-                      <a
-                        href="javascript:changeProductCount(103888,22320,-1,16457908);"
-                        >-</a
-                      >
-                      <div class="input-wrapper">
-                        <form novalidate="novalidate">
-                          <input
-                            data-limitedstok="False"
-                            data-lineid="16457908"
-                            data-target="22320"
-                            data-toggle="103888"
-                            data-val="true"
-                            data-val-number="The field TQuantityA must be a number."
-                            data-val-required="The TQuantityA field is required."
-                            id="productCount_16457908"
-                            min="1"
-                            name="item.BasketItem.TQuantityA"
-                            onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-                            type="number"
-                            value="1"
-                            style="text-align: right;"
-                          />
-                        </form>
-                        <span>Adet</span>
-                      </div>
-                      <a
-                        href="javascript:changeProductCount(103888,22320,1,16457908);"
-                        >+</a
-                      >
-                    </div>
-                  </div>
-                  <div class="basket-cart__table-column price">
-                    <div class="basket-cart__product-price">
-                      <span> 7.599,00 TL </span>
-                    </div>
-                  </div>
-                  <div
-                    class="basket-cart__table-column info badges visible-xs visible-sm"
-                  >
-                    <ul class="basket-cart__product-badges">
-                      <li></li>
-                    </ul>
-                  </div>
-                  <div class="basket-cart__table-column warranty">
-                    <span>Garantiyi Uzat</span>
-                    <input
-                      class="apple-switch basket-cart__product-switch warranty-toggler "
-                      checked=""
-                      type="checkbox"
-                      onchange="warrantyToggler(event)"
-                    />
-                  </div>
-                  <div class="basket-cart__table-column text-center remove ">
-                    <a
-                      href="javascript:void(0)"
-                      class="basket-cart__product-remove"
-                      onclick="DeleteFromBasket(16457908,10207181)"
-                      ><i class="icon-times-circle"></i
-                    ></a>
-                  </div>
-                  <div class="basket-cart__extrawarranty">
-                    <p class="kg-text">
-                      <i class="icon-warranty-lock-alt"></i>
-                      <span>
-                        Keyifli Garanti, standart garanti bittikten sonra
-                        geçerli olan geniş kapsamlı bir hizmettir. Buna ek
-                        olarak ilk yıla özel hırsızlık ve kaza sigortası
-                        hediyedir.
-                      </span>
-                    </p>
-                    <div class="basket-installment-carousel swiper-container">
-                      <ul class="swiper-wrapper">
-                        <li class="swiper-slide active ">
-                          <label class="wrapper-radio wrapper-radio-product">
-                            <input
-                              type="radio"
-                              name="warranty_95ca8bd8-049b-4cc6-a859-dfec01a5b9a4"
-                              onclick="AddOrRemoveKeyifliGaranti(110011,16457908,'False',0,103888)"
-                            />
-                            <span class="checkmark"></span>
-                            +1 Yıl Keyifli Garanti
-                          </label>
-                          <div class="basket-cart__extrawarranty-price">
-                            1.150,00 TL
-                          </div>
-                        </li>
-                        <li class="swiper-slide active ">
-                          <label class="wrapper-radio wrapper-radio-product">
-                            <input
-                              type="radio"
-                              name="warranty_95ca8bd8-049b-4cc6-a859-dfec01a5b9a4"
-                              onclick="AddOrRemoveKeyifliGaranti(110012,16457908,'False',0,103888)"
-                            />
-                            <span class="checkmark"></span>
-                            +2 Yıl Keyifli Garanti
-                          </label>
-                          <div class="basket-cart__extrawarranty-price">
-                            1.450,00 TL
-                          </div>
-                        </li>
-                        <li class="swiper-slide active ">
-                          <label class="wrapper-radio wrapper-radio-product">
-                            <input
-                              type="radio"
-                              name="warranty_95ca8bd8-049b-4cc6-a859-dfec01a5b9a4"
-                              onclick="AddOrRemoveKeyifliGaranti(110013,16457908,'False',0,103888)"
-                            />
-                            <span class="checkmark"></span>
-                            +3 Yıl Keyifli Garanti
-                          </label>
-                          <div class="basket-cart__extrawarranty-price">
-                            1.900,00 TL
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                <!-- Ürünler listelenecek -->
+                <BasketCartTableRow :productId="cartItem.pid" :cartCount="cartItem.count" v-for="cartItem in Cart" :key="cartItem.count"/>
               </div>
               <div class="clearfix basket-cart__footer text-center">
                 <a
@@ -289,462 +150,7 @@ export default {
                 >
               </div>
             </div>
-            <div class="basket-tab-area classic-tab">
-              <ul
-                class="nav nav-tabs nav-justified basket-widget-tabs basketWidgetTabs"
-              >
-                <li class="active">
-                  <a data-toggle="tab" data-type="tab1" href="#tab1"
-                    >Size Özel İndirimler</a
-                  >
-                </li>
-                <li>
-                  <a data-toggle="tab" data-type="tab2" href="#tab2"
-                    >Önerdiğimiz Ürünler</a
-                  >
-                </li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane fade active in" id="tab1">
-                  <div class="basket-promotion">
-                    <h4 class="basket-promotion__title">
-                      Sepetinize özel indirimler
-                    </h4>
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a
-                            href="../s-link-ip-g11m-10-000mah-2-usb-port-tasinabilir-sarj-cihazi-beyaz.html"
-                          >
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/s-link/thumb/v2-93505_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              S-LİNK IP-G11M 10.000mAh 2 USB PORT TAŞINABİLİR
-                              ŞARJ CİHAZI- BEYAZ
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <span class="discount">133,00 TL</span>
-                            <strong>68,99</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(93505,1,true,20250)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a
-                            href="../snopy-sn-tws03-mobil-telefon-uyumlu-bluetooth-tws-mikrofonlu-kulaklik-beyaz.html"
-                          >
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/snopy/thumb/109478_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              SNOPY SN-TWS03 MOBİL TELEFON UYUMLU BLUETOOTH TWS
-                              MİKROFONLU KULAKLIK- BEYAZ
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <span class="discount">321,00 TL</span>
-                            <strong>199,00</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(109478,1,true,21713)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a href="../fakir-taffy-blender-set-kirmizi.html">
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/fakir/thumb/TeoriV2-109020_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              FAKIR TAFFY BLENDER SET (KIRMIZI)
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <span class="discount">299,00 TL</span>
-                            <strong>268,99</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(109020,1,true,22356)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a
-                            href="../sony-whch510b-ce7-kablosuz-kulakustu-kulaklik-siyah.html"
-                          >
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/sony/thumb/TeoriV2-104760_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              SONY WHCH510B.CE7 KABLOSUZ KULAKÜSTÜ
-                              KULAKLIK-SİYAH
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <span class="discount">369,00 TL</span>
-                            <strong>298,99</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(104760,1,true,22383)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a
-                            href="../remington-s6700-sleek-curl-expert-sac-duzlestirici.html"
-                          >
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/remington/thumb/TeoriV2-105550_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              REMINGTON S6700 SLEEK&amp;CURL EXPERT SAÇ
-                              DÜZLEŞTİRİCİ
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <strong>228,99</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(105550,1,true,22664)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                    <div class="clearfix basket_promo_item">
-                      <div class="basket-promotion__left-wrapper">
-                        <div class="basket-promotion__left">
-                          <a
-                            href="../mikado-md-2bt-x-brio-siyah-bluetooth-speaker.html"
-                          >
-                            <div class="basket-promotion__image">
-                              <img
-                                src="https://cdn.vatanbilgisayar.com/Upload//Product/mikado/thumb/v2-93760_small.jpg"
-                              />
-                            </div>
-                            <div class="basket-promotion__name">
-                              Mikado MD-2BT X-BRIO Siyah Bluetooth Speaker
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="basket-promotion__right-wrapper">
-                        <div class="basket-promotion__subtitle">Size Özel</div>
-                        <div class="basket-promotion__right">
-                          <div class="basket-promotion__price">
-                            <span class="discount">134,00 TL</span>
-                            <strong>98,99</strong> TL
-                          </div>
-                          <a
-                            href="javascript:void(0)"
-                            class="btn btn-default basket-promotion__button"
-                            onclick="AddOfferToBasket(93760,1,true,22725)"
-                            id="btnBasket"
-                            >HEMEN EKLE</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <hr
-                      style="background: transparent; border-color: transparent;"
-                    />
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="tab2">
-                  <div class="basket-promotion-others">
-                    <h4 class="basket-promotion-others__title">
-                      <i class="icon-arrow-down-percent"></i>
-                      Bu ürünlere de ihtiyacınız olabilir
-                    </h4>
-                    <div class="basket-promotion-others__row">
-                      <a
-                        href="../mcafee-internet-security-3-cihaz-tum-platformlar.html"
-                      >
-                        <div class="basket-promotion-others__image">
-                          <img
-                            src="https://cdn.vatanbilgisayar.com/Upload//Product/mcafee/thumb/TeoriV2-89308-2_small.jpg"
-                            alt="mcafee-internet-security-3-cihaz-tum-platformlar.html"
-                            title="mcafee-internet-security-3-cihaz-tum-platformlar.html"
-                          />
-                        </div>
-                        <div class="basket-promotion-others__name">
-                          <span
-                            >McAfee Internet Security 3 Cihaz/Tüm
-                            platformlar</span
-                          >
-                        </div>
-                      </a>
-                      <div class="basket-promotion-others__price">
-                        <div class="basket-promotion-others__price-wrapper">
-                          <span class="discount">200,00 TL </span>
-                          <strong>159,01</strong> TL
-                        </div>
-                      </div>
-                      <form
-                        action="/Basket/AddBundle?ProductId=89308&amp;BundleType=0&amp;MainItemLineId=16457908"
-                        class="form-horizontal"
-                        data-ajax="true"
-                        data-ajax-begin="javascript:locked();"
-                        data-ajax-method="POST"
-                        data-ajax-success="OnSuccessAddBundle"
-                        id="form0"
-                        method="post"
-                        role="form"
-                      >
-                        <input
-                          name="__RequestVerificationToken"
-                          type="hidden"
-                          value="JsqUuXKTqaU_uouXODfmaas7EqmhxT0M18JWE3rSz9dGWs2m_HkzhSVdmK1Sy7RJr9v7UK6WBmgWAp7IrMwjfCBnJYQ1"
-                        />
-                        <input
-                          type="submit"
-                          class="btn btn-primary basket-promotion-others__button"
-                          value="EKLE"
-                        />
-                      </form>
-                    </div>
-                    <div class="basket-promotion-others__row">
-                      <a
-                        href="../addison-ip-11s-iphone-11-ultra-slim-telefon-kilifi-siyah.html"
-                      >
-                        <div class="basket-promotion-others__image">
-                          <img
-                            src="https://cdn.vatanbilgisayar.com/Upload//Product/addison/thumb/TeoriV2-105344_small.jpg"
-                            alt="addison-ip-11s-iphone-11-ultra-slim-telefon-kilifi-siyah.html"
-                            title="addison-ip-11s-iphone-11-ultra-slim-telefon-kilifi-siyah.html"
-                          />
-                        </div>
-                        <div class="basket-promotion-others__name">
-                          <span
-                            >ADDİSON IP-11S İPHONE 11 ULTRA SLİM TELEFON KILIFI-
-                            SİYAH</span
-                          >
-                        </div>
-                      </a>
-                      <div class="basket-promotion-others__price">
-                        <div class="basket-promotion-others__price-wrapper">
-                          <span class="discount">82,00 TL </span>
-                          <strong>73,41</strong> TL
-                        </div>
-                      </div>
-                      <form
-                        action="/Basket/AddBundle?ProductId=105344&amp;BundleType=0&amp;MainItemLineId=16457908"
-                        class="form-horizontal"
-                        data-ajax="true"
-                        data-ajax-begin="javascript:locked();"
-                        data-ajax-method="POST"
-                        data-ajax-success="OnSuccessAddBundle"
-                        id="form1"
-                        method="post"
-                        role="form"
-                      >
-                        <input
-                          name="__RequestVerificationToken"
-                          type="hidden"
-                          value="mncoBRO3jv6N-ZQeOgbDjBrBW4AQMIyoYPrRwxMEnVMotOE33jvWpeFE-0AZRGuEAfTbIbyyDA3wjmyQM0frmljKpBs1"
-                        />
-                        <input
-                          type="submit"
-                          class="btn btn-primary basket-promotion-others__button"
-                          value="EKLE"
-                        />
-                      </form>
-                    </div>
-                    <div class="basket-promotion-others__row">
-                      <a
-                        href="../ttec-airglass-edgecolor-iphone-11-cam-ekran-koruyucu.html"
-                      >
-                        <div class="basket-promotion-others__image">
-                          <img
-                            src="https://cdn.vatanbilgisayar.com/Upload//Product/ttec/thumb/TeoriV2-108049_small.jpg"
-                            alt="ttec-airglass-edgecolor-iphone-11-cam-ekran-koruyucu.html"
-                            title="ttec-airglass-edgecolor-iphone-11-cam-ekran-koruyucu.html"
-                          />
-                        </div>
-                        <div class="basket-promotion-others__name">
-                          <span
-                            >TTEC AIRGLASS EDGECOLOR IPHONE 11 CAM EKRAN
-                            KORUYUCU</span
-                          >
-                        </div>
-                      </a>
-                      <div class="basket-promotion-others__price">
-                        <div class="basket-promotion-others__price-wrapper">
-                          <span class="discount">149,00 TL </span>
-                          <strong>134,10</strong> TL
-                        </div>
-                      </div>
-                      <form
-                        action="/Basket/AddBundle?ProductId=108049&amp;BundleType=0&amp;MainItemLineId=16457908"
-                        class="form-horizontal"
-                        data-ajax="true"
-                        data-ajax-begin="javascript:locked();"
-                        data-ajax-method="POST"
-                        data-ajax-success="OnSuccessAddBundle"
-                        id="form2"
-                        method="post"
-                        role="form"
-                      >
-                        <input
-                          name="__RequestVerificationToken"
-                          type="hidden"
-                          value="JmDlc7pcaVPDsRyCFhQfTT_CPVIFUHOc9EdtogmZxxnt3oQyPIVcRdsTtMr03dMX8bjkvLTNa8fZ02Uq0AsKkuNG3EM1"
-                        />
-                        <input
-                          type="submit"
-                          class="btn btn-primary basket-promotion-others__button"
-                          value="EKLE"
-                        />
-                      </form>
-                    </div>
-                    <div class="basket-promotion-others__row">
-                      <a
-                        href="../apple-mwvu2zm-a-iphone-11-silikon-kilif-siyah.html"
-                      >
-                        <div class="basket-promotion-others__image">
-                          <img
-                            src="https://cdn.vatanbilgisayar.com/Upload//Product/apple/thumb/TeoriV2-104376_small.jpg"
-                            alt="apple-mwvu2zm-a-iphone-11-silikon-kilif-siyah.html"
-                            title="apple-mwvu2zm-a-iphone-11-silikon-kilif-siyah.html"
-                          />
-                        </div>
-                        <div class="basket-promotion-others__name">
-                          <span
-                            >APPLE MWVU2ZM/A İPHONE 11 SİLİKON KILIF -
-                            SİYAH</span
-                          >
-                        </div>
-                      </a>
-                      <div class="basket-promotion-others__price">
-                        <div class="basket-promotion-others__price-wrapper">
-                          <span class="discount">399,00 TL </span>
-                          <strong>359,10</strong> TL
-                        </div>
-                      </div>
-                      <form
-                        action="/Basket/AddBundle?ProductId=104376&amp;BundleType=0&amp;MainItemLineId=16457908"
-                        class="form-horizontal"
-                        data-ajax="true"
-                        data-ajax-begin="javascript:locked();"
-                        data-ajax-method="POST"
-                        data-ajax-success="OnSuccessAddBundle"
-                        id="form3"
-                        method="post"
-                        role="form"
-                      >
-                        <input
-                          name="__RequestVerificationToken"
-                          type="hidden"
-                          value="had8UIbltPDTctWjf6jj8OKJuOyRWhX7tC5kHp4oQXKDsiRHt5fpzKL-n2bAYZtAyNlFyQEh3iKMGjEqoFVFTuDpado1"
-                        />
-                        <input
-                          type="submit"
-                          class="btn btn-primary basket-promotion-others__button"
-                          value="EKLE"
-                        />
-                      </form>
-                    </div>
-                    <div class="text-center">
-                      <a href="#" id="discount" class="discount-link">
-                        <div class="discount-up">
-                          <span>Daha Fazla Göster</span>
-                          <span class="icon-angle-down"></span>
-                        </div>
-                        <div class="discount-down hide">
-                          <span>Daha Az Göster</span>
-                          <span class="icon-angle-up"></span>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
 
             <div
               class="wrapper-product wrapper-product--dark visilabs-basket-promoted basket-promoted-products"
@@ -1322,7 +728,7 @@ export default {
               <h4 class="basket-ordersummary__title">Sipariş Özeti</h4>
               <div class="basket-ordersummary__secure-shopping">
                 <img
-                  src="/assets/dist/images/secure-shopping-icon.png"
+                  src="https://www.vatanbilgisayar.com/assets/dist/images/secure-shopping-icon.png"
                   alt="#"
                   class="img-responsive"
                 />
@@ -1336,17 +742,17 @@ export default {
                 <tbody>
                   <tr>
                     <td><strong>Ara Toplam</strong></td>
-                    <td class="text-right">6.439,83 TL</td>
+                    <td class="text-right">{{formatPrice(GetTotal()*0.88)}} TL</td>
                   </tr>
                   <tr>
                     <td><strong>KDV</strong></td>
-                    <td class="text-right">1.159,17 TL</td>
+                    <td class="text-right">{{formatPrice(GetTotal()*0.22)}} TL</td>
                   </tr>
                   <tr class="basket-ordersummary__total">
                     <td>TOPLAM</td>
                     <td class="text-right active">
                       <strong>
-                        7.599,00
+                        {{formatPrice(GetTotal())}}
                       </strong>
                       TL
                     </td>
@@ -1372,7 +778,7 @@ export default {
                 />
               </form>
               <img
-                src="/assets/dist/images/signup_logos.png"
+                src="https://www.vatanbilgisayar.com/assets/dist/images/signup_logos.png"
                 alt="#"
                 class="basket-ordersummary__logos"
               />

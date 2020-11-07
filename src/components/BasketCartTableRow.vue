@@ -11,6 +11,19 @@ export default {
       required: true
     }
   },
+  methods: {
+    formatPrice(value) {
+      let val = (value / 1).toFixed(2).replace(".", ",");
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    },
+    changeCount(number) {
+      console.log(number);
+    },
+    
+    ProductHref() {
+      return this.product.name.toLowerCase().replace(/\s/g, "-") + ".html";
+    }
+  },
   data() {
     return {
       product: Products.data.find(data => data.id === this.productId)
@@ -33,14 +46,9 @@ export default {
           }"
         >
           <div class="basket-cart__product-image">
-            <img
-              :src="product.images[0]"
-              class=""
-              alt=""
-            />
+            <img :src="product.images[0]" class="" alt="" />
           </div>
-          <div class="basket-cart__product-name">{{product.name}}
-          </div>
+          <div class="basket-cart__product-name">{{ product.name }}</div>
         </router-link>
         <ul class="basket-cart__product-badges hidden-xs hidden-sm">
           <li class="discount"></li>
@@ -49,7 +57,7 @@ export default {
     </div>
     <div class="basket-cart__table-column count">
       <div class="number-input">
-        <a :href="">-</a>
+        <a :href="changeCount(-1)">-</a>
         <div class="input-wrapper">
           <form novalidate="novalidate">
             <input
@@ -71,12 +79,12 @@ export default {
           </form>
           <span>Adet</span>
         </div>
-        <a href="javascript:changeProductCount(110768,17793,1,16459878);">+</a>
+        <a :href="changeCount(1)">+</a>
       </div>
     </div>
     <div class="basket-cart__table-column price">
       <div class="basket-cart__product-price">
-        <span> 10.135,00 TL </span>
+        <span> {{formatPrice(product.cost*cartCount)}} TL </span>
       </div>
     </div>
     <div class="basket-cart__table-column info badges visible-xs visible-sm">
@@ -123,7 +131,7 @@ export default {
               +1 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              1.539,00 TL
+              {{formatPrice(cartCount*product.cost/6.6)}} TL
             </div>
           </li>
           <li class="swiper-slide active ">
@@ -137,7 +145,7 @@ export default {
               +2 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              2.148,00 TL
+              {{formatPrice(cartCount*product.cost/5)}} TL
             </div>
           </li>
           <li class="swiper-slide active ">
@@ -151,7 +159,7 @@ export default {
               +3 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              2.899,00 TL
+              {{formatPrice(cartCount*product.cost/3.75)}} TL
             </div>
           </li>
         </ul>
