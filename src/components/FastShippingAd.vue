@@ -1,7 +1,6 @@
 <template>
   <div
     class="header-banner"
-    style="background-image: url(https://cdn.vatanbilgisayar.com/Upload/BANNER/);"
   >
   <router-link to="/hizli-teslimat">
     <a href="/hizli-teslimat/">

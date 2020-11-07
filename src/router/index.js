@@ -99,6 +99,7 @@ const routes = [
 
 const router = new VueRouter({
   mode: "history",
+  redirect: "/",
   linkExactActiveClass: "topbar-exact-active",
   routes
 });

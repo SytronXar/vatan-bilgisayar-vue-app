@@ -1,4 +1,12 @@
 export default {
+  inCart: [
+    {
+      id:"1", pid: "111981", count: 1,
+    },
+    {
+      id:"2", pid:"9105", count:1
+    }
+  ],
   data: [
     /*Notebook ürünleri id'leri
         111981,110768,103828,103267,108837,108642,106786,105261,
@@ -6,7 +14,7 @@ export default {
         300873,69791,79651,9105,109276,89614,72441,
         */
     {
-      id: 111981,
+      id: "111981",
       code: "UX363EA-EM045T",
       name:
         "ASUS ZENBOOK 13 UX363 CORE İ7 1165G7 2.8GHZ-16GB RAM-1TB SSD-13.3'-INT-W10",
@@ -20,19 +28,19 @@ export default {
       fastShipping: true /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:8,
+      inStock: 8,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        72441,
-        103828,
-        111981,
-        110768,
-        79651,
-        300873,
-        69791,
-        9105,
-        109276,
-        89614
+        "72441",
+        "103828",
+        "111981",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "9105",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/111981_large.jpg",
@@ -59,20 +67,20 @@ export default {
       ],
       comments: [],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     /* tavsiye edilen üç ürün yazdım tüm notebooklara bu üç ürünü tavsiye edebiliriz belki  */
     {
-      id: 88816,
+      id: "88816",
       code: "SDRW-08U9M-U-BLACK",
       name: "ASUS SDRW-08U9M-U ZENDRIVE HARİCİ SLİM DVD-YAZICI - SİYAH",
       cost: 413,
@@ -85,7 +93,7 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
-      inStock:100,
+      inStock: 100,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/v2-88816_large.jpg",
@@ -132,7 +140,7 @@ export default {
       ]
     },
     {
-      id: 84459,
+      id: "84459",
       code: "QQ2-00006",
       name:
         "Online Microsoft 365 Bireysel (1 kullanıcı-1yıl) (Dijital İndirilebilir Lisans)",
@@ -146,14 +154,14 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
-      inStock:100,
+      inStock: 100,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/TeoriV2-84459_large.jpg"
       ]
     },
     {
-      id: 104988,
+      id: "104988",
       code: "MB16AMT",
       name:
         "ASUS 15,6' MB16AMT ZenScreen taşınabilir Dokunmatik IPS FullHD USB monitör",
@@ -167,7 +175,7 @@ export default {
       fastShipping: false,
       maxInstallmentCount: 6,
       productType: "Ekstra Ürünler",
-      inStock:30,
+      inStock: 30,
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/TeoriV2-104988_large.jpg",
@@ -217,7 +225,7 @@ export default {
     },
     /* Diğer notebooklar */
     {
-      id: 110768,
+      id: "110768",
       code: "G315-4B30W85C",
       name:
         "DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6-W10",
@@ -231,19 +239,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:18,
+      inStock: 18,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        111981,
-        110768,
-        103828,
-        300873,
-        69791,
-        79651,
-        9105,
-        109276,
-        89614,
-        72441
+        "111981",
+        "110768",
+        "103828",
+        "300873",
+        "69791",
+        "79651",
+        "9105",
+        "109276",
+        "89614",
+        "72441"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_large.jpg",
@@ -299,19 +307,19 @@ export default {
         }
       ],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     {
-      id: 300873,
+      id: "300873",
       code: "88174",
       name: "ADDISON 300873 13.3 - 14 NOTEBOOK SIRT ÇANTASI (SİYAH)",
       cost: 142,
@@ -324,7 +332,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -342,11 +350,11 @@ export default {
         { info: "Menşei:", info_detail: "Çin" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
 
     {
-      id: 103828,
+      id: "103828",
       code: "81TC000VTX",
       name:
         "LENOVO YOGA C740 CORE İ7 10510U 1.8GHZ-8GB RAM-512GB SSD-14''-INT-TOUCH-W10",
@@ -360,26 +368,25 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        111981,
-        110768,
-        103828,
-        300873,
-        69791,
-        79651,
-        9105,
-        109276,
-        89614,
-        72441
+        "111981",
+        "110768",
+        "103828",
+        "300873",
+        "69791",
+        "79651",
+        "9105",
+        "109276",
+        "89614",
+        "72441"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-6_large.jpg",
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-7_large.jpg",
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-8_large.jpg",
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-9_large.jpg",
-        "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-10_large.jpg",
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-10_large.jpg",
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-103828-11_large.jpg"
       ],
@@ -422,19 +429,19 @@ export default {
         }
       ],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     {
-      id: 69791,
+      id: "69791",
       code: "CA.ANC316",
       name: "CASE LOGIC CA.ANC316 NOTEBOOK ÇANTASI 15.6 SİYAH",
       cost: 179,
@@ -447,7 +454,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:22,
+      inStock: 22,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -463,11 +470,11 @@ export default {
         { info: "Garanti:", info_detail: "24" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
 
     {
-      id: 79651,
+      id: "79651",
       code: "L6V67AA",
       name: "HP 14'' SİGNATURE II SLİM TOPLOAD NOTEBOOK ÇANTASI",
       cost: 221,
@@ -479,7 +486,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:221,
+      inStock: 221,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -496,10 +503,10 @@ export default {
         { info: "Garanti:", info_detail: "24" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
     {
-      id: 9105,
+      id: "9105",
       code: "TAR300Z",
       name: "TARGUS TAR300Z 15.6'' NOTEBOOK ÇANTASI- (SİYAH)",
       cost: 170,
@@ -512,7 +519,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:300,
+      inStock: 300,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -528,11 +535,11 @@ export default {
         { info: "Renk:", info_detail: "Siyah" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
 
     {
-      id: 109276,
+      id: "109276",
       code: "CA.TGAE2356",
       name: "Thule Gauntlet 4.0 15 MacBookPro / Ultrabook Çanta",
       cost: 549,
@@ -545,7 +552,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:11,
+      inStock: 11,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -563,11 +570,11 @@ export default {
         { info: "Menşei:", info_detail: "Çin" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
 
     {
-      id: 89614,
+      id: "89614",
       code: "L8J89AA",
       name: "HP 15.6 ODYSSEY NOTEBOOK SIRT ÇANTASI -(GRİ)",
       cost: 406,
@@ -579,7 +586,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:5,
+      inStock: 5,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -595,11 +602,11 @@ export default {
         { info: "Menşei:", info_detail: "Çin" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
 
     {
-      id: 72441,
+      id: "72441",
       code: "CA.WMBP115GY",
       name:
         "CASE LOGIC CA.WMBP115GY JAUNT 15.6'' NOTEBOOK SIRT ÇANTASI- (KOYU GRİ)",
@@ -613,7 +620,7 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Sırt Çantası" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [],
       images: [
@@ -629,10 +636,10 @@ export default {
         { info: "Marka", info_detail: "Caselogic" }
       ],
       comments: [],
-      alsoChecked: [300873, 69791, 79651, 9105, 109276, 89614, 72441]
+      alsoChecked: ["300873", "69791", "79651", "9105", "109276", "89614", "72441"]
     },
     {
-      id: 103267,
+      id: "103267",
       code: "KJT-00006",
       name:
         "MICROSOFT SURFACE PRO 6 CORE İ5 8250U 1.6GHZ-8GB RAM-256GB SSD-INT-12.3 W10",
@@ -646,19 +653,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        72441,
-        103828,
-        111981,
-        110768,
-        79651,
-        300873,
-        69791,
-        9105,
-        109276,
-        89614
+        "72441",
+        "103828",
+        "111981",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "9105",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/109917-2_large.jpg",
@@ -707,19 +714,19 @@ export default {
         }
       ],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     {
-      id: 108642,
+      id: "108642",
       code: "MATEBOOK X PRO/2020",
       name:
         "HUAWEI MATEBOOK X PRO 2020 CORE İ7 10510U 1.8GHZ-16GB-1TBSSD-13.9 -MX250 2GB-W10",
@@ -733,19 +740,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        72441,
-        103828,
-        111981,
-        110768,
-        79651,
-        300873,
-        69791,
-        9105,
-        109276,
-        89614
+        "72441",
+        "103828",
+        "111981",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "9105",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/huawei/thumb/TeoriV2-108642_large.jpg",
@@ -768,19 +775,19 @@ export default {
       ],
       comments: [],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     {
-      id: 108837,
+      id: "108837",
       code: "UX581LV-H2013T",
       name:
         "ASUS ZENBOOK PRO DUO UX581 CORE İ7 10750H 2.6GHZ-32GB-1TB-15.6 -RTX2060 6GB-W10",
@@ -794,19 +801,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:15,
+      inStock: 15,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        72441,
-        103828,
-        111981,
-        110768,
-        79651,
-        300873,
-        69791,
-        9105,
-        109276,
-        89614
+        "72441",
+        "103828",
+        "111981",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "9105",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/asus-zenbook-pro-duo-x581-gorseli-108837_large.jpg",
@@ -831,19 +838,19 @@ export default {
       ],
       comments: [],
       alsoChecked: [
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642,
-        106786,
-        105261
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642",
+        "106786",
+        "105261"
       ]
     },
 
     {
-      id: 106786,
+      id: "106786",
       code: "7390-FS510W161N",
       name:
         "DELL XPS 13 7390 CORE İ7 10710U 1.1GHZ-16GB RAM-1TB SSD-INT-13.3 W10",
@@ -857,19 +864,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:50,
+      inStock: 50,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        9105,
-        111981,
-        72441,
-        103828,
-        110768,
-        79651,
-        300873,
-        69791,
-        109276,
-        89614
+        "9105",
+        "111981",
+        "72441",
+        "103828",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/TeoriV2-106786_large.jpg",
@@ -911,18 +918,18 @@ export default {
         }
       ],
       alsoChecked: [
-        106786,
-        105261,
-        111981,
-        110768,
-        103828,
-        103267,
-        108837,
-        108642
+        "106786",
+        "105261",
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "108837",
+        "108642"
       ]
     },
     {
-      id: 105261,
+      id: "105261",
       code: "81Q9007FTX",
       name:
         "LENOVO YOGA C940 CORE İ7 1065G7 1.3GHZ-16GB RAM-512GB SSD-14''-INT-TOUCH-W10",
@@ -936,19 +943,19 @@ export default {
       fastShipping: false /* hızlı kargo */,
       maxInstallmentCount: 6 /* taksit sayısı */,
       productType: "Notebook" /*Urun Turu*/,
-      inStock:100,
+      inStock: 100,
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
-        72441,
-        103828,
-        111981,
-        110768,
-        79651,
-        300873,
-        69791,
-        9105,
-        109276,
-        89614
+        "72441",
+        "103828",
+        "111981",
+        "110768",
+        "79651",
+        "300873",
+        "69791",
+        "9105",
+        "109276",
+        "89614"
       ],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/lenovo/thumb/TeoriV2-105261-7_large.jpg",
@@ -990,14 +997,14 @@ export default {
         }
       ],
       alsoChecked: [
-        108642,
-        108837,
-        111981,
-        110768,
-        103828,
-        103267,
-        106786,
-        105261
+        "108642",
+        "108837",
+        "111981",
+        "110768",
+        "103828",
+        "103267",
+        "106786",
+        "105261"
       ]
     }
   ]

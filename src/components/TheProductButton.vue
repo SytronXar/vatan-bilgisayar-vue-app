@@ -11,7 +11,7 @@
           title=""
           class="product-list__image-safe-link sld product-pic-slider owl-carousel owl-loaded owl-drag"
         >
-          <div class="owl-stage-outer">
+          <div class="owl-stage-outer" @mousemove="onMouseOver">
             <div
               class="owl-stage"
               :style="
@@ -172,6 +172,9 @@ export default {
     },
     isLowInStock() {
       return this.productData.inStock <= 30;
+    },
+    onMouseOver() {
+      //console.log(event.pageX - event.target.pageX);
     }
   }
 };

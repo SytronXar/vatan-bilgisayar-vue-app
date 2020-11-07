@@ -78,7 +78,7 @@
                             name: 'LoginPage',
                             params: {
                               openLogin: true,
-                              loginhref: 'signin' 
+                              loginhref: 'signin'
                             }
                           }"
                           >Giriş Yap</router-link
@@ -102,25 +102,7 @@
                   <div class="btn-group referrer-search-area">
                     <i class="icon-search"></i>
                   </div>
-
-                  <div class="btn-group basketGroup">
-                    <button
-                      type="button"
-                      id="btnMyBasket"
-                      class="btn btn-primary btn-basket dropdown-toggle"
-                      aria-haspopup="true"
-                      aria-expanded="true"
-                      @mouseenter="OpenDropdown"
-                      @mouseleave="CloseDropdown"
-                    >
-                      <span class="icon-shopping-card"></span>
-                      <span class="btn-basket--text">SEPETİM</span>
-                      <span class="btn-basket--count">0</span>
-                    </button>
-                    <ul
-                      class="dropdown-menu dropdown-menu-basket openBasket"
-                    ></ul>
-                  </div>
+                  <CartButton />
                 </div>
               </div>
               <div id="navbar-search-results"></div>
@@ -141,10 +123,11 @@
 </style>
 <script>
 import TheTopBar from "@/components/TheTopBar";
+import CartButton from "@/components/CartButton/TheCartButton";
 import LoginData from "@/LoginData";
 export default {
   components: {
-    TheTopBar
+    TheTopBar,CartButton
   },
   computed: {},
   props: {},
@@ -162,13 +145,11 @@ export default {
     CloseDropdown(event) {
       var Target = event.target;
       Target.setAttribute("aria-expanded", true);
-      setTimeout(() => Target.parentElement.classList.remove("open"),100);
+      setTimeout(() => Target.parentElement.classList.remove("open"), 250);
     },
     parent_open(event) {
       var Target = event.target;
-      return (
-        Target.parentElement.classList.contains("open")
-      );
+      return Target.parentElement.classList.contains("open");
     }
   }
 };
