@@ -26757,6 +26757,10 @@ input.apple-switch:checked:after {
   .icon-motorcycle{
     content:"\f21c"
   }
+  .icon-star{
+    content:"\f005";
+    color:"	#FFD700";
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;

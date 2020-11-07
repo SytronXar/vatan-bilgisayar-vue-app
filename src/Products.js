@@ -421,7 +421,7 @@ export default {
         {
           date: "2020-10-09",
           time: "16:31:00",
-          rate: "5",
+          rate: "3",
           name: "MİNE T**** - İSTANBUL",
           highlight_comment: "Teşekkürler!",
           comment:
