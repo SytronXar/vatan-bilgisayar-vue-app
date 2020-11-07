@@ -1,11 +1,17 @@
 export default {
+  /* addItemToCart(pid, count){
+    var isValid=  this.inCart.includes(inCart => inCart.id === pid).id
+    if(isValid){
+      this.inCart.find(inCart => inCart.id === pid).count=con
+    }
+  }, */
   inCart: [
     {
       id:"1", pid: "111981", count: 1,
     },
     {
       id:"2", pid:"9105", count:1
-    }
+    }  
   ],
   data: [
     /*Notebook ürünleri id'leri
