@@ -226,17 +226,17 @@ export default {
                   v-for="comment in productData.comments"
                   :key="comment"
                 >
-                  <div class="col-md-12 ds-table comment-items" style="">
+                  <div class="col-md-12 ds-table comment-items"  style="text-align: left">
                     <div
                       class="wrapper-comments commetPrd"
                       :data-rank="comment.rate"
                     >
-                      <div class="wrapper-star comment-star">
-                        <div class="rank-star" v-for="comment in 5" :key="comment.rate">
-                          <span class="icon-star" style="width:80%; color:#FFD700"><i class="fas fa-star"></i></span>
+                      <div class="wrapper-star comment-star" v-for="n in comment.rate" :key="n">
+                        <div class="rank-star">
+                        <span class="icon-star" style="width:80%; color:#FFD700;"><i class="fas fa-star"></i></span>
                         </div>
                       </div>
-                      <span class="date comment-date">{{ comment.date }}  {{comment.time}}</span>
+                      <span class="date comment-date">{{ comment.date }} {{comment.time}}</span>
 
                       <div>
                         <h4>

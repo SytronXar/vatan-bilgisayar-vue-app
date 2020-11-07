@@ -26759,7 +26759,7 @@ input.apple-switch:checked:after {
   }
   .icon-star{
     content:"\f005";
-    color:"	#FFD700";
+    color:#FFD700;
   }
   .responsive-tables td:before {
     content: attr(data-label);
