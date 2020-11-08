@@ -15,12 +15,9 @@ export default {
     }
   },
   data() {
-    return {
-    };
+    return {};
   },
-  methods: {
-
-    }
+  methods: {}
 };
 </script>
 <template>
@@ -82,7 +79,6 @@ export default {
                 <div class="wrapper-score clearfix">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 hidden-xs">
                     <picture>
-
                       <!--[if IE 9]></video><![endif]-->
                       <img
                         :src="productData.images[0]"
@@ -92,19 +88,25 @@ export default {
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div class="wrapper-star">
-                        <div class="rank-star">
-                          <span
-                            class="score"
-                            id="topAverageRank"
-                            :style="{
-                              width: (100 * productData.rate) / 5 + '%'
-                            }"
-                          ></span>
-                        </div>
-                      <span style="">Bu ürün <b>{{productData.comments.length}}</b> yorumdan ortalama</span>
-                      <span
-                        > <strong id="averageRankNum"> {{13.5 / productData.comments.length}}</strong> Puan
-                        Almıştır</span
+                      <div class="rank-star">
+                        <span
+                          class="score"
+                          id="topAverageRank"
+                          :style="{
+                            width: (100 * productData.rate) / 5 + '%'
+                          }"
+                        ></span>
+                      </div>
+                      <span style=""
+                        >Bu ürün
+                        <b>{{ productData.comments.length }}</b> yorumdan
+                        ortalama</span
+                      >
+                      <span>
+                        <strong id="averageRankNum">
+                          {{ 13.5 / productData.comments.length }}</strong
+                        >
+                        Puan Almıştır</span
                       >
                     </div>
 
@@ -217,17 +219,32 @@ export default {
                   v-for="comment in productData.comments"
                   :key="comment"
                 >
-                  <div class="col-md-12 ds-table comment-items"  style="text-align: left">
+                  <div
+                    class="col-md-12 ds-table comment-items"
+                    style="text-align: left"
+                  >
                     <div
                       class="wrapper-comments commetPrd"
                       :data-rank="comment.rate"
                     >
-                      <div class="wrapper-star comment-star" v-for="n in comment.rate" :key="n">
+                      <div
+                        class="wrapper-star comment-star"
+                        v-for="n in comment.rate"
+                        :key="n"
+                      >
                         <div class="rank-star">
-                        <span class="icon-star" style="width:80%; color:#FFD700;"><i class="fas fa-star"></i></span>
+                          <span
+                            class="score"
+                            id="topAverageRank"
+                            :style="{
+                              width: (100 * comment.rate) / 5 + '%'
+                            }"
+                          ></span>
                         </div>
                       </div>
-                      <span class="date comment-date">{{ comment.date }} {{comment.time}}</span>
+                      <span class="date comment-date"
+                        >{{ comment.date }} {{ comment.time }}</span
+                      >
 
                       <div>
                         <h4>
