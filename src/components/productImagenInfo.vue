@@ -44,7 +44,7 @@ export default {
         comment: ""
       };
     },
-    randomVisitor(){
+    randomVisitor() {
       return Math.random() * (25 - 1) + 1;
     }
   }
@@ -60,8 +60,11 @@ export default {
               <div class="person-count">
                 <span class="icon-view"></span
                 ><span
-                  >Bu Ürünü Şuan <span id="vlVisitorCount">{{formatPrice(randomVisitor())}}</span> Kişi
-                  İnceliyor</span
+                  >Bu Ürünü Şuan
+                  <span id="vlVisitorCount">{{
+                    formatPrice(randomVisitor())
+                  }}</span>
+                  Kişi İnceliyor</span
                 ><span class="icon-zoom lightbox-item"></span>
               </div>
               <div class="clearfix">
@@ -691,7 +694,9 @@ export default {
                           @click="AddToBasket()"
                           class="btn btn-success basketBTN"
                         >
-                          <span class="shopping-cart"><i class="fas fa-shopping-cart"></i></span>
+                          <span class="shopping-cart"
+                            ><i class="fas fa-shopping-cart"></i
+                          ></span>
                           <span> SEPETE EKLE</span>
                         </button>
                       </div>
@@ -880,8 +885,8 @@ export default {
                       </div>
                     </div>
                     <!--Önerilen Ürünler-->
-                    <AdvicedProductsC :productId="productId"/>
-                    
+                    <AdvicedProductsC :productId="productId" />
+
                     <!--SORUN YARATAN CLASS-->
                     <div
                       class="discount-prod-detail best-comment-view"

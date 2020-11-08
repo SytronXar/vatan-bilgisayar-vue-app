@@ -186,7 +186,7 @@ export default {
         "ASUS 15,6' MB16AMT ZenScreen taşınabilir Dokunmatik IPS FullHD USB monitör",
       cost: 4355,
       productLaunchTime: "2020-08-10",
-      rate: 0,
+      rate: 5,
       markalogosu:
         "https://cdn.vatanbilgisayar.com/Upload//MARKA/asus/asus.jpg",
       ratedPersonCount: 0,
@@ -225,7 +225,7 @@ export default {
         {
           date: "2020-08-27",
           time: "00:33:00",
-          rate: "5",
+          rate:"5",
           name: "engin yöner",
           highlight_comment: "ÇOK KULLANIŞLI",
           comment:
