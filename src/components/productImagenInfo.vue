@@ -4,9 +4,6 @@ import Products from "@/Products";
 export default {
   name: "UrunSayfasi",
   computed: {
-    productData() {
-      return Products.data.find(data => data.id === this.productId);
-    }
   },
   props: {
     productId: {
@@ -17,7 +14,8 @@ export default {
   data() {
     return {
       currentimg: 0,
-      showFancy: false
+      showFancy: false,
+      productData:Products.data.find(data => data.id === this.productId)
     };
   },
   methods: {
@@ -30,6 +28,18 @@ export default {
     },
     AddToBasket() {
       this.showFancy = true;
+    },
+    getComment(index) {
+      var comments = this.productData.comments;
+      if (comments.length > index) return comments[0];
+      comments.push({
+          date: "",
+          time: "",
+          rate: "",
+          name: "",
+          highlight_comment: "",
+          comment: ""});
+      return null;
     }
   }
 };
@@ -610,11 +620,16 @@ export default {
               </div>
               <div class="container-fluid wrapper-product-detail-info">
                 <div class="row">
-                  <ul class="pdetail-property-list" v-for="moreInformation in productData.moreInformation"
-                        v-bind:key="moreInformation">
+                  <ul
+                    class="pdetail-property-list"
+                    v-for="moreInformation in productData.moreInformation"
+                    v-bind:key="moreInformation"
+                  >
                     <li data-count="8">
-                      <span class="property-head">{{moreInformation.info}}</span>
-                      <span>{{moreInformation.info_detail}}</span>
+                      <span class="property-head">{{
+                        moreInformation.info
+                      }}</span>
+                      <span>{{ moreInformation.info_detail }}</span>
                     </li>
                   </ul>
                 </div>
@@ -657,7 +672,7 @@ export default {
                       </div>
                     </div>
                     <div class="clearfix prod-code-rank">
-                        <!--Yıldızlar-->
+                      <!--Yıldızlar-->
                       <div class="wrapper-star">
                         <div class="rank-star">
                           <span
@@ -1060,7 +1075,10 @@ export default {
                       </div>
                     </div>
                     <!--SORUN YARATAN CLASS-->
-                    <div class="discount-prod-detail best-comment-view" v-show="productData.comments" >
+                    <div
+                      class="discount-prod-detail best-comment-view"
+                      v-show="productData.comments"
+                    >
                       <div style="text-align: left">
                         <div class="wrapper-star comment-star">
                           <div>
@@ -1079,13 +1097,14 @@ export default {
                       <div
                         class="discount-item-wrapper"
                         style="text-align: left"
-                      ><!--sorunlu kısım-->
+                      >
+                        <!--sorunlu kısım-->
                         <p>
-                          <b>{{ productData.comments[0].name }}</b>
+                          <b>{{ getComment(0).name }}</b>
                         </p>
                         <p class="best-comment-text">
-                          {{ productData.comments[0].highlight_comment }}
-                          {{ productData.comments[0].comment }}
+                          {{ getComment(0).highlight_comment }}
+                          {{ getComment(0).comment }}
                         </p>
                         <div class="item-all-comment">
                           <span class="d-inline-block"><strong></strong></span>
