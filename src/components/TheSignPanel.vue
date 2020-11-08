@@ -6,7 +6,7 @@ export default {
   },
   props: {
     openLogin: {
-      type: String,
+      type: Boolean,
       required: true
     }
   },

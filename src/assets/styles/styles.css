@@ -19068,7 +19068,7 @@ select.static-page__select-menu.form-control:hover {
 .rank-star {
   width: 94px;
   height: 17px;
-  /* background: url(../images/stars.svg) no-repeat; */
+  background: url(../images/stars.svg) no-repeat; 
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -19091,7 +19091,7 @@ select.static-page__select-menu.form-control:hover {
 
 .rank-star span {
   bottom: 0;
-  /* background: url(../images/stars-score.svg) no-repeat; */
+  background: url(../images/stars-score.svg) no-repeat; 
   z-index: 11;
 }
 

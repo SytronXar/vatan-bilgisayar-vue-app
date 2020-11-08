@@ -5,7 +5,7 @@ import Products from "@/Products";
 import Comments from "@/components/Comments";
 import FancyBoxContainer from "@/components/TheFancyBoxContainer"
 export default {
-  name: "UrunSayfasi",
+  name: "ProductPage",
   computed: {
     productData() {
       return Products.data.find(data => data.id === this.productId);
@@ -778,7 +778,7 @@ export default {
                               <span
                                 class="score"
                                 id="topAverageRank"
-                                style="width: 80%;"
+                                :style="{width: 100*productData.rate/5+'%'}"
                               ></span>
                             </div>
                             <a

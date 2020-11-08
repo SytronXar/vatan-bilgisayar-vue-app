@@ -13,6 +13,17 @@ export default {
       id:"2", pid:"9105", count:1
     }  
   ],
+  categories:[
+    {
+      id:"0", name: "Tüketici Elektroniği",  parentHierarchy:[]
+    },
+    {
+      id:"1", name: "Telefon",  parentHierarchy:["0", ]
+    },
+    {
+      id:"2", name: "Bilgisayar", parentHierarchy:[]
+    }
+  ],
   data: [
     /*Notebook ürünleri id'leri
         111981,110768,103828,103267,108837,108642,106786,105261,

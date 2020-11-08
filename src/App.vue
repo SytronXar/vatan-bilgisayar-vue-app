@@ -5,12 +5,10 @@
     <CategoryDropbar />
     <router-view :key="$route.path"/>
     <BottomOfPage/>
-    <TheFancyBoxContainer v-show="false"/>
 
   </div>
 </template>
 <script>
-import TheFancyBoxContainer from "@/components/TheFancyBoxContainer"
 import TheWrapper from "@/components/TheWrapper";
 import CategoryDropbar from "@/components/CategoryDropbar";
 import FastShippingAd from "@/components/FastShippingAd";
@@ -20,8 +18,7 @@ export default {
     TheWrapper,
     CategoryDropbar,
     FastShippingAd,
-    BottomOfPage,
-    TheFancyBoxContainer
+    BottomOfPage
   },
   methods:{
     openFancyBoxPanel(){

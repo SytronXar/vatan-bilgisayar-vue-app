@@ -98,7 +98,7 @@ export default {
             <tr>
               <td><strong>KDV</strong></td>
               <td class="text-right">
-                {{ formatPrice(GetTotal() * 0.22) }} TL
+                {{ formatPrice(GetTotal()-GetTotal() * 0.88) }} TL
               </td>
             </tr>
             <tr class="basket-ordersummary__total">

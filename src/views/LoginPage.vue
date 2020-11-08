@@ -2,13 +2,13 @@
 // @ is an alias to /src
 import SignPanel from "@/components/TheSignPanel";
 export default {
-  name: "UrunSayfasi",
+  name: "LoginPage",
   components: {
     SignPanel
   },
   props: {
     openLogin: {
-      type: String,
+      type: Boolean,
       required: true
     }
   },

@@ -8,7 +8,7 @@
             <div class="navbar-header__content no-padding">
               <div class="navbar-header__area">
                 <a class="navbar-brand" href="/">
-                  <img src="../assets/logo.png" alt="Vatan Bilgisayar" />
+                  <img src="../assets/images/logo.png" alt="Vatan Bilgisayar" />
                 </a>
               </div>
               <div class="navbar-header__area">

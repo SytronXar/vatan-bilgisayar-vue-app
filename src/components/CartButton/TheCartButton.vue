@@ -65,7 +65,7 @@ export default {
           class="test"
           data-count="1"
           v-for="cartItem in Cart"
-          :key="cartItem.count"
+          :key="cartItem.id"
         >
           <CartButtonItem :CartId="cartItem.id" :pId="cartItem.pid" />
         </li>
