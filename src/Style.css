@@ -26779,6 +26779,12 @@ input.apple-switch:checked:after {
   .shopping-cart{
     content:"\f07a"
   }
+  .icon-discount-tag{
+    content:"\f02b"
+  }
+  .icon-discount-tag2{
+    content:"\f295"
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;

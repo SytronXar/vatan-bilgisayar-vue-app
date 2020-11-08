@@ -54,10 +54,11 @@ export default {
 };
 </script>
 <template>
-  <div class="discount-prod-detail">
+  <div class="discount-prod-detail" v-show="productData.advicedProducts.length>0">
     <div class="discount-text clearfix">
-      <span class="icon-arrow-down-percent"></span>
-      <span>Bu ürünle birlikte alabileceğiniz ürünler</span>
+      <span class="icon-discount-tag"><i class="fas fa-tag"></i></span>
+      <span class="icon-discount-tag2"><i class="fas fa-percent"></i></span>
+      <span> Bu ürünle birlikte alabileceğiniz ürünler</span>
     </div>
     <div class="discount-item-wrapper">
       <!-- V-for çevirdiğimiz yer -->
