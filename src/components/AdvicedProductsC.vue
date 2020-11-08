@@ -1,9 +1,12 @@
 <script>
 // @ is an alias to /src
 import Products from "@/Products";
+import AdvicedProductsButton from "@/components/AdvicedProductsButton";
 export default {
   name: "UrunSayfasi",
-  computed: {},
+  components: {
+    AdvicedProductsButton
+  },
   props: {
     productId: {
       type: String,
@@ -58,55 +61,8 @@ export default {
     </div>
     <div class="discount-item-wrapper">
       <!-- V-for çevirdiğimiz yer -->
-      <div
-        class="discount-item"
-        v-for="sProduct in productData.advicedProducts"
-        :key="sProduct"
-      >
-        <div class="d-table clearfix">
-          <div class="d-cell">
-            <router-link
-              :id="sProduct"
-              :to="{
-                name: 'ProductPage',
-                params: { productId: sProduct, producthref: ProductHref(getProductData(sProduct).name) }
-              }"
-            >
-              <picture>
-                <img
-                  :src="getProductData(sProduct).images[0]"
-                  alt="urunismi"
-                />
-              </picture>
-              <span class="prod-name"
-                >{{ getProductData(sProduct).name }}
-              </span>
-            </router-link>
-          </div>
-            <div class="d-cell">
-            <span class="old-price">{{getProductData(sProduct).cost}} TL</span>
-            <span class="price">{{formatPrice(getProductData(sProduct).cost * 0.95)}} <span>TL</span></span>
-          </div>
-          <div class="d-cell">
-            <input
-              type="checkbox"
-              class="hidden-check bundle-check bundleProcess"
-              name="chkBndURN_88816"
-              id="chkBndURN_88816"
-            />
-            <label class="btn btn-add btn-sm pull-right" for="chkBndURN_88816"
-              >SEÇ</label
-            >
-          </div>
-          <input
-            type="hidden"
-            name="hdnUBN_KOD"
-            id="hdnUBN_KOD_88816"
-            class="inputCheck"
-            value="88816"
-          />
-        </div>
-      </div>
+      <AdvicedProductsButton :productId="pid"  v-for="pid in productData.advicedProducts"
+        :key="pid"/>
     </div>
     <div class="text-center">
       <a
