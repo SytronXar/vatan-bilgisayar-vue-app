@@ -1,3 +1,31 @@
+<script>
+import Products from "@/Products";
+export default {
+  props: {
+    productId: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {
+      product: Products.data.find(data => data.id === this.productId),
+      show:false
+    };
+  },
+  methods: {
+    formatPrice(value) {
+      let val = (value / 1).toFixed(0).replace(".", ",");
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    }
+  },
+  computed: {
+    ProductHref() {
+      return this.product.name.toLowerCase().replace(/\s/g, "-") + ".html";
+    }
+  }
+};
+</script>
 <template>
   <div
     class="fancybox-container fancybox-is-open fancybox-can-swipe"
@@ -109,42 +137,32 @@
               <div class="d-cell col-sm-1 col-xs-3 short-image">
                 <a href="javascript:void(0)">
                   <picture>
-                    <!--[if IE 9] >< video style="display: none;"><![endif]-->
-                    <source
-                      srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/TeoriV2-103888-27_small.jpg"
-                      media="(min-width: 1000px)"
-                      alt="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                      title="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                    />
-                    <source
-                      srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/TeoriV2-103888-27_small.jpg"
-                      media="(min-width: 600px)"
-                      alt="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                      title="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                    />
-                    <source
-                      srcset="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/TeoriV2-103888-27_small.jpg"
-                      media="(min-width: 300px)"
-                      alt="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                      title="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                    />
-                    <!--[if IE 9]></video><![endif]-->
                     <img
-                      src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/apple/thumb/TeoriV2-103888-27_small.jpg"
+                      :src="product.images[0]"
                       class="img-responsive"
-                      alt="iPhone  11 64 GB AKILLI TELEFON SİYAH"
-                      title="iPhone  11 64 GB AKILLI TELEFON SİYAH"
+                      :alt="product.name"
+                      :title="product.name"
                     />
                   </picture>
                 </a>
               </div>
               <div class="d-cell col-sm-5 col-xs-5 short-name">
-                <a href="../ iphone-11-akilli-telefon-siyah.html">
-                  <span> iPhone 11 64 GB AKILLI TELEFON SİYAH </span>
-                </a>
+                <router-link
+                  :to="{
+                    name: 'ProductPage',
+                    params: {
+                      productId: product.id,
+                      producthref: ProductHref
+                    }
+                  }"
+                >
+                  <span> {{ product.name }} </span>
+                </router-link>
               </div>
               <div class="d-cell col-xs-3 short-price">
-                <span class="product-list__price">7.599</span>
+                <span class="product-list__price">{{
+                  formatPrice(product.cost)
+                }}</span>
                 <span class="product-list__currency">TL</span>
               </div>
             </div>
@@ -405,6 +423,7 @@
               data-fancybox-close=""
               class="fancybox-button fancybox-close-small"
               title="Close"
+              @click="$emit('show-time',show)"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

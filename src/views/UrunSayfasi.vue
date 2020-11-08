@@ -3,6 +3,7 @@
 
 import Products from "@/Products";
 import Comments from "@/components/Comments";
+import FancyBoxContainer from "@/components/TheFancyBoxContainer"
 export default {
   name: "UrunSayfasi",
   computed: {
@@ -17,17 +18,22 @@ export default {
     }
   },
   components: {
-    Comments
+    Comments,
+    FancyBoxContainer
   },
   data() {
     return {
-      currentimg:0
+      currentimg:0,
+      showFancy:false
     };
   },
   methods:{
     updateimg(index)
     {
       this.currentimg=index
+    },
+    AddToBasket(){
+      this.showFancy=true;
     }
   }
 };
@@ -105,7 +111,7 @@ export default {
           </div>
           <div class="d-cell col-xs-12 short-basket-button">
             <a
-              onclick="AddToBasket(110768,17793 ,3,[])"
+              @click="AddToBasket()"
               class="btn btn-success sepete
                ekle"
               ><span
@@ -822,7 +828,7 @@ export default {
                           <div class="d-cell product-button--cell">
                             <button
                               id="add-to-cart-button"
-                              onclick="AddToBasket(110768, 17793, 3, [])"
+                              @click="AddToBasket()"
                               class="btn btn-success basketBTN"
                             >
                               <span class="icon-shopping-card"></span>
@@ -2463,5 +2469,6 @@ export default {
       <Comments :productId="productId"/>
 <!--Comments buraya gelecek-->
     </main>
+    <FancyBoxContainer :productId="productId" v-show="showFancy" @show-time="showFancy=$show"/>
   </body>
 </template>

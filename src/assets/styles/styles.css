@@ -11783,10 +11783,11 @@ button.swiper-pagination-bullet {
 }
 .icon-callcenter:before {
   content: "\e91d";
-}
+}*/
 .icon-check:before {
-  content: "\e91e";
+  content: "\f00c";
 }
+/*
 .icon-credit-card-alt:before {
   content: "\e91f";
 }
@@ -11836,10 +11837,11 @@ button.swiper-pagination-bullet {
 }
 .icon-instagram:before {
   content: "\e92d";
-}
+}*/
 .icon-map-marker-alt:before {
-  content: "\e92e";
+  content: "\f3c5";
 }
+/*
 .icon-memory:before {
   content: "\e92f";
 }

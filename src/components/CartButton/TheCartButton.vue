@@ -59,6 +59,7 @@ export default {
     </button>
     <ul class="dropdown-menu dropdown-menu-basket openBasket">
       <div class="basket-lists">
+        <span class="nothing-prod-in-basket" v-show="Cart.length<1">Sepetinizde Ürün Bulunmamaktadır.</span>
         <li
           id="16453018"
           class="test"
