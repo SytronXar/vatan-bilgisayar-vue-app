@@ -610,38 +610,11 @@ export default {
               </div>
               <div class="container-fluid wrapper-product-detail-info">
                 <div class="row">
-                  <ul class="pdetail-property-list">
-                    <li data-count="0">
-                      <span class="property-head">Pil Hücre Sayısı: </span>
-                      <span>3 Hücreli</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">Pil Kimyası: </span>
-                      <span>Lityum İyon</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">Güvenlik: </span>
-                      <span>Kensington kilidi</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">İşlemci Ön Bellek: </span>
-                      <span>8 MB</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">İşlemci Markası: </span>
-                      <span>Intel</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">İşlemci Hızı: </span>
-                      <span>2.5 GHz Turbo Boost 4.5 GHz</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">İşlemci Numarası: </span>
-                      <span>10300H</span>
-                    </li>
-                    <li data-count="0">
-                      <span class="property-head">İşlemci Teknolojisi: </span>
-                      <span>Core i5</span>
+                  <ul class="pdetail-property-list" v-for="moreInformation in productData.moreInformation"
+                        v-bind:key="moreInformation">
+                    <li data-count="8">
+                      <span class="property-head">{{moreInformation.info}}</span>
+                      <span>{{moreInformation.info_detail}}</span>
                     </li>
                   </ul>
                 </div>
@@ -1086,7 +1059,8 @@ export default {
                         </a>
                       </div>
                     </div>
-                    <div class="discount-prod-detail best-comment-view">
+                    <!--SORUN YARATAN CLASS-->
+                    <div class="discount-prod-detail best-comment-view" v-show="productData.comments" >
                       <div style="text-align: left">
                         <div class="wrapper-star comment-star">
                           <div>
@@ -1105,7 +1079,7 @@ export default {
                       <div
                         class="discount-item-wrapper"
                         style="text-align: left"
-                      >
+                      ><!--sorunlu kısım-->
                         <p>
                           <b>{{ productData.comments[0].name }}</b>
                         </p>
