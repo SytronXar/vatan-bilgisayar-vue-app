@@ -49,8 +49,6 @@ export default {
       /* bu ürünle tavsiye edilenler:*/
       advicedProducts: [
         "72441",
-        "103828",
-        "111981",
         "110768",
         "79651",
         "300873",
@@ -159,11 +157,10 @@ export default {
     {
       id: "84459",
       code: "QQ2-00006",
-      name:
-        "Online Microsoft 365 Bireysel (1 kullanıcı-1yıl) (Dijital İndirilebilir Lisans)",
+      name:"Online Microsoft 365 Bireysel (1 kullanıcı-1yıl) (Dijital İndirilebilir Lisans)",
       cost: 550,
       productLaunchTime: "2020-08-10",
-      rate: 5,
+      rate: 0,
       markalogosu:
         "https://cdn.vatanbilgisayar.com/Upload//MARKA/microsoft/microsoft.jpg",
       ratedPersonCount: 17,
@@ -175,6 +172,11 @@ export default {
       advicedProducts: [],
       images: [
         "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/microsoft/thumb/TeoriV2-84459_large.jpg"
+      ],
+      comments: [
+      ],
+      moreInformation:[
+
       ]
     },
     {
@@ -375,7 +377,7 @@ export default {
       code: "81TC000VTX",
       name:
         "LENOVO YOGA C740 CORE İ7 10510U 1.8GHZ-8GB RAM-512GB SSD-14''-INT-TOUCH-W10",
-      cost: 10018,
+      cost: 10092,
       productLaunchTime: "2020-08-22" /* ürünün satışa sunulma tarihi */,
       rate: 5 /* yıldız */,
       markalogosu:

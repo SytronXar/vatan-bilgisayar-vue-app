@@ -92,7 +92,7 @@
           </div>
         </router-link>
         <div class="product-list__cost">
-          <span class="product-list__price">{{
+          <span class="old-price">{{
             formatPrice(productData.cost)
           }}</span>
           <span class="product-list__currency"> TL</span>

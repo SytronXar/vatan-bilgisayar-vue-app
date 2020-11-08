@@ -26776,6 +26776,9 @@ input.apple-switch:checked:after {
   .share-alt{
     content:"\f1e0"
   }
+  .shopping-cart{
+    content:"\f07a"
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;

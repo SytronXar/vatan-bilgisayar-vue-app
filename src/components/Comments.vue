@@ -92,13 +92,15 @@ export default {
                   </div>
                   <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div class="wrapper-star">
-                      <div class="rank-star">
-                        <span
-                          class="score"
-                          id="averageRank"
-                          style="width: 81.5385%;"
-                        ></span>
-                      </div>
+                        <div class="rank-star">
+                          <span
+                            class="score"
+                            id="topAverageRank"
+                            :style="{
+                              width: (100 * productData.rate) / 5 + '%'
+                            }"
+                          ></span>
+                        </div>
                       <span style="">Bu ürün <b>{{productData.comments.length}}</b> yorumdan ortalama</span>
                       <span
                         > <strong id="averageRankNum"> {{13.5 / productData.comments.length}}</strong> Puan

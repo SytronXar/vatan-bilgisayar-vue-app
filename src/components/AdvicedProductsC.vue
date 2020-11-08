@@ -83,10 +83,9 @@ export default {
               </span>
             </router-link>
           </div>
-          <div class="d-cell">
-            <span class="price"
-              >{{ formatPrice(getProductData(sProduct).cost) }} <span>TL</span></span
-            >
+            <div class="d-cell">
+            <span class="old-price">{{getProductData(sProduct).cost}} TL</span>
+            <span class="price">{{formatPrice(getProductData(sProduct).cost * 0.95)}} <span>TL</span></span>
           </div>
           <div class="d-cell">
             <input

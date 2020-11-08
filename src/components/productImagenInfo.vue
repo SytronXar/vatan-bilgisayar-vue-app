@@ -54,60 +54,6 @@ export default {
         <div class="global-container top-pd-update linear-gradient">
           <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 pd-left">
-              <div class="hidden-sm hidden-md hidden-lg wrapper-pd-buttons">
-                <a
-                  id="favorite-button"
-                  data-message="Yukarıdaki Ürünün Fiyatı Düşünce Size Haber Verilecek"
-                  data-producttitle='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
-                  data-checkfav="/ProductDetail/CheckFavorite"
-                  href="javascript:void(0)"
-                  data-productid="110768"
-                  data-url="/ProductDetail/AddProductToFavorites"
-                  data-type="2"
-                  class="wrapper-detail-icon favoriteButton"
-                  data-toggle="tooltip"
-                  data-placement="top"
-                  title=""
-                  data-original-title="Favoriye Ekle"
-                >
-                  <span class="icon-heart-alt"></span>
-                </a>
-                <a
-                  class="wrapper-detail-icon icon-exchange addProductToCompare"
-                  href="javascript:void(0);"
-                  data-name='DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6"W10'
-                  data-code=""
-                  data-url="dell-g315-core-i5-10300h-2-5ghz-8gb-ram-512gb-ssd-gtx1650ti-4gb-15-6-w10.html"
-                  data-category="PC_POR"
-                  data-id="110768"
-                  data-price="10.018"
-                  data-img="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
-                  data-placement="top"
-                  title="Karşılaştır"
-                >
-                </a>
-                <a
-                  class="wrapper-detail-icon socialShareBtn "
-                  href="javascript:void(0);"
-                  title="Paylaş"
-                >
-                  <span class="icon-share2"></span>
-                </a>
-                <div class="social-share hide">
-                  <a
-                    href="javascript:socialShare(&#39;fb&#39;, &#39;DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6W10 - 10.018 TL&#39;); void(0);"
-                    class="icon-facebook"
-                  ></a>
-                  <a
-                    href="javascript:socialShare(&#39;tt&#39;,  &#39;DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6W10 - 10.018 TL&#39;); void(0);"
-                    class="icon-twitter"
-                  ></a>
-                  <a
-                    href="javascript:socialShare(&#39;wp&#39;, &#39;DELL G315 CORE İ5 10300H 2.5GHZ-8GB RAM-512GB SSD-GTX1650TI 4GB-15.6W10 - 10.018 TL&#39;); void(0);"
-                    class="icon-whatsapp"
-                  ></a>
-                </div>
-              </div>
               <div class="person-count">
                 <span class="icon-view"></span
                 ><span
@@ -742,8 +688,8 @@ export default {
                           @click="AddToBasket()"
                           class="btn btn-success basketBTN"
                         >
-                          <span class="icon-shopping-card"></span>
-                          <span>SEPETE EKLE</span>
+                          <span class="shopping-cart"><i class="fas fa-shopping-cart"></i></span>
+                          <span> SEPETE EKLE</span>
                         </button>
                       </div>
                       <div class="d-cell product-icon--cell">
