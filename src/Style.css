@@ -26761,6 +26761,21 @@ input.apple-switch:checked:after {
     content:"\f005";
     color:#FFD700;
   }
+  .icon-warranty{
+    content:"\f5a2"
+  }
+  .truck-moving{
+    content:"\f4df"
+  }
+  .favourite-heart{
+    content:"\f004"
+  }
+  .exchange-alt{
+    content:"\f362"
+  }
+  .share-alt{
+    content:"\f1e0"
+  }
   .responsive-tables td:before {
     content: attr(data-label);
     float: left;

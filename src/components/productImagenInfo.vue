@@ -3,8 +3,7 @@
 import Products from "@/Products";
 export default {
   name: "UrunSayfasi",
-  computed: {
-  },
+  computed: {},
   props: {
     productId: {
       type: String,
@@ -15,7 +14,7 @@ export default {
     return {
       currentimg: 0,
       showFancy: false,
-      productData:Products.data.find(data => data.id === this.productId)
+      productData: Products.data.find(data => data.id === this.productId)
     };
   },
   methods: {
@@ -32,14 +31,14 @@ export default {
     getComment(index) {
       var comments = this.productData.comments;
       if (comments.length > index) return comments[0];
-      comments.push({
-          date: "",
-          time: "",
-          rate: "",
-          name: "",
-          highlight_comment: "",
-          comment: ""});
-      return null;
+      return {
+        date: "",
+        time: "",
+        rate: "",
+        name: "",
+        highlight_comment: "",
+        comment: ""
+      };
     }
   }
 };
@@ -620,12 +619,12 @@ export default {
               </div>
               <div class="container-fluid wrapper-product-detail-info">
                 <div class="row">
-                  <ul
-                    class="pdetail-property-list"
-                    v-for="moreInformation in productData.moreInformation"
-                    v-bind:key="moreInformation"
-                  >
-                    <li data-count="8">
+                  <ul class="pdetail-property-list">
+                    <li
+                      data-count="0"
+                      v-for="moreInformation in productData.moreInformation"
+                      v-bind:key="moreInformation"
+                    >
                       <span class="property-head">{{
                         moreInformation.info
                       }}</span>
@@ -688,7 +687,7 @@ export default {
                           onclick="focusTab(&#39;yorumlar&#39;)"
                           class="comment-count"
                         >
-                          <span>(11)</span>
+                          <span>({{ productData.comments.length }})</span>
                         </a>
                       </div>
 
@@ -752,13 +751,15 @@ export default {
                           data-type="2"
                           data-productid="110768"
                           data-url="/ProductDetail/AddProductToFavorites"
-                          class="wrapper-detail-icon favoriteButton"
+                          class="wrapper-detail-icon"
                           data-toggle="tooltip"
                           data-placement="top"
                           title=""
                           data-original-title="Favoriye Ekle"
                         >
-                          <span class="icon-heart-alt"></span>
+                          <span class="favourite-heart"
+                            ><i class="fas fa-heart"></i
+                          ></span>
                         </a>
                         <a
                           href="javascript:void(0);"
@@ -769,12 +770,15 @@ export default {
                           data-id="110768"
                           data-price="10.018"
                           data-img="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768_small.jpg"
-                          class="wrapper-detail-icon icon-exchange addProductToCompare"
+                          class="wrapper-detail-icon"
                           data-toggle="tooltip"
                           data-placement="top"
                           title=""
                           data-original-title="Karşılaştır"
                         >
+                          <span class="exchange-alt"
+                            ><i class="fas fa-exchange-alt"></i
+                          ></span>
                         </a>
                         <a
                           class="wrapper-detail-icon icon-share2 socialShareBtn "
@@ -784,6 +788,9 @@ export default {
                           title=""
                           data-original-title="Paylaş"
                         >
+                          <span class="share-alt"
+                            ><i class="fas fa-share-alt"></i
+                          ></span>
                         </a>
                         <div class="social-share hide">
                           <a
@@ -808,7 +815,9 @@ export default {
                         title=""
                         data-original-title="Vatanbilgisayar’da sizlere sunulan tüm ürünler Türkiye’deki yetkili ithalatçı ve üretici firmaların garantisi altındadır, Uluslararası markaların sadece Türkiye için üretilen veya özelleştirilen ve yetkili servislerin ülke garantisi sağladığı modelleri sizlere sunulmaktadır."
                       >
-                        <span class="icon-warranty"></span>
+                        <span class="icon-warranty"
+                          ><i class="fas fa-medal"></i
+                        ></span>
                         <span>Garanti</span>
                       </li>
                       <li>
@@ -844,8 +853,10 @@ export default {
                         title=""
                         data-original-title="Ürünü teslim aldığınız tarihten itibaren 14 gün içerisinde , ön bilgilendirme formunda ve sözleşme metninde yazılı olan usule uyarak ücretsiz iade edebilir veya değiştirebilirsiniz. Cayma bildirimi tarafımıza ulaştığı tarihten itibaren 20 gün içerisinde, ürüne herhangi bir hasar verilmemesi ve eksiksiz teslim edilmesi şartıyla, tercihinize göre ürünü iade alarak bedelini tarafınıza ödemeyi veya ürün bedeli kadar alış veriş kuponu vermeyi taahhüt ederiz. Ancak satın alınan elektronik ürünlerde; sim kart takılması, wifi ile network bağlantı kurulması, kurulum yapılması, sarf malzemesinin kullanılmış olması, koruyucu bantların çıkarılmış olması, aktivasyon yapılması ve kullanıcı yaratılması halinde iade kabul edilmemektedir. Kişisel bakım ürünleri de hijyen kuralları gereği iadeye uygun değildir. Ticari veya mesleki amaçlarla hareket eden tüzel kişi ve / veya kişiler cayma hakkından ve cayma hakkından doğan hiçbir haktan faydalanamaz."
                       >
-                        <span class="icon-truck-alt"></span>
-                        <span>İade</span>
+                        <span class="truck-moving"
+                          ><i class="fas fa-truck-moving"></i
+                        ></span>
+                        <span> İade</span>
                       </li>
                     </ul>
                     <div class="discount-prod-detail delivery-options">
