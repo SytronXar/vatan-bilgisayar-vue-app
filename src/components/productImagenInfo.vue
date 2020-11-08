@@ -43,6 +43,9 @@ export default {
         highlight_comment: "",
         comment: ""
       };
+    },
+    randomVisitor(){
+      return Math.random() * (25 - 1) + 1;
     }
   }
 };
@@ -57,7 +60,7 @@ export default {
               <div class="person-count">
                 <span class="icon-view"></span
                 ><span
-                  >Bu Ürünü Şuan <span id="vlVisitorCount">11</span> Kişi
+                  >Bu Ürünü Şuan <span id="vlVisitorCount">{{formatPrice(randomVisitor())}}</span> Kişi
                   İnceliyor</span
                 ><span class="icon-zoom lightbox-item"></span>
               </div>
