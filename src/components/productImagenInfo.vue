@@ -1,18 +1,18 @@
 <script>
 // @ is an alias to /src
 import Products from "@/Products";
-import FancyBoxContainer from "@/components/TheFancyBoxContainer";
+import AdvicedProductsC from "@/components/AdvicedProductsC";
 export default {
   name: "UrunSayfasi",
-  components: {
-    FancyBoxContainer
-  },
   computed: {},
   props: {
     productId: {
       type: String,
       required: true
     }
+  },
+  components: {
+    AdvicedProductsC
   },
   data() {
     return {
@@ -930,165 +930,9 @@ export default {
                         </div>
                       </div>
                     </div>
-                    <div class="discount-prod-detail">
-                      <div class="discount-text clearfix">
-                        <span class="icon-arrow-down-percent"></span>
-                        <span>Bu ürünle birlikte alabileceğiniz ürünler</span>
-                      </div>
-                      <div class="discount-item-wrapper">
-                        <div class="discount-item">
-                          <div class="d-table clearfix">
-                            <div class="d-cell">
-                              <a
-                                href="https://www.vatanbilgisayar.com/asus-sdrw-08u9m-u-zendrive-harici-slim-dvd-yazici-siyah.html"
-                              >
-                                <picture>
-                                  <img
-                                    src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-12_large.jpg"
-                                    alt="ASUS SDRW-08U9M-U ZENDRIVE HARİCİ SLİM DVD-YAZICI - SİYAH"
-                                  />
-                                </picture>
-                                <span class="prod-name"
-                                  >ASUS SDRW-08U9M-U ZENDRIVE HARİCİ SLİM
-                                  DVD-YAZICI - SİYAH</span
-                                >
-                              </a>
-                            </div>
-                            <div class="d-cell">
-                              <span class="old-price">413,00 TL</span>
-                              <span class="price">367,82 <span>TL</span></span>
-                            </div>
-                            <div class="d-cell">
-                              <input
-                                type="checkbox"
-                                class="hidden-check bundle-check bundleProcess"
-                                name="chkBndURN_88816"
-                                id="chkBndURN_88816"
-                              />
-                              <label
-                                class="btn btn-add btn-sm pull-right"
-                                for="chkBndURN_88816"
-                                >SEÇ</label
-                              >
-                            </div>
-                            <input
-                              type="hidden"
-                              name="hdnUBN_KOD"
-                              id="hdnUBN_KOD_88816"
-                              class="inputCheck"
-                              value="88816"
-                            />
-                          </div>
-                        </div>
-                        <div class="discount-item">
-                          <div class="d-table clearfix">
-                            <div class="d-cell">
-                              <a
-                                href="https://www.vatanbilgisayar.com/online-office-365-personal-1-kullanici-1yil.html"
-                              >
-                                <picture>
-                                  <img
-                                    src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-12_large.jpg"
-                                    alt="Online Microsoft 365 Bireysel (1 kullanıcı-1yıl) (Dijital İndirilebilir Lisans)"
-                                  />
-                                </picture>
-                                <span class="prod-name"
-                                  >Online Microsoft 365 Bireysel (1
-                                  kullanıcı-1yıl) (Dijital İndirilebilir
-                                  Lisans)</span
-                                >
-                              </a>
-                            </div>
-                            <div class="d-cell">
-                              <span class="old-price">550,00 TL</span>
-                              <span class="price">499,02 <span>TL</span></span>
-                            </div>
-                            <div class="d-cell">
-                              <input
-                                type="checkbox"
-                                class="hidden-check bundle-check bundleProcess"
-                                name="chkBndURN_84459"
-                                id="chkBndURN_84459"
-                              />
-                              <label
-                                class="btn btn-add btn-sm pull-right"
-                                for="chkBndURN_84459"
-                                >SEÇ</label
-                              >
-                            </div>
-                            <input
-                              type="hidden"
-                              name="hdnUBN_KOD"
-                              id="hdnUBN_KOD_84459"
-                              class="inputCheck"
-                              value="84459"
-                            />
-                          </div>
-                        </div>
-                        <div class="discount-item">
-                          <div class="d-table clearfix">
-                            <div class="d-cell">
-                              <a
-                                href="https://www.vatanbilgisayar.com/asus-15-6-mb16amt-zenscreen-tasinabilir-ips-full-hd-usb-monitor.html"
-                              >
-                                <picture>
-                                  <img
-                                    src="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/dell/thumb/110768-12_large.jpg"
-                                    alt='ASUS 15,6" MB16AMT ZenScreen taşınabilir Dokunmatik IPS FullHD USB monitör'
-                                  />
-                                </picture>
-                                <span class="prod-name"
-                                  >ASUS 15,6" MB16AMT ZenScreen taşınabilir
-                                  Dokunmatik IPS FullHD USB monitör</span
-                                >
-                              </a>
-                            </div>
-                            <div class="d-cell">
-                              <span class="old-price">4.355,00 TL</span>
-                              <span class="price"
-                                >4.072,10 <span>TL</span></span
-                              >
-                            </div>
-                            <div class="d-cell">
-                              <input
-                                type="checkbox"
-                                class="hidden-check bundle-check bundleProcess"
-                                name="chkBndURN_104988"
-                                id="chkBndURN_104988"
-                              />
-                              <label
-                                class="btn btn-add btn-sm pull-right"
-                                for="chkBndURN_104988"
-                                >SEÇ</label
-                              >
-                            </div>
-                            <input
-                              type="hidden"
-                              name="hdnUBN_KOD"
-                              id="hdnUBN_KOD_104988"
-                              class="inputCheck"
-                              value="104988"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        <a
-                          href="https://www.vatanbilgisayar.com/dell-g315-core-i5-10300h-2-5ghz-8gb-ram-512gb-ssd-gtx1650ti-4gb-15-6-w10.html#"
-                          id="discount"
-                          class="discount-link hide"
-                        >
-                          <div class="discount-up">
-                            <span>Daha Fazla Göster</span>
-                            <span class="icon-angle-down"></span>
-                          </div>
-                          <div class="discount-down hide">
-                            <span>Daha Az Göster</span>
-                            <span class="icon-angle-up"></span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
+                    <!--Önerilen Ürünler-->
+                    <AdvicedProductsC :productId="productId"/>
+                    
                     <!--SORUN YARATAN CLASS-->
                     <div
                       class="discount-prod-detail best-comment-view"
@@ -1145,6 +989,5 @@ export default {
         </div>
       </div>
     </div>
-    <FancyBoxContainer :productId="productId" v-show="showFancy" @close="showFancy=false"/>
   </div>
 </template>
