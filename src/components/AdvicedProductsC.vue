@@ -22,7 +22,7 @@ export default {
       this.currentimg = index;
     },
     formatPrice(value) {
-      let val = (value / 1).toFixed(0).replace(".", ",");
+      let val = (value / 1).toFixed(2).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     AddToBasket() {
@@ -40,11 +40,13 @@ export default {
         comment: ""
       };
     },
-    /*
+
+    ProductHref(name) {
+      return name.toLowerCase().replace(/\s/g, "-") + ".html";
+    },
     getProductData(sProduct) {
-        return Products.data.find(data => data.id === this.sProduct)
+      return Products.data.find(data => data.id === sProduct);
     }
-    */
   }
 };
 </script>
@@ -55,27 +57,36 @@ export default {
       <span>Bu ürünle birlikte alabileceğiniz ürünler</span>
     </div>
     <div class="discount-item-wrapper">
-        <!-- V-for çevirdiğimiz yer -->
+      <!-- V-for çevirdiğimiz yer -->
       <div
         class="discount-item"
-        v-for="sProduct in productData.advicedProducts" :key="sProduct"
+        v-for="sProduct in productData.advicedProducts"
+        :key="sProduct"
       >
         <div class="d-table clearfix">
           <div class="d-cell">
-            <a href="">
+            <router-link
+              :id="sProduct"
+              :to="{
+                name: 'ProductPage',
+                params: { productId: sProduct, producthref: ProductHref(getProductData(sProduct).name) }
+              }"
+            >
               <picture>
                 <img
-                  src="https://static.wikia.nocookie.net/callmekevin/images/c/c1/JimPoster.jpg/revision/latest?cb=20180925021535"
+                  :src="getProductData(sProduct).images[0]"
                   alt="urunismi"
                 />
               </picture>
-              <span class="prod-name">Ürün ismi
+              <span class="prod-name"
+                >{{ getProductData(sProduct).name }}
               </span>
-            </a>
+            </router-link>
           </div>
           <div class="d-cell">
-            <span class="old-price">413,00 TL</span>
-            <span class="price">367,82 <span>TL</span></span>
+            <span class="price"
+              >{{ formatPrice(getProductData(sProduct).cost) }} <span>TL</span></span
+            >
           </div>
           <div class="d-cell">
             <input
