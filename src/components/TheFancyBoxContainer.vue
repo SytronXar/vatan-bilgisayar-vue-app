@@ -423,7 +423,7 @@ export default {
               data-fancybox-close=""
               class="fancybox-button fancybox-close-small"
               title="Close"
-              @click="$emit('show-time',show)"
+              @click="$emit('close',show)"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

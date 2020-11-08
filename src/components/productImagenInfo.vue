@@ -1,8 +1,12 @@
 <script>
 // @ is an alias to /src
 import Products from "@/Products";
+import FancyBoxContainer from "@/components/TheFancyBoxContainer";
 export default {
   name: "UrunSayfasi",
+  components: {
+    FancyBoxContainer
+  },
   computed: {},
   props: {
     productId: {
@@ -1141,5 +1145,6 @@ export default {
         </div>
       </div>
     </div>
+    <FancyBoxContainer :productId="productId" v-show="showFancy" @close="showFancy=false"/>
   </div>
 </template>

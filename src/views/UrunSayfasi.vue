@@ -4,7 +4,6 @@
 import Products from "@/Products";
 import Comments from "@/components/Comments";
 import productImagenInfo from "@/components/productImagenInfo";
-import FancyBoxContainer from "@/components/TheFancyBoxContainer"
 export default {
   name: "ProductPage",
   computed: {
@@ -20,13 +19,11 @@ export default {
   },
   components: {
     Comments,
-    FancyBoxContainer,
     productImagenInfo,
   },
   data() {
     return {
-      currentimg:0,
-      showFancy:false
+      currentimg:0
     };
   },
   methods:{
@@ -1382,6 +1379,5 @@ export default {
       <Comments :productId="productId"/>
 <!--Comments buraya gelecek-->
     </main>
-    <FancyBoxContainer :productId="productId" v-show="showFancy" @show-time="showFancy=$show"/>
   </body>
 </template>
