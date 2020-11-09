@@ -11,49 +11,86 @@ export default {
     }
   },
   components: {
-    FiveCarouselButton,CarouselDot
+    FiveCarouselButton,
+    CarouselDot
   },
-  computed:{
-    owlStageWidth(){
-      return (this.carouselItemX)*this.nItem
+  computed: {
+    owlStageWidth() {
+      return this.carouselItemX * this.nItem;
     },
-    nDot(){
-      return Number((this.owlStageWidth/((this.carouselItemX)*5)).toFixed())
+    nDot() {
+      return Number((this.owlStageWidth / (this.carouselItemX * 5)).toFixed());
     },
-    outerLenght(){
-      return 5*(this.carouselItemX)
+    outerLenght() {
+      return 5 * this.carouselItemX;
     },
-    minStageX(){
-      return this.outerLenght-this.owlStageWidth
+    minStageX() {
+      return this.outerLenght - this.owlStageWidth;
     },
-    carouselItemX(){
-      return this.carouselItemWidth+this.carouselItemMarginR;
+    carouselItemX() {
+      return this.carouselItemWidth + this.carouselItemMarginR;
     }
-    
   },
   data() {
     return {
-      nItem :ProductJs.data.length,
+      nItem: ProductJs.data.length,
       Products: ProductJs.data,
-      carouselItemWidth:262.4,
-      carouselItemMarginR:6,
-      owlStageX:0,
-      owlGrab:false
+      carouselItemWidth: 262.4,
+      carouselItemMarginR: 6,
+      owlStageX: 0,
+      owlGrab: false,
+      grabInterval: undefined,
+      mouseX:0,
     };
   },
   methods: {
-    onDotClick(dotNumber){
-      var toStageX=(dotNumber-1)*this.outerLenght*(-1);
-      if(toStageX<this.minStageX) this.owlStageX= this.minStageX;
-      else this.owlStageX=toStageX
+    onDotClick(dotNumber) {
+      var toStageX = (dotNumber - 1) * this.outerLenght * -1;
+      if (toStageX < this.minStageX) this.owlStageX = this.minStageX;
+      else this.owlStageX = toStageX;
     },
-    onNavClick(way){
-      var toStageX=this.owlStageX+this.carouselItemX*(way);
-      if(toStageX>0) this.owlStageX=0;
-      else if(toStageX<this.minStageX) this.owlStageX= this.minStageX;
-      else this.owlStageX=toStageX;
+    onNavClick(way) {
+      var toStageX = this.owlStageX + this.carouselItemX * way;
+      if (toStageX > 0) this.owlStageX = 0;
+      else if (toStageX < this.minStageX) this.owlStageX = this.minStageX;
+      else this.owlStageX = toStageX;
     },
-    
+    SetOwlStage(toStageX){
+      if (toStageX > 0) this.owlStageX = 0;
+      else if (toStageX < this.minStageX) this.owlStageX = this.minStageX;
+      else this.owlStageX = toStageX;
+    },
+
+    StartGrab(event) {
+      console.log("interval start ");
+      this.owlGrab = true;
+      var currentMouseX=event.pageX;
+      if (!this.grabInterval) {
+        window.addEventListener("mousemove",this.SetMousePosition)
+        this.grabInterval = setInterval(   
+          function() {
+            console.log(currentMouseX - this.mouseX);
+            this.SetOwlStage(this.owlStageX-(currentMouseX - this.mouseX));
+          }.bind(this),
+          50
+        );
+      }
+    },
+    SetMousePosition(event){
+      this.mouseX= event.pageX
+    },
+
+    StopGrab() {
+      console.log("interval stop ");
+      clearInterval(this.grabInterval);
+      window.removeEventListener("mousemove",this.SetMousePosition);
+      this.grabInterval=null;
+      this.owlGrab = false;
+    }
+  },
+  mounted() {
+    window.addEventListener("mouseup", this.StopGrab);
+    /* var x = event.clientX; */
   }
 };
 </script>
@@ -72,12 +109,17 @@ export default {
         </h3>
       </div>
       <div
-        class="owl-carousel owl-carousel-arrows owl-theme owl-loaded owl-drag" :class="{ 'owl-grab': owlGrab }"
+        class="owl-carousel owl-carousel-arrows owl-theme owl-loaded owl-drag"
+        :class="{ 'owl-grab': owlGrab }"
       >
-        <div class="owl-stage-outer" @mousedown="owlGrab=true" @mouseup="owlGrab=false">
+        <div class="owl-stage-outer" @mousedown="StartGrab">
           <div
             class="owl-stage"
-            :style="{transform: 'translate3d('+owlStageX+'px, 0px, 0px)', transition: 'all 0.25s  ease 0s', width: owlStageWidth+ 'px'}"
+            :style="{
+              transform: 'translate3d(' + owlStageX + 'px, 0px, 0px)',
+              transition: 'all 0.25s  ease 0s',
+              width: owlStageWidth + 'px'
+            }"
           >
             <!-- Owl button -->
             <FiveCarouselButton
@@ -88,14 +130,31 @@ export default {
           </div>
         </div>
         <div class="owl-nav">
-          <button type="button" role="presentation" class="owl-prev disabled" @click="onNavClick(1)">
+          <button
+            type="button"
+            role="presentation"
+            class="owl-prev disabled"
+            @click="onNavClick(1)"
+          >
             <span class="btn-carousel-controls icon-angle-left"></span></button
-          ><button type="button" role="presentation" class="owl-next" @click="onNavClick(-1)">
+          ><button
+            type="button"
+            role="presentation"
+            class="owl-next"
+            @click="onNavClick(-1)"
+          >
             <span class="btn-carousel-controls icon-angle-right"></span>
           </button>
         </div>
-        <div class="owl-dots" > 
-          <CarouselDot @clicked="onDotClick" :outerLenght="outerLenght" :owlStageX="owlStageX" :dotNumber="n" v-for="n in nDot" :key="n"/>
+        <div class="owl-dots">
+          <CarouselDot
+            @clicked="onDotClick"
+            :outerLenght="outerLenght"
+            :owlStageX="owlStageX"
+            :dotNumber="n"
+            v-for="n in nDot"
+            :key="n"
+          />
         </div>
       </div>
     </div>

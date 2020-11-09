@@ -35,7 +35,6 @@ export default {
       return this.selfOwlStageX+this.outerLenght
     },
     isActive(){
-      console.log(this.selfOwlStageX)
       return this.owlStageX<this.maxStageX && this.owlStageX>this.minStageX
     }
   }
