@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     ProductHref() {
-      return this.product.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      return this.product.name.toLowerCase().replace(/\s/g, "-");
     },
     formatPrice(value) {
       let val = (value / 1).toFixed(0).replace(".", ",");

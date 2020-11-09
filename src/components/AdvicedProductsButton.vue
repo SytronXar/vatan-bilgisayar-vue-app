@@ -19,7 +19,7 @@ export default {
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     ProductHref() {
-      var href=this.productData.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      var href=this.productData.name.toLowerCase().replace(/\s/g, "-");
       console.log(href)
       return href
     }

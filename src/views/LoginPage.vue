@@ -7,8 +7,8 @@ export default {
     SignPanel
   },
   props: {
-    openLogin: {
-      type: Boolean,
+    loginhref: {
+      type: String,
       required: true
     }
   },
@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
   <main>
-    <SignPanel :openLogin="openLogin" />
+    <SignPanel :openLogin="loginhref==='signin'" />
     <div
       class="modal fade"
       id="exampleModal"

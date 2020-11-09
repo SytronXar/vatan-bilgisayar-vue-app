@@ -22,7 +22,7 @@ export default {
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     ProductHref() {
-      return this.productData.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      return this.productData.name.toLowerCase().replace(/\s/g, "-");
     }
   }
 };

@@ -148,7 +148,7 @@ export default {
       return 100 / this.productData.images.length;
     },
     ProductHref() {
-      return this.productData.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      return this.productData.name.toLowerCase().replace(/\s/g, "-");
     }
   },
   props: {

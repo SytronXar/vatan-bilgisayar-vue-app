@@ -56,22 +56,22 @@ export default {
       else this.owlStageX = toStageX;
     },
     SetOwlStage(toStageX){
-      if (toStageX > 0) this.owlStageX = 0;
+     /*  if (toStageX > 0) this.owlStageX = 0;
       else if (toStageX < this.minStageX) this.owlStageX = this.minStageX;
-      else this.owlStageX = toStageX;
+      else  */this.owlStageX = toStageX;
     },
 
     StartGrab(event) {
       console.log("interval start ");
       this.owlGrab = true;
       var currentMouseX=event.pageX;
+      var tempOwlStageX=this.owlStageX;
       if (!this.grabInterval) {
         window.addEventListener("mouseup", this.StopGrab);
         window.addEventListener("mousemove",this.SetMousePosition)
         this.grabInterval = setInterval(   
           function() {
-            console.log(currentMouseX - this.mouseX);
-            this.SetOwlStage(this.owlStageX-(currentMouseX - this.mouseX));
+            this.SetOwlStage(tempOwlStageX-(currentMouseX - this.mouseX));
           }.bind(this),
           50
         );
@@ -88,6 +88,9 @@ export default {
       window.removeEventListener("mouseup", this.StopGrab);
       this.grabInterval=null;
       this.owlGrab = false;
+      if (this.owlStageX > 0) this.owlStageX = 0;
+      else if (this.owlStageX < this.minStageX) this.owlStageX = this.minStageX;
+     
     }
   },
   mounted() {

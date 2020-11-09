@@ -21,7 +21,7 @@ export default {
     },
     
     ProductHref() {
-      return this.product.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      return this.product.name.toLowerCase().replace(/\s/g, "-");
     }
   },
   data() {

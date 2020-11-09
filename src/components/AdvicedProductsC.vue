@@ -45,7 +45,7 @@ export default {
     },
 
     ProductHref(name) {
-      return name.toLowerCase().replace(/\s/g, "-") + ".html";
+      return name.toLowerCase().replace(/\s/g, "-");
     },
     getProductData(sProduct) {
       return Products.data.find(data => data.id === sProduct);

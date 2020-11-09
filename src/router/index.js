@@ -6,14 +6,14 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/:producthref",
+    path: "/:producthref/:productId.html",
     name: "ProductPage",
     props:true,
     component: () =>
       import(/*webpackChunkName:"UrunSayfasi"*/ "../views/UrunSayfasi.vue")
   },
   {
-    path: "/login/?returnUrl=%2F&logtab=:loginhref",
+    path: "/login/logtab/:loginhref",
     name: "LoginPage",
     props:true,
     component: () =>
