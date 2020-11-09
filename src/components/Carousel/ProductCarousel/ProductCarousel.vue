@@ -26,7 +26,7 @@
           <ProductCarouselButton
             :imageSrc="image"
             v-for="image in productData.images"
-            :key="image"
+            :key="image" :itemWidth="itemWidth"
           />
         </div>
       </div>
@@ -63,6 +63,10 @@ export default {
     productId: {
       type: String,
       required: true
+    },
+    itemWidth:{
+        type: Number,
+        required:true
     }
   },
   components: {
@@ -102,7 +106,7 @@ export default {
   },
   data() {
     return {
-      carouselItemWidth: 179.625,
+      carouselItemWidth: this.itemWidth /* 179.625, */,
       carouselItemMarginR: 0,
       owlStageX: 0,
       grabInterval: undefined,

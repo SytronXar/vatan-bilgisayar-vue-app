@@ -1,5 +1,5 @@
 <template>
-  <div class="owl-item active" style="width: 179.625px;">
+  <div class="owl-item active" :style="{width: itemWidth +'px'}">
     <div class="slider-img">
       <img
         :src="imageSrc"
@@ -18,6 +18,10 @@ export default {
     imageSrc: {
       type: String,
       required: true
+    },
+    itemWidth:{
+        type: Number,
+        required:true
     }
   }
 };

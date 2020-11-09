@@ -26,7 +26,7 @@
           <ProductButton
             :productId="getProductID(index)"
             v-for="(n, index) in getMaxAvailableListCount(18)"
-            :key="n"
+            :key="n" :itemWidth="179.625"
           />
         </div>
       </div>

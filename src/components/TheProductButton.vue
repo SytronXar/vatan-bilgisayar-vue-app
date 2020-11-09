@@ -1,7 +1,7 @@
 <template>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
     <div class="product-list">
-      <ProductCarousel :productId="productId" />
+      <ProductCarousel :productId="productId" :itemWidth="itemWidth" />
       <!-- Son * ürün labeli -->
       <div
         class="product-list__campaign-bar only-web flash-animated"
@@ -103,6 +103,10 @@ export default {
     productId: {
       type: String,
       required: true
+    },
+    itemWidth:{
+        type: Number,
+        required:true
     }
   },
   methods: {
