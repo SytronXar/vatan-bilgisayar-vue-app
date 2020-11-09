@@ -3,7 +3,6 @@
 // @ is an alias to /src
 import Products from "@/Products";
 export default {
-  name: "UrunSayfasi",
   computed: {},
   props: {
     productId: {
@@ -102,10 +101,10 @@ export default {
             </router-link>
           </div>
           <div class="product-list__cost">
-            <span class="product-list__price">{{ productData.cost }} </span>
+            <span class="product-list__price">{{ formatPrice(productData.cost) }} </span>
             <span class="product-list__currency">TL</span>
             <span class="product-list__current-price"
-              >{{ productData.cost * 1.1 }} TL</span
+              >{{ formatPrice(productData.cost * 1.1) }} TL</span
             >
           </div>
           <div class="wrapper-condition">

@@ -1,59 +1,7 @@
 <template>
   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
     <div class="product-list">
-      <div class="product-list__image-safe">
-        <router-link
-          :id="productData.id"
-          :to="{
-            name: 'ProductPage',
-            params: { productId: productData.id, producthref: ProductHref }
-          }"
-          title=""
-          class="product-list__image-safe-link sld product-pic-slider owl-carousel owl-loaded owl-drag"
-        >
-          <div class="owl-stage-outer" @mousemove="onMouseOver">
-            <div
-              class="owl-stage"
-              :style="
-                `transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width:` +
-                  owlStageWidth +
-                  `px;`
-              "
-            >
-              <div
-                class="owl-item active"
-                :style="`width: ` + imageWidth + `px;`"
-                v-for="image in productData.images"
-                v-bind:key="image"
-              >
-                <div class="slider-img">
-                  <img
-                    class="lazyimg"
-                    v-bind:src="image"
-                    v-bind:data-src="image"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="owl-nav disabled">
-            <button type="button" role="presentation" class="owl-prev">
-              <span aria-label="Previous">‹</span></button
-            ><button type="button" role="presentation" class="owl-next">
-              <span aria-label="Next">›</span>
-            </button>
-          </div>
-          <div class="owl-dots disabled"></div
-        ></router-link>
-        <ul class="img-slide-thumbs">
-          <li
-            :style="`width:` + percentSlideThumbs + `%`"
-            v-for="n in productData.images.length"
-            :key="n"
-            v-bind:class="{ active: n === currentShowImageIndex }"
-          ></li>
-        </ul>
-      </div>
+      <ProductCarousel :productId="productId" />
       <!-- Son * ürün labeli -->
       <div
         class="product-list__campaign-bar only-web flash-animated"
@@ -66,6 +14,7 @@
           ></span
         >
       </div>
+
       <!-- Yeni ürün labeli -->
       <div
         class="product-list__badge-bar"
@@ -92,9 +41,7 @@
           </div>
         </router-link>
         <div class="product-list__cost">
-          <span class="old-price">{{
-            formatPrice(productData.cost)
-          }}</span>
+          <span class="old-price">{{ formatPrice(productData.cost) }}</span>
           <span class="product-list__currency"> TL</span>
           <span class="product-list__current-price"> </span>
         </div>
@@ -128,6 +75,7 @@
 </template>
 <script>
 import Products from "@/Products";
+import ProductCarousel from "@/components/Carousel/ProductCarousel/ProductCarousel";
 import moment from "moment";
 export default {
   data() {
@@ -136,7 +84,7 @@ export default {
       currentShowImageIndex: 1
     };
   },
-  components: {},
+  components: { ProductCarousel },
   computed: {
     productData() {
       return Products.data.find(data => data.id === this.productId);
