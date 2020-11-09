@@ -12,13 +12,15 @@ export default {
     }
   },
   components: {
-    AdvicedProductsC,TheFancyBoxContainer
+    AdvicedProductsC,
+    TheFancyBoxContainer
   },
   data() {
     return {
       currentimg: 0,
       showFancy: false,
-      productData: Products.data.find(data => data.id === this.productId)
+      productData: Products.data.find(data => data.id === this.productId),
+      randomVisitor: Math.random() * (25 - 1) + 1
     };
   },
   methods: {
@@ -43,9 +45,6 @@ export default {
         highlight_comment: "",
         comment: ""
       };
-    },
-    randomVisitor() {
-      return Math.random() * (25 - 1) + 1;
     }
   }
 };
@@ -62,7 +61,7 @@ export default {
                 ><span
                   >Bu Ürünü Şuan
                   <span id="vlVisitorCount">{{
-                    formatPrice(randomVisitor())
+                    formatPrice(randomVisitor)
                   }}</span>
                   Kişi İnceliyor</span
                 ><span class="icon-zoom lightbox-item"></span>
@@ -943,6 +942,10 @@ export default {
         </div>
       </div>
     </div>
-    <TheFancyBoxContainer :productId="productId" @close="showFancy=$show" v-show="showFancy" />
+    <TheFancyBoxContainer
+      :productId="productId"
+      @close="showFancy = $show"
+      v-show="showFancy"
+    />
   </div>
 </template>
