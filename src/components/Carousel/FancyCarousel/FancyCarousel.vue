@@ -1,7 +1,73 @@
+<template>
+  <div class="fancy-modal-body fancy-modal-list">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <h4>{{ Message }}</h4>
+        </div>
+        <div class="col-xs-12">
+          <div
+            id="popupBundleList"
+            data-productlineid="0"
+            class="owl-modal-slider-bundle owl-carousel owl-theme owl-loaded owl-drag"
+            :class="{ 'owl-grab': owlGrab }"
+          >
+            <div class="owl-stage-outer" @mousedown="StartGrab">
+              <div
+                class="owl-stage"
+                :style="{
+                  transform: 'translate3d(' + owlStageX + 'px, 0px, 0px)',
+                  transition: 'all 0.25s  ease 0s',
+                  width: owlStageWidth + 'px'
+                }"
+              >
+                <!-- Owl button -->
+                <FancyCarouselButton
+                  :productId="product.id"
+                  v-for="product in Products"
+                  :key="product.id"
+                />
+              </div>
+            </div>
+            <div class="owl-nav">
+              <button
+                type="button"
+                role="presentation"
+                class="owl-prev"
+                @click="onNavClick(1)"
+              >
+                <span
+                  class="btn-carousel-controls icon-angle-left"
+                ></span></button
+              ><button
+                type="button"
+                role="presentation"
+                class="owl-next disabled"
+                @click="onNavClick(-1)"
+              >
+                <span class="btn-carousel-controls icon-angle-right"></span>
+              </button>
+            </div>
+            <div class="owl-dots">
+              <CarouselDot
+                @clicked="onDotClick"
+                :outerLenght="outerLenght"
+                :owlStageX="owlStageX"
+                :dotNumber="n"
+                v-for="n in nDot"
+                :key="n"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
 // @ is an alias to /src
 import ProductJs from "@/Products";
-import FiveCarouselButton from "@/components/Carousel/FiveCarouselButton";
+import FancyCarouselButton from "@/components/Carousel/FancyCarousel/FancyCarouselButton";
 import CarouselDot from "@/components/Carousel/CarouselDot";
 export default {
   props: {
@@ -11,7 +77,7 @@ export default {
     }
   },
   components: {
-    FiveCarouselButton,
+    FancyCarouselButton,
     CarouselDot
   },
   computed: {
@@ -19,7 +85,12 @@ export default {
       return this.carouselItemX * this.nItem;
     },
     nDot() {
-      return Number((this.owlStageWidth / (this.carouselItemX * this.nCarouselItem)).toFixed());
+      return Number(
+        (
+          this.owlStageWidth /
+          (this.carouselItemX * this.nCarouselItem)
+        ).toFixed()
+      );
     },
     outerLenght() {
       return this.nCarouselItem * this.carouselItemX;
@@ -35,13 +106,13 @@ export default {
     return {
       nItem: ProductJs.data.length,
       Products: ProductJs.data,
-      carouselItemWidth: 262.4,
+      carouselItemWidth: 289.333,
       carouselItemMarginR: 6,
       owlStageX: 0,
       owlGrab: false,
       grabInterval: undefined,
       mouseX: 0,
-      nCarouselItem:5
+      nCarouselItem: 3
     };
   },
   methods: {
@@ -70,8 +141,8 @@ export default {
       if (!this.grabInterval) {
         window.addEventListener("mouseup", this.StopGrab);
         window.addEventListener("mousemove", this.SetMousePosition);
-         var Mdiff = this.mouseX - currentMouseX;
-         /* var TmDiff=Mdiff */
+        var Mdiff = this.mouseX - currentMouseX;
+        /* var TmDiff=Mdiff */
         this.grabInterval = setInterval(
           function() {
             Mdiff = this.mouseX - currentMouseX;
@@ -104,69 +175,3 @@ export default {
   }
 };
 </script>
-<template>
-  <div
-    class="wrapper-product wrapper-product--light wrapper-product-detail- no-pad-bot visilabs-alternate-products"
-  >
-    <div class="global-container">
-      <div
-        class="global-component-header global-component-header--small-gutter clearfix"
-      >
-        <h3
-          class="global-component-header__title global-component-header--small-gutter__title"
-        >
-          {{ Message }}
-        </h3>
-      </div>
-      <div
-        class="owl-carousel owl-carousel-arrows owl-theme owl-loaded owl-drag"
-        :class="{ 'owl-grab': owlGrab }"
-      >
-        <div class="owl-stage-outer" @mousedown="StartGrab">
-          <div
-            class="owl-stage"
-            :style="{
-              transform: 'translate3d(' + owlStageX + 'px, 0px, 0px)',
-              transition: 'all 0.25s  ease 0s',
-              width: owlStageWidth + 'px'
-            }"
-          >
-            <!-- Owl button -->
-            <FiveCarouselButton
-              :productId="product.id"
-              v-for="product in Products"
-              :key="product.id"
-            />
-          </div>
-        </div>
-        <div class="owl-nav">
-          <button
-            type="button"
-            role="presentation"
-            class="owl-prev disabled"
-            @click="onNavClick(1)"
-          >
-            <span class="btn-carousel-controls icon-angle-left"></span></button
-          ><button
-            type="button"
-            role="presentation"
-            class="owl-next"
-            @click="onNavClick(-1)"
-          >
-            <span class="btn-carousel-controls icon-angle-right"></span>
-          </button>
-        </div>
-        <div class="owl-dots">
-          <CarouselDot
-            @clicked="onDotClick"
-            :outerLenght="outerLenght"
-            :owlStageX="owlStageX"
-            :dotNumber="n"
-            v-for="n in nDot"
-            :key="n"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
