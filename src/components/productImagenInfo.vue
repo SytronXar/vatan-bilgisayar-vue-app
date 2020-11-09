@@ -2,8 +2,8 @@
 // @ is an alias to /src
 import Products from "@/Products";
 import AdvicedProductsC from "@/components/AdvicedProductsC";
+import TheFancyBoxContainer from "@/components/TheFancyBoxContainer";
 export default {
-  name: "UrunSayfasi",
   computed: {},
   props: {
     productId: {
@@ -12,7 +12,7 @@ export default {
     }
   },
   components: {
-    AdvicedProductsC
+    AdvicedProductsC,TheFancyBoxContainer
   },
   data() {
     return {
@@ -665,7 +665,7 @@ export default {
                           class="product-list_explanation product-list__description-text"
                         ></h3>
                         <span class="product-list__price">{{
-                          productData.cost
+                          formatPrice(productData.cost)
                         }}</span>
                         <span class="product-list__currency">TL</span>
                       </div>
@@ -943,5 +943,6 @@ export default {
         </div>
       </div>
     </div>
+    <TheFancyBoxContainer :productId="productId" @close="showFancy=$show" v-show="showFancy" />
   </div>
 </template>
