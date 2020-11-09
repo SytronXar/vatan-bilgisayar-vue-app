@@ -1,7 +1,7 @@
 <script>
 // @ is an alias to /src
 import ProductJs from "@/Products";
-import FiveCarouselButton from "@/components/Carousel/FiveCarouselButton";
+import TwoCarouselButton from "@/components/Carousel/TwoCarouselButton";
 import CarouselDot from "@/components/Carousel/CarouselDot";
 export default {
   props: {
@@ -11,7 +11,7 @@ export default {
     }
   },
   components: {
-    FiveCarouselButton,
+    TwoCarouselButton,
     CarouselDot
   },
   computed: {
@@ -41,7 +41,7 @@ export default {
       owlGrab: false,
       grabInterval: undefined,
       mouseX: 0,
-      nCarouselItem:5
+      nCarouselItem:2
     };
   },
   methods: {
@@ -105,23 +105,12 @@ export default {
 };
 </script>
 <template>
-  <div
-    class="wrapper-product wrapper-product--light wrapper-product-detail- no-pad-bot visilabs-alternate-products"
-  >
+  <div class="wrapper-product wrapper-product--dark wrapper-product--limited">
     <div class="global-container">
-      <div
-        class="global-component-header global-component-header--small-gutter clearfix"
-      >
-        <h3
-          class="global-component-header__title global-component-header--small-gutter__title"
-        >
-          {{ Message }}
-        </h3>
+      <div class="global-component-header clearfix">
+        <h3 class="global-component-header__title">{{Message}}</h3>
       </div>
-      <div
-        class="owl-carousel owl-carousel-arrows owl-theme owl-loaded owl-drag"
-        :class="{ 'owl-grab': owlGrab }"
-      >
+      <div class="owl-carousel owl-carousel-two owl-theme owl-loaded owl-drag" :class="{ 'owl-grab': owlGrab }">
         <div class="owl-stage-outer" @mousedown="StartGrab">
           <div
             class="owl-stage"
@@ -131,29 +120,19 @@ export default {
               width: owlStageWidth + 'px'
             }"
           >
-            <!-- Owl button -->
-            <FiveCarouselButton
+             <!-- Owl button -->
+            <TwoCarouselButton
               :productId="product.id"
               v-for="product in Products"
               :key="product.id"
             />
           </div>
         </div>
-        <div class="owl-nav">
-          <button
-            type="button"
-            role="presentation"
-            class="owl-prev disabled"
-            @click="onNavClick(1)"
-          >
-            <span class="btn-carousel-controls icon-angle-left"></span></button
-          ><button
-            type="button"
-            role="presentation"
-            class="owl-next"
-            @click="onNavClick(-1)"
-          >
-            <span class="btn-carousel-controls icon-angle-right"></span>
+        <div class="owl-nav disabled">
+          <button type="button" role="presentation" class="owl-prev">
+            <span aria-label="Previous">‹</span></button
+          ><button type="button" role="presentation" class="owl-next">
+            <span aria-label="Next">›</span>
           </button>
         </div>
         <div class="owl-dots">
@@ -166,6 +145,15 @@ export default {
             :key="n"
           />
         </div>
+      </div>
+      <div class="text-center">
+        <a
+          href="/webeozel-urunler"
+          class="btn btn-default btn-transparent btn-global mb-mrtop-0"
+        >
+          <span>TÜMÜNÜ GÖR</span>
+          <span class="icon-arrow-right"></span>
+        </a>
       </div>
     </div>
   </div>

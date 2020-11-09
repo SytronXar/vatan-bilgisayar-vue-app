@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/:producthref/:productId.html",
+    path: "/:producthref?id=:productId.html",
     name: "ProductPage",
     props:true,
     component: () =>
