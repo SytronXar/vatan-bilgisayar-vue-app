@@ -101,7 +101,14 @@ const routes = [
     name:"notFound",
     component: () =>
       import(/*webpackChunkName:"NotFound"*/ "../views/NotFound.vue")
-  }
+  },
+  {
+    path: "/bilgisayar/",
+    name: "Bilgisayar",
+    props:true,
+    component: () =>
+      import(/*webpackChunkName:"Bilgisayar"*/ "../views/Bilgisayar.vue")
+  },
 ];
 
 const router = new VueRouter({

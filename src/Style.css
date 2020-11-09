@@ -15056,8 +15056,8 @@ select.static-page__select-menu.form-control:hover {
   vertical-align: top;
   width: 14px;
   height: 14px;
-  font-family: Vatan-Bilgisayar !important;
-  content: "\e90a" !important;
+  font-family:"Font Awesome 5 Free" !important;
+  content: "\f078" !important;
   color: #464646;
   position: absolute;
   right: 20px;
@@ -26784,6 +26784,9 @@ input.apple-switch:checked:after {
   }
   .icon-discount-tag2{
     content:"\f295"
+  }
+  .chevron-down{
+    content:"\f078"
   }
   .responsive-tables td:before {
     content: attr(data-label);
