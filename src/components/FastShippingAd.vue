@@ -2,8 +2,10 @@
   <div
     class="header-banner"
   >
-  <router-link to="/hizli-teslimat">
-    <a href="/hizli-teslimat/">
+  <router-link
+            :to="{
+              name: 'HizliTeslimat',
+            }">
       <img
         src="https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_EKIM/yt-kargo.jpg"
         class="lazyimg hidden-xs lazy-init"
@@ -13,7 +15,6 @@
         data-src="https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_EKIM/yt-kargo.jpg"
         class="lazyimg hidden-md hidden-sm hidden-lg"
       />
-    </a>
   </router-link>
   </div>
 </template>

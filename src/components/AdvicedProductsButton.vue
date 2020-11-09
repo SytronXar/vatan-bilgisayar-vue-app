@@ -18,8 +18,10 @@ export default {
       let val = (value / 1).toFixed(2).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
-    ProductHref(name) {
-      return name.toLowerCase().replace(/\s/g, "-") + ".html";
+    ProductHref() {
+      var href=this.productData.name.toLowerCase().replace(/\s/g, "-") + ".html";
+      console.log(href)
+      return href
     }
   }
 };
@@ -34,7 +36,7 @@ export default {
             name: 'ProductPage',
             params: {
               productId: productId,
-              producthref: ProductHref(productData.name)
+              producthref: ProductHref()
             }
           }"
         >

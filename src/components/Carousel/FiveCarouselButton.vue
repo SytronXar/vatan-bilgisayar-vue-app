@@ -20,6 +20,9 @@ export default {
     formatPrice(value) {
       let val = (value / 1).toFixed(0).replace(".", ",");
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    },
+    ProductHref() {
+      return this.productData.name.toLowerCase().replace(/\s/g, "-") + ".html";
     }
   }
 };
@@ -30,9 +33,13 @@ export default {
       <div class="product-list product-list--fourth">
         <div class="product-list__image-safe">
           <router-link
+            :id="productId"
             :to="{
               name: 'ProductPage',
-              params: { productId: productData.id, producthref: ProductHref }
+              params: {
+                productId: productId,
+                producthref: ProductHref()
+              }
             }"
             class="product-list__image-safe-link vl-product-alter"
             ><picture>
@@ -52,10 +59,11 @@ export default {
         </div>
         <div class="product-list__content">
           <div class="product-list__product-name">
-            {{productData.name}}
+            {{ productData.name }}
           </div>
           <div class="product-list__cost">
-            <span class="product-list__price">{{formatPrice(productData.cost)}}  </span
+            <span class="product-list__price"
+              >{{ formatPrice(productData.cost) }} </span
             ><span class="product-list__currency"> TL</span>
           </div>
         </div>

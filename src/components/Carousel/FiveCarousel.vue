@@ -66,11 +66,12 @@ export default {
       this.owlGrab = true;
       var currentMouseX=event.pageX;
       if (!this.grabInterval) {
+        window.addEventListener("mouseup", this.StopGrab);
         window.addEventListener("mousemove",this.SetMousePosition)
         this.grabInterval = setInterval(   
           function() {
             console.log(currentMouseX - this.mouseX);
-            this.SetOwlStage(this.owlStageX+(currentMouseX - this.mouseX/3));
+            this.SetOwlStage(this.owlStageX-(currentMouseX - this.mouseX));
           }.bind(this),
           50
         );
@@ -84,12 +85,13 @@ export default {
       console.log("interval stop ");
       clearInterval(this.grabInterval);
       window.removeEventListener("mousemove",this.SetMousePosition);
+      window.removeEventListener("mouseup", this.StopGrab);
       this.grabInterval=null;
       this.owlGrab = false;
     }
   },
   mounted() {
-    window.addEventListener("mouseup", this.StopGrab);
+    
     /* var x = event.clientX; */
   }
 };

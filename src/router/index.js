@@ -9,9 +9,6 @@ const routes = [
     path: "/:producthref",
     name: "ProductPage",
     props:true,
-    meta: {
-      reload: true,
-    },
     component: () =>
       import(/*webpackChunkName:"UrunSayfasi"*/ "../views/UrunSayfasi.vue")
   },
