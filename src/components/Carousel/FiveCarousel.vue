@@ -70,7 +70,7 @@ export default {
         this.grabInterval = setInterval(   
           function() {
             console.log(currentMouseX - this.mouseX);
-            this.SetOwlStage(this.owlStageX-(currentMouseX - this.mouseX));
+            this.SetOwlStage(this.owlStageX+(currentMouseX - this.mouseX));
           }.bind(this),
           50
         );
