@@ -21,11 +21,11 @@ export default {
   },
   methods: {},
   mounted() {
-    document.addEventListener("dragstart", e => {
+    /* document.addEventListener("dragstart", e => {
       if (e.target.tagName === "IMG") {
         e.preventDefault();
       }
-    });
+    }); */
   }
 };
 </script>
