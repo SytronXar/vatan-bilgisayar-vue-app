@@ -3,8 +3,9 @@
     <FastShippingAd />
     <TheWrapper />
     <CategoryDropbar />
-    <router-view :key="$route.path" />
-    <BottomOfPage />
+    <router-view :key="$route.path"/>
+    <BottomOfPage/>
+
   </div>
 </template>
 <script>
@@ -19,6 +20,7 @@ export default {
     FastShippingAd,
     BottomOfPage
   },
+<<<<<<< HEAD
   methods: {},
   mounted() {
     /* document.addEventListener("dragstart", e => {
@@ -26,6 +28,12 @@ export default {
         e.preventDefault();
       }
     }); */
+=======
+  methods:{
+    openFancyBoxPanel(){
+      return false
+    }
+>>>>>>> parent of aa902a40... resimlerin drag edilememesi sağlandı böylelikle carouselin takılma sorunu düzelmiş oldu.
   }
 };
 </script>
