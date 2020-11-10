@@ -3,9 +3,8 @@
     <FastShippingAd />
     <TheWrapper />
     <CategoryDropbar />
-    <router-view :key="$route.path"/>
-    <BottomOfPage/>
-
+    <router-view :key="$route.path" />
+    <BottomOfPage />
   </div>
 </template>
 <script>
@@ -20,10 +19,13 @@ export default {
     FastShippingAd,
     BottomOfPage
   },
-  methods:{
-    openFancyBoxPanel(){
-      return false
-    }
+  methods: {},
+  mounted() {
+    document.addEventListener("dragstart", e => {
+      if (e.target.tagName === "IMG") {
+        e.preventDefault();
+      }
+    });
   }
 };
 </script>

@@ -49,7 +49,7 @@ export default {
                 :alt="productData.name"
                 :title="productData.name"
               />
-              <img
+              <img 
                 :src="productData.images[0]"
                 :alt="productData.name"
                 :title="productData.name"
