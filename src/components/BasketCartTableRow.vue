@@ -5,6 +5,10 @@ export default {
     cartId: {
       type: String,
       required: true
+    },
+    index:{
+      type: Number,
+      required: true
     }
   },
   methods: {
@@ -13,12 +17,10 @@ export default {
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     changeCount(number) {
-      this.cartItem.count += number;
-      console.log(this.cartItem.count);
-      this.$emit("value-changed", this.cartItem.count, this.productId);
+      Products.inCart[this.index].count += number;
     },
     DeleteCartItem(){
-      this.$emit("item-removed");
+      Products.inCart.splice(this.index, 1);
     },
     ProductHref() {
       return this.product.name.toLowerCase().replace(/\s/g, "-");

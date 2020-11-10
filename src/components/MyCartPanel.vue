@@ -75,10 +75,9 @@ export default {
           <!-- Ürünler listelenecek -->
           <BasketCartTableRow
             :cartId="cartItem.id"
+            :index="index"
             v-for="(cartItem, index) in Cart"
             :key="cartItem.id"
-            @value-changed="OnItemCountChanged"
-            @item-removed="onItemRemoved(index)"
           />
         </div>
         <div class="clearfix basket-cart__footer text-center">
