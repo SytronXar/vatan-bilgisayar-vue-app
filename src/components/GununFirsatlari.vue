@@ -25,7 +25,7 @@
           <!--V-for ile sıfırdan yapılacak-->
           <ProductButton
             :productId="getProductID(index)"
-            v-for="(n, index) in getMaxAvailableListCount(18)"
+            v-for="(n, index) in getMaxAvailableListCount(12)"
             :key="n" :itemWidth="179.625"
           />
         </div>

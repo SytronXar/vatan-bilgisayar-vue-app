@@ -6,13 +6,10 @@ export default {
   data() {
     return {
       Cart: Products.inCart,
+      CartProducts:this.GetProducts()
     };
   },
-  methods: {
-    formatPrice(value) {
-      let val = (value / 1).toFixed(2).replace(".", ",");
-      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-    },
+  computed:{
     GetTotal() {
       var total = 0;
       this.Cart.forEach(cartItem => {
@@ -22,6 +19,27 @@ export default {
             cartItem.count;
       });
       return total;
+    },
+    
+  },
+  methods: {
+    formatPrice(value) {
+      let val = (value / 1).toFixed(2).replace(".", ",");
+      return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+    },
+    GetProducts(){
+      var products;
+      for(var cartItem in this.Cart){
+        products.push(Products.data.find(data => data.id === cartItem.pid))
+      }
+      return products;
+    },
+    OnItemCountChanged(...args){
+      const [cartCount,productId] =args
+      this.Cart.find(data => data.pid === productId).count+=cartCount;
+    },
+    onItemRemoved(index){
+      this.Cart.splice(index, 1);
     }
   }
 };
@@ -56,10 +74,11 @@ export default {
           </div>
           <!-- Ürünler listelenecek -->
           <BasketCartTableRow
-            :productId="cartItem.pid"
-            :cartCount="cartItem.count"
-            v-for="cartItem in Cart"
-            :key="cartItem.count"
+            :cartId="cartItem.id"
+            v-for="(cartItem, index) in Cart"
+            :key="cartItem.id"
+            @value-changed="OnItemCountChanged"
+            @item-removed="onItemRemoved(index)"
           />
         </div>
         <div class="clearfix basket-cart__footer text-center">
@@ -92,20 +111,20 @@ export default {
             <tr>
               <td><strong>Ara Toplam</strong></td>
               <td class="text-right">
-                {{ formatPrice(GetTotal() * 0.88) }} TL
+                {{ formatPrice(GetTotal * 0.88) }} TL
               </td>
             </tr>
             <tr>
               <td><strong>KDV</strong></td>
               <td class="text-right">
-                {{ formatPrice(GetTotal()-GetTotal() * 0.88) }} TL
+                {{ formatPrice(GetTotal-GetTotal * 0.88) }} TL
               </td>
             </tr>
             <tr class="basket-ordersummary__total">
               <td>TOPLAM</td>
               <td class="text-right active">
                 <strong>
-                  {{ formatPrice(GetTotal()) }}
+                  {{ formatPrice(GetTotal) }}
                 </strong>
                 TL
               </td>

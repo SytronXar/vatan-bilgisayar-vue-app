@@ -2,12 +2,8 @@
 import Products from "@/Products";
 export default {
   props: {
-    productId: {
+    cartId: {
       type: String,
-      required: true
-    },
-    cartCount: {
-      type: Number,
       required: true
     }
   },
@@ -17,18 +13,27 @@ export default {
       return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     },
     changeCount(number) {
-      console.log(number);
+      this.cartItem.count += number;
+      console.log(this.cartItem.count);
+      this.$emit("value-changed", this.cartItem.count, this.productId);
     },
-    
+    DeleteCartItem(){
+      this.$emit("item-removed");
+    },
     ProductHref() {
       return this.product.name.toLowerCase().replace(/\s/g, "-");
     }
   },
   data() {
     return {
-      product: Products.data.find(data => data.id === this.productId)
+      cartItem: Products.inCart.find(inCart => inCart.id === this.cartId)
     };
-  }
+  },
+  computed: {
+    product() {
+      return Products.data.find(data => data.id === this.cartItem.pid);
+    }
+  },
 };
 </script>
 <template>
@@ -36,11 +41,10 @@ export default {
     <div class="basket-cart__table-column info">
       <div class="basket-cart__product-info">
         <router-link
-          :id="productId"
           :to="{
             name: 'ProductPage',
             params: {
-              productId: productId,
+              productId: product.id,
               producthref: ProductHref()
             }
           }"
@@ -57,7 +61,7 @@ export default {
     </div>
     <div class="basket-cart__table-column count">
       <div class="number-input">
-        <a :href="changeCount(-1)">-</a>
+        <a @click="changeCount(-1)">-</a>
         <div class="input-wrapper">
           <form novalidate="novalidate">
             <input
@@ -73,18 +77,18 @@ export default {
               name="item.BasketItem.TQuantityA"
               onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
               type="number"
-              value="1"
+              :value="cartItem.count"
               style="text-align: right;"
             />
           </form>
           <span>Adet</span>
         </div>
-        <a :href="changeCount(1)">+</a>
+        <a @click="changeCount(1)">+</a>
       </div>
     </div>
     <div class="basket-cart__table-column price">
       <div class="basket-cart__product-price">
-        <span> {{formatPrice(product.cost*cartCount)}} TL </span>
+        <span> {{ formatPrice(product.cost * cartItem.count) }} TL </span>
       </div>
     </div>
     <div class="basket-cart__table-column info badges visible-xs visible-sm">
@@ -105,7 +109,7 @@ export default {
       <a
         href="javascript:void(0)"
         class="basket-cart__product-remove"
-        onclick="DeleteFromBasket(16459878,10208081)"
+        @click="DeleteCartItem()"
         ><i class="icon-times-circle"></i
       ></a>
     </div>
@@ -131,7 +135,7 @@ export default {
               +1 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              {{formatPrice(cartCount*product.cost/6.6)}} TL
+              {{ formatPrice((cartItem.count * product.cost) / 6.6) }} TL
             </div>
           </li>
           <li class="swiper-slide active ">
@@ -145,7 +149,7 @@ export default {
               +2 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              {{formatPrice(cartCount*product.cost/5)}} TL
+              {{ formatPrice((cartItem.count * product.cost) / 5) }} TL
             </div>
           </li>
           <li class="swiper-slide active ">
@@ -159,7 +163,7 @@ export default {
               +3 Yıl Keyifli Garanti
             </label>
             <div class="basket-cart__extrawarranty-price">
-              {{formatPrice(cartCount*product.cost/3.75)}} TL
+              {{ formatPrice((cartItem.count * product.cost) / 3.75) }} TL
             </div>
           </li>
         </ul>

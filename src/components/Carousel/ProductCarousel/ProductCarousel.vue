@@ -1,6 +1,6 @@
 <template>
   <div class="product-list__image-safe">
-    <router-link :ref = "busstop"
+    <router-link 
       :id="productId"
       :to="{
         name: 'ProductPage',
@@ -13,7 +13,7 @@
       :class="{ 'owl-grab': owlGrab }"
       title=""
     >
-      <div class="owl-stage-outer" @mousemove="onMouseMovement(busstop)" :ref="referance" @mouseleave="onMouseLeave()">
+      <div class="owl-stage-outer" @mousemove="onMouseMovement()" :ref="referance" @mouseleave="onMouseLeave()">
         <div
           class="owl-stage"
           :style="{

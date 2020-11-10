@@ -11928,10 +11928,11 @@ button.swiper-pagination-bullet {
 }
 .icon-thunderbolt:before {
   content: "\e949";
-}
-.icon-times-circle:before {
-  content: "\e94a";
 }*/
+
+.icon-times-circle:before {
+  content: "\f057";
+}
 
 .icon-times:before {
   content: "\f00d";
