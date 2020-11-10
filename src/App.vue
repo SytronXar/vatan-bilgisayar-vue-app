@@ -23,10 +23,11 @@ export default {
 <<<<<<< HEAD
   methods: {},
   mounted() {
-    /* document.addEventListener("dragstart", e => {
+    document.addEventListener("dragstart", e => {
       if (e.target.tagName === "IMG") {
         e.preventDefault();
       }
+<<<<<<< HEAD
     }); */
 =======
   methods:{
@@ -34,6 +35,9 @@ export default {
       return false
     }
 >>>>>>> parent of aa902a40... resimlerin drag edilememesi sağlandı böylelikle carouselin takılma sorunu düzelmiş oldu.
+=======
+    });
+>>>>>>> parent of 4d82e229... resim kaydırmada listener yerine css kullanıldı.
   }
 };
 </script>
